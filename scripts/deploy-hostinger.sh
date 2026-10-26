@@ -38,7 +38,7 @@ mkdir -p -- "$LARAVEL_DIR" "$PUBLIC_DIR"
 
 # La primera ejecución debe hacerse después de retirar/revisar el checkout
 # antiguo de public_html. El bloqueo evita borrar código o archivos desconocidos.
-for legacy in app artisan bootstrap composer.json config database resources routes vendor .git; do
+for legacy in app artisan bootstrap composer.json config database resources routes .git; do
     if [[ -e "$PUBLIC_DIR/$legacy" ]]; then
         printf 'public_html contiene la ruta heredada "%s"; revise y límpiela manualmente antes de continuar.\n' "$legacy" >&2
         exit 1
