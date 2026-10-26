@@ -1,0 +1,142 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="clases_diseno" name="Diagrama de Clases (solo atributos) - Registrar Usuario Alumno">
+    <mxGraphModel dx="1566" dy="855" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="530" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="clsUsuario" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="388" width="280" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_hdr" parent="clsUsuario" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Usuario&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="280" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_body" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="352" width="280" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a0" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idUsuario: Integer" vertex="1">
+          <mxGeometry height="22" width="280" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a1" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- apellido: String" vertex="1">
+          <mxGeometry height="22" width="280" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a2" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- nombre: String" vertex="1">
+          <mxGeometry height="22" width="280" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a3" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- dniUsuario: String" vertex="1">
+          <mxGeometry height="22" width="280" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a4" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- fechaNacimiento: Date" vertex="1">
+          <mxGeometry height="22" width="280" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a5" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- sexo: String" vertex="1">
+          <mxGeometry height="22" width="280" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a6" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoCivil: String" vertex="1">
+          <mxGeometry height="22" width="280" y="168" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a7" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- telefono: String" vertex="1">
+          <mxGeometry height="22" width="280" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a8" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- celular: String" vertex="1">
+          <mxGeometry height="22" width="280" y="212" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a9" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- email: String" vertex="1">
+          <mxGeometry height="22" width="280" y="234" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a10" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- direccion: String" vertex="1">
+          <mxGeometry height="22" width="280" y="256" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a11" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- barrio: String" vertex="1">
+          <mxGeometry height="22" width="280" y="278" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a12" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- pais: String" vertex="1">
+          <mxGeometry height="22" width="280" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a13" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- provincia: String" vertex="1">
+          <mxGeometry height="22" width="280" y="322" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a14" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- localidad: String" vertex="1">
+          <mxGeometry height="22" width="280" y="344" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a15" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- foto: String" vertex="1">
+          <mxGeometry height="22" width="280" y="366" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="410" width="300" x="520" y="29" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_hdr" parent="clsEncuestaSocioeconomica" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;EncuestaSocioeconomica&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="300" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_body" parent="clsEncuestaSocioeconomica" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="374" width="300" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_a0" parent="clsEncuestaSocioeconomica" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idEncuestaSocioeconomica: Integer" vertex="1">
+          <mxGeometry height="22" width="300" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_a1" parent="clsEncuestaSocioeconomica" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- tieneHijos: Boolean" vertex="1">
+          <mxGeometry height="22" width="300" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_a2" parent="clsEncuestaSocioeconomica" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- viveSolo: Boolean" vertex="1">
+          <mxGeometry height="22" width="300" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_a3" parent="clsEncuestaSocioeconomica" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- padresViven: Boolean" vertex="1">
+          <mxGeometry height="22" width="300" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_a4" parent="clsEncuestaSocioeconomica" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- madreTrabaja: Boolean" vertex="1">
+          <mxGeometry height="22" width="300" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_a5" parent="clsEncuestaSocioeconomica" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- padreTrabaja: Boolean" vertex="1">
+          <mxGeometry height="22" width="300" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_a6" parent="clsEncuestaSocioeconomica" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- nivelEstudiosMadre: String" vertex="1">
+          <mxGeometry height="22" width="300" y="168" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_a7" parent="clsEncuestaSocioeconomica" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- nivelEstudiosPadre: String" vertex="1">
+          <mxGeometry height="22" width="300" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_a8" parent="clsEncuestaSocioeconomica" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- trabaja: Boolean" vertex="1">
+          <mxGeometry height="22" width="300" y="212" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_a9" parent="clsEncuestaSocioeconomica" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- recibeAyudaEconomica: Boolean" vertex="1">
+          <mxGeometry height="22" width="300" y="234" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_a10" parent="clsEncuestaSocioeconomica" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estudiosSuperioresPrevios: Boolean" vertex="1">
+          <mxGeometry height="22" width="300" y="256" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_a11" parent="clsEncuestaSocioeconomica" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idiomas: String" vertex="1">
+          <mxGeometry height="22" width="300" y="278" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_a12" parent="clsEncuestaSocioeconomica" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- poseeDiscapacidad: Boolean" vertex="1">
+          <mxGeometry height="22" width="300" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_a13" parent="clsEncuestaSocioeconomica" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- miembroPoblacionIndigena: Boolean" vertex="1">
+          <mxGeometry height="22" width="300" y="322" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_a14" parent="clsEncuestaSocioeconomica" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- hablanteLenguasIndigenas: Boolean" vertex="1">
+          <mxGeometry height="22" width="300" y="344" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_a15" parent="clsEncuestaSocioeconomica" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- sabeUsarPC: Boolean" vertex="1">
+          <mxGeometry height="22" width="300" y="366" as="geometry" />
+        </mxCell>
+        <mxCell id="clsEncuestaSocioeconomica_a16" parent="clsEncuestaSocioeconomica" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- esUsuarioInternet: Boolean" vertex="1">
+          <mxGeometry height="22" width="300" y="388" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="clsEncuestaSocioeconomica" style="html=1;fontSize=10;fontColor=#333333;endArrow=none;startArrow=classic;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=0;startFill=1;" target="clsUsuario" value="tiene">
+          <mxGeometry relative="1" x="-0.0003" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel1lbl1" connectable="0" parent="rel1" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="-22" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel1lbl2" connectable="0" parent="rel1" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

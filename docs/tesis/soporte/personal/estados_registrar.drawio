@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="de_reg_personal" name="Diagrama de Estados - Registrar Datos de Personal Docente y Administrativo">
+    <mxGraphModel dx="1201" dy="643" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1250" pageHeight="800" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="inicio" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="20" width="20" x="30" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" parent="1" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8b2a30;strokeWidth=1.5;fontSize=11;fontColor=#2a2020;align=center;verticalAlign=middle;" value="&lt;b&gt;P1&lt;/b&gt;&lt;br&gt;Gestion de Personal" vertex="1">
+          <mxGeometry height="40" width="200" x="110" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="t0" edge="1" parent="1" source="inicio" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;labelBackgroundColor=#ffffff;align=left;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="p1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" edge="1" parent="1" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;align=left;verticalAlign=top;labelBackgroundColor=#ffffff;entryX=0.1;entryY=0;entryDx=0;entryDy=0;" target="p1" value="C: click pestaña Activos&lt;br&gt;A: lista el personal con cuenta &#39;Activa&#39;">
+          <mxGeometry relative="1" x="-1" y="5" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="130" y="250" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2" edge="1" parent="1" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;align=left;verticalAlign=top;labelBackgroundColor=#ffffff;entryX=0.6;entryY=0;entryDx=0;entryDy=0;" value="C: Buscar por DNI o nombre&lt;br&gt;A: se actualiza el listado de personal">
+          <mxGeometry relative="1" x="-1" y="5" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="288" y="250" as="sourcePoint" />
+            <mxPoint x="288" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3" edge="1" parent="1" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;align=left;verticalAlign=top;labelBackgroundColor=#ffffff;entryX=0.3;entryY=1;entryDx=0;entryDy=0;" target="p1" value="C: seleccionar Rol&lt;br&gt;A: filtra el listado por rol">
+          <mxGeometry relative="1" x="-0.1429" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="170" y="430" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p2" parent="1" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8b2a30;strokeWidth=1.5;fontSize=11;fontColor=#2a2020;align=center;verticalAlign=middle;" value="&lt;b&gt;P2&lt;/b&gt;&lt;br&gt;Formulario Registrar Personal" vertex="1">
+          <mxGeometry height="64" width="240" x="640" y="313" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" edge="1" parent="1" source="p1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;labelBackgroundColor=#ffffff;align=left;exitX=1;exitY=0.3;entryX=0;entryY=0.3;" target="p2" value="C: click &#39;Registrar Personal&#39;">
+          <mxGeometry relative="1" x="-0.6193" y="22" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b1" edge="1" parent="1" source="p2" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;labelBackgroundColor=#ffffff;align=left;dashed=1;strokeColor=#a5a5a5;fontColor=#a5a5a5;exitX=0;exitY=0.8;entryX=1;entryY=0.8;" target="p1" value="C: click &#39;Cancelar&#39;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p5" parent="1" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8b2a30;strokeWidth=1.5;fontSize=11;fontColor=#2a2020;align=center;verticalAlign=middle;" value="&lt;b&gt;P5&lt;/b&gt;&lt;br&gt;Confirmacion" vertex="1">
+          <mxGeometry height="36" width="170" x="675" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="fin" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="24" width="24" x="748" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" edge="1" parent="1" source="p2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;labelBackgroundColor=#ffffff;align=left;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="p5" value="C: click &#39;Registrar Personal&#39;&lt;br&gt;A: guarda los cambios">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" edge="1" parent="1" source="p5" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;align=left;verticalAlign=top;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="fin" value="C: click &#39;Aceptar&#39;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

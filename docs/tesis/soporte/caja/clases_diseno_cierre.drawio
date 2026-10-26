@@ -1,0 +1,216 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="clases_diseno_cierre_caja" name="Diagrama de Clases de Diseno - Registrar Cierre de Caja">
+    <mxGraphModel dx="1903" dy="1040" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="640" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="clsCajero" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="40.0" width="220" x="40" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCajero_hdr" parent="clsCajero" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Cajero&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="220" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCajero_body" parent="clsCajero" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="4.0" width="220" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCajero_div" parent="clsCajero" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="220" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="306.0" width="300" x="360" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_hdr" parent="clsCaja" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Caja&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="300" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_body" parent="clsCaja" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="270.0" width="300" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_a0" parent="clsCaja" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idCaja: Integer" vertex="1">
+          <mxGeometry height="22" width="300" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_a1" parent="clsCaja" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- fechaApertura: Date" vertex="1">
+          <mxGeometry height="22" width="300" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_a2" parent="clsCaja" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- montoInicial: Decimal" vertex="1">
+          <mxGeometry height="22" width="300" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_a3" parent="clsCaja" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- fechaCierre: Date" vertex="1">
+          <mxGeometry height="22" width="300" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_a4" parent="clsCaja" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- diferenciaTotal: Decimal" vertex="1">
+          <mxGeometry height="22" width="300" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_a5" parent="clsCaja" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- observacionCierre: String" vertex="1">
+          <mxGeometry height="22" width="300" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_a6" parent="clsCaja" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoCaja: String" vertex="1">
+          <mxGeometry height="22" width="300" y="168" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_div" parent="clsCaja" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="300" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_o0" parent="clsCaja" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;" value="+ registrar_cierre_caja(dcc): void" vertex="1">
+          <mxGeometry height="34" width="300" y="194" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_o1" parent="clsCaja" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idCaja): Caja" vertex="1">
+          <mxGeometry height="26" width="300" y="228" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_o2" parent="clsCaja" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Caja" vertex="1">
+          <mxGeometry height="26" width="300" y="254" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_o3" parent="clsCaja" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ actualizar(dca): void" vertex="1">
+          <mxGeometry height="26" width="300" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDCC" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="232.0" width="300" x="780" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDCC_hdr" parent="clsDCC" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;DetalleCierreCaja&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="300" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDCC_body" parent="clsDCC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="196.0" width="300" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDCC_a0" parent="clsDCC" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idDetalleCierreCaja: Integer" vertex="1">
+          <mxGeometry height="22" width="300" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDCC_a1" parent="clsDCC" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- montoEsperado: Decimal" vertex="1">
+          <mxGeometry height="22" width="300" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDCC_a2" parent="clsDCC" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- montoContado: Decimal" vertex="1">
+          <mxGeometry height="22" width="300" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDCC_a3" parent="clsDCC" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- diferencia: Decimal" vertex="1">
+          <mxGeometry height="22" width="300" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDCC_div" parent="clsDCC" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="300" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDCC_o0" parent="clsDCC" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ crear(): DetalleCierreCaja" vertex="1">
+          <mxGeometry height="26" width="300" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDCC_o1" parent="clsDCC" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): DetalleCierreCaja" vertex="1">
+          <mxGeometry height="26" width="300" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDCC_o2" parent="clsDCC" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ cargar(ddc): void" vertex="1">
+          <mxGeometry height="26" width="300" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="128.0" width="300" x="360" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_hdr" parent="clsPago" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Pago&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="300" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_body" parent="clsPago" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="92.0" width="300" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_a0" parent="clsPago" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idPago: Integer" vertex="1">
+          <mxGeometry height="22" width="300" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_a1" parent="clsPago" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- fechaPago: Date" vertex="1">
+          <mxGeometry height="22" width="300" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_a2" parent="clsPago" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- montoTotal: Decimal" vertex="1">
+          <mxGeometry height="22" width="300" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_a3" parent="clsPago" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoPago: String" vertex="1">
+          <mxGeometry height="22" width="300" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_div" parent="clsPago" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="300" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMP" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="136.0" width="300" x="780" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMP_hdr" parent="clsMP" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;MedioPago&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="300" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMP_body" parent="clsMP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="100.0" width="300" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMP_a0" parent="clsMP" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idMedioPago: Integer" vertex="1">
+          <mxGeometry height="22" width="300" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMP_a1" parent="clsMP" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- medioPago: String" vertex="1">
+          <mxGeometry height="22" width="300" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMP_div" parent="clsMP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="300" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMP_o0" parent="clsMP" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idMedioPago): MedioPago" vertex="1">
+          <mxGeometry height="26" width="300" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMP_o1" parent="clsMP" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): MedioPago" vertex="1">
+          <mxGeometry height="26" width="300" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="clsCajero" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsCaja" value="abre">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1l1" connectable="0" parent="rel1" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint x="6" y="19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel1l2" connectable="0" parent="rel1" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint x="-4" y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="clsCaja" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsPago" value="registra">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2l1" connectable="0" parent="rel2" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint x="-20" y="21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2l2" connectable="0" parent="rel2" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint x="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3" edge="1" parent="1" source="clsPago" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsMP" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3l1" connectable="0" parent="rel3" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint x="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3l2" connectable="0" parent="rel3" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint x="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4" edge="1" parent="1" source="clsCaja" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsDCC" value="contiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel4l1" connectable="0" parent="rel4" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint x="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4l2" connectable="0" parent="rel4" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint x="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel5" edge="1" parent="1" source="clsDCC" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsMP" value="corresponde a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel5l1" connectable="0" parent="rel5" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint x="-20" y="5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel5l2" connectable="0" parent="rel5" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint x="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      <mxCell id="clsDCC_new8" parent="clsDCC" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ vincular(): void" vertex="1">
+          <mxGeometry height="26" width="300" y="206.0" as="geometry" />
+        </mxCell>
+        </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

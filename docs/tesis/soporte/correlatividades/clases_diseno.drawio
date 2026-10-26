@@ -1,0 +1,107 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="diseno_correlatividades" name="Diagrama de Clases de Diseño">
+    <mxGraphModel dx="1688" dy="918" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="380" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="clsDetalle" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="218.0" width="290" x="60" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_hdr" parent="clsDetalle" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;DetallePlanEstudio&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="290" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_body" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="184.0" width="290" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_a1" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idDetPlanEstudio: Integer" vertex="1">
+          <mxGeometry height="22" width="290" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_a2" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- codigoDetPlanEstudio: String" vertex="1">
+          <mxGeometry height="22" width="290" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_a2b" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoDetPlanEstudio: String" vertex="1">
+          <mxGeometry height="22" width="290" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_a3" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- cargaHorariaDetPlanEstudio: Integer" vertex="1">
+          <mxGeometry height="22" width="290" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_a4" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- anioCursoDetPlanEstudio: Integer" vertex="1">
+          <mxGeometry height="22" width="290" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_div" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="290" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_o1" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idDetPlanEstudio): DetallePlanEstudio" vertex="1">
+          <mxGeometry height="34" width="290" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_o2" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): DetallePlanEstudio" vertex="1">
+          <mxGeometry height="34" width="290" y="184" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCorrelativa" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="276.0" width="290" x="510" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCorrelativa_hdr" parent="clsCorrelativa" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Correlativa&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="290" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCorrelativa_body" parent="clsCorrelativa" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="242.0" width="290" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCorrelativa_a1" parent="clsCorrelativa" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idCorrelativa: Integer" vertex="1">
+          <mxGeometry height="22" width="290" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCorrelativa_a2" parent="clsCorrelativa" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- pCursar: String" vertex="1">
+          <mxGeometry height="22" width="290" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCorrelativa_a3" parent="clsCorrelativa" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- pRendir: String" vertex="1">
+          <mxGeometry height="22" width="290" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCorrelativa_div" parent="clsCorrelativa" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="290" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCorrelativa_o0" parent="clsCorrelativa" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;" value="+ registrar_correlativa(dc): void" vertex="1">
+          <mxGeometry height="34" width="290" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCorrelativa_o1" parent="clsCorrelativa" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ crear(): Correlativa" vertex="1">
+          <mxGeometry height="34" width="290" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCorrelativa_o2" parent="clsCorrelativa" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Correlativa" vertex="1">
+          <mxGeometry height="34" width="290" y="174" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCorrelativa_o3" parent="clsCorrelativa" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ cargar(c): void" vertex="1">
+          <mxGeometry height="34" width="290" y="208" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCorrelativa_o4" parent="clsCorrelativa" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ vincular(): void" vertex="1">
+          <mxGeometry height="34" width="290" y="242" as="geometry" />
+        </mxCell>
+        <mxCell id="rel8" edge="1" parent="1" source="clsDetalle" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.3;entryDx=0;entryDy=0;" target="clsCorrelativa" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel8lbl1" connectable="0" parent="rel8" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="16" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel8lbl2" connectable="0" parent="rel8" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="-16" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel9" edge="1" parent="1" source="clsCorrelativa" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" target="clsDetalle" value="es correlativa de">
+          <mxGeometry relative="1" x="0.0011" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel9lbl1" connectable="0" parent="rel9" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="-22" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel9lbl2" connectable="0" parent="rel9" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="12" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

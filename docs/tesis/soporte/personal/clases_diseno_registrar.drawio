@@ -1,0 +1,250 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="clases_diseno_registrar_personal" name="Diagrama de Clases de Diseno - Registrar Datos de Personal Docente y Administrativo">
+    <mxGraphModel dx="2037" dy="1108" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1220" pageHeight="680" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="clsUsuario" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="398.0" width="320" x="440" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_hdr" parent="clsUsuario" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Usuario&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="320" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_body" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="362.0" width="320" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a0" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idUsuario: Integer" vertex="1">
+          <mxGeometry height="22" width="320" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a1" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- dniUsuario: String" vertex="1">
+          <mxGeometry height="22" width="320" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a2" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- apellidoUsuario: String" vertex="1">
+          <mxGeometry height="22" width="320" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a3" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- nombreUsuario: String" vertex="1">
+          <mxGeometry height="22" width="320" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a4" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- telefonoUsuario: String" vertex="1">
+          <mxGeometry height="22" width="320" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a5" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- correoUsuario: String" vertex="1">
+          <mxGeometry height="22" width="320" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a6" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- direccionUsuario: String" vertex="1">
+          <mxGeometry height="22" width="320" y="168" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a7" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- contrasenia: String" vertex="1">
+          <mxGeometry height="22" width="320" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a8" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- fechaAlta: Date" vertex="1">
+          <mxGeometry height="22" width="320" y="212" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a9" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoCuenta: String" vertex="1">
+          <mxGeometry height="22" width="320" y="234" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_div" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="320" y="256" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_o0" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;" value="+ registrar_personal(dp): void" vertex="1">
+          <mxGeometry height="34" width="320" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_o1" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ crear(): Usuario" vertex="1">
+          <mxGeometry height="26" width="320" y="294" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_o2" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Usuario" vertex="1">
+          <mxGeometry height="26" width="320" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_o3" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ cargar(du): void" vertex="1">
+          <mxGeometry height="26" width="320" y="346" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRol" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="180.0" width="260" x="40" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRol_hdr" parent="clsRol" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Rol&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRol_body" parent="clsRol" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="144.0" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRol_a0" parent="clsRol" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idRol: Integer" vertex="1">
+          <mxGeometry height="22" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRol_a1" parent="clsRol" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- nombreRol: String" vertex="1">
+          <mxGeometry height="22" width="260" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRol_a2" parent="clsRol" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- descripcionRol: String" vertex="1">
+          <mxGeometry height="22" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRol_a3" parent="clsRol" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoRol: String" vertex="1">
+          <mxGeometry height="22" width="260" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRol_div" parent="clsRol" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="260" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRol_o0" parent="clsRol" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idRol): Rol" vertex="1">
+          <mxGeometry height="26" width="260" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRol_o1" parent="clsRol" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Rol" vertex="1">
+          <mxGeometry height="26" width="260" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="clsLoc" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="136.0" width="260" x="900" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="clsLoc_hdr" parent="clsLoc" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Localidad&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsLoc_body" parent="clsLoc" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="100.0" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsLoc_a0" parent="clsLoc" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idLocalidad: Integer" vertex="1">
+          <mxGeometry height="22" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsLoc_a1" parent="clsLoc" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- localidad: String" vertex="1">
+          <mxGeometry height="22" width="260" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsLoc_div" parent="clsLoc" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsLoc_o0" parent="clsLoc" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idLocalidad): Localidad" vertex="1">
+          <mxGeometry height="26" width="260" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="clsLoc_o1" parent="clsLoc" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Localidad" vertex="1">
+          <mxGeometry height="26" width="260" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="relRol" edge="1" parent="1" source="clsUsuario" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsRol" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="relRoll1" connectable="0" parent="relRol" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint x="-14" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relRoll2" connectable="0" parent="relRol" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint x="2" y="-7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relLoc" edge="1" parent="1" source="clsUsuario" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsLoc" value="reside en">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="relLocl1" connectable="0" parent="relLoc" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint x="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relLocl2" connectable="0" parent="relLoc" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint x="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="clsDocente" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="40.0" width="170" x="140" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDocente_hdr" parent="clsDocente" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Docente&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="170" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDocente_body" parent="clsDocente" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="4.0" width="170" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDocente_div" parent="clsDocente" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="170" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="genDocente" edge="1" parent="1" source="clsDocente" style="html=1;endArrow=block;endFill=0;endSize=16;strokeColor=#3a5da8;strokeWidth=2;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="clsUsuario" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="225" y="490" />
+              <mxPoint x="600" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="clsCajero" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="40.0" width="170" x="330" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCajero_hdr" parent="clsCajero" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Cajero&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="170" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCajero_body" parent="clsCajero" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="4.0" width="170" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCajero_div" parent="clsCajero" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="170" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="genCajero" edge="1" parent="1" source="clsCajero" style="html=1;endArrow=block;endFill=0;endSize=16;strokeColor=#3a5da8;strokeWidth=2;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="clsUsuario" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="415" y="490" />
+              <mxPoint x="600" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="clsCoordinador" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="40.0" width="170" x="520" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCoordinador_hdr" parent="clsCoordinador" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Coordinador&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="170" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCoordinador_body" parent="clsCoordinador" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="4.0" width="170" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCoordinador_div" parent="clsCoordinador" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="170" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="genCoordinador" edge="1" parent="1" source="clsCoordinador" style="html=1;endArrow=block;endFill=0;endSize=16;strokeColor=#3a5da8;strokeWidth=2;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="clsUsuario" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="605" y="490" />
+              <mxPoint x="600" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="clsAdministrativo" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="40.0" width="170" x="710" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAdministrativo_hdr" parent="clsAdministrativo" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Administrativo&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="170" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAdministrativo_body" parent="clsAdministrativo" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="4.0" width="170" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAdministrativo_div" parent="clsAdministrativo" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="170" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="genAdministrativo" edge="1" parent="1" source="clsAdministrativo" style="html=1;endArrow=block;endFill=0;endSize=16;strokeColor=#3a5da8;strokeWidth=2;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="clsUsuario" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="795" y="490" />
+              <mxPoint x="600" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="clsDirectorGeneral" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="40.0" width="170" x="900" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDirectorGeneral_hdr" parent="clsDirectorGeneral" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;DirectorGeneral&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="170" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDirectorGeneral_body" parent="clsDirectorGeneral" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="4.0" width="170" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDirectorGeneral_div" parent="clsDirectorGeneral" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="170" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="genDirectorGeneral" edge="1" parent="1" source="clsDirectorGeneral" style="html=1;endArrow=block;endFill=0;endSize=16;strokeColor=#3a5da8;strokeWidth=2;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="clsUsuario" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="985" y="490" />
+              <mxPoint x="600" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nota" parent="1" style="shape=note;whiteSpace=wrap;html=1;size=14;fontSize=10;align=left;spacingLeft=6;fillColor=#fff2cc;strokeColor=#d6b656;" value="{El Rol del Usuario debe corresponder a su subclase: un Cajero tiene Rol &quot;Cajero&quot;}" vertex="1">
+          <mxGeometry height="56" width="240" x="40" y="320" as="geometry" />
+        </mxCell>
+      <mxCell id="clsUsuario_new15" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ vincular(): void" vertex="1">
+          <mxGeometry height="26" width="320" y="372.0" as="geometry" />
+        </mxCell>
+        </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

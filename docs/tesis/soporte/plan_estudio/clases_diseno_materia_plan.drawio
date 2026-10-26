@@ -1,0 +1,166 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="diseno_cargar_materia" name="Diagrama de Clases de Diseño">
+    <mxGraphModel dx="1407" dy="765" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="450" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="clsPlanEstudio" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="174.0" width="260" x="40" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPlanEstudio_hdr" parent="clsPlanEstudio" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;PlanEstudio&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPlanEstudio_body" parent="clsPlanEstudio" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="140.0" width="260" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPlanEstudio_a1" parent="clsPlanEstudio" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idPlanEstudio: Integer" vertex="1">
+          <mxGeometry height="22" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPlanEstudio_a2" parent="clsPlanEstudio" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- anioPlanEstudio: Integer" vertex="1">
+          <mxGeometry height="22" width="260" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPlanEstudio_a3" parent="clsPlanEstudio" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoPlanEstudio: String" vertex="1">
+          <mxGeometry height="22" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPlanEstudio_div" parent="clsPlanEstudio" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="260" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPlanEstudio_o4" parent="clsPlanEstudio" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idPlanEstudio): PlanEstudio" vertex="1">
+          <mxGeometry height="34" width="260" y="106.0" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="320.0" width="290" x="410" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_hdr" parent="clsDetalle" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;DetallePlanEstudio&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="290" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_body" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="286.0" width="290" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_a1" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idDetPlanEstudio: Integer" vertex="1">
+          <mxGeometry height="22" width="290" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_a2" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- codigoDetPlanEstudio: String" vertex="1">
+          <mxGeometry height="22" width="290" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_a2b" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoDetPlanEstudio: String" vertex="1">
+          <mxGeometry height="22" width="290" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_a3" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- cargaHorariaDetPlanEstudio: Integer" vertex="1">
+          <mxGeometry height="22" width="290" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_a4" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- anioCursoDetPlanEstudio: Integer" vertex="1">
+          <mxGeometry height="22" width="290" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_div" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="290" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_o0" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;" value="+ cargar_materia(ddpe): void" vertex="1">
+          <mxGeometry height="34" width="290" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_o1" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ crear(): DetallePlanEstudio" vertex="1">
+          <mxGeometry height="34" width="290" y="184" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_o2" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): DetallePlanEstudio" vertex="1">
+          <mxGeometry height="34" width="290" y="218" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_o3" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ cargar(dpe): void" vertex="1">
+          <mxGeometry height="34" width="290" y="252" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="152.0" width="220" x="800" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_hdr" parent="clsMateria" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Materia&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="220" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_body" parent="clsMateria" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="118.0" width="220" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_a1" parent="clsMateria" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idMateria: Integer" vertex="1">
+          <mxGeometry height="22" width="220" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_a1b" parent="clsMateria" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- nombreMateria: String" vertex="1">
+          <mxGeometry height="22" width="220" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_div" parent="clsMateria" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="220" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_a2" parent="clsMateria" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idMateria): Materia" vertex="1">
+          <mxGeometry height="34" width="220" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRegimen" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="152.0" width="220" x="800" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRegimen_hdr" parent="clsRegimen" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Regimen&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="220" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRegimen_body" parent="clsRegimen" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="118.0" width="220" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRegimen_a1" parent="clsRegimen" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idRegimen: Integer" vertex="1">
+          <mxGeometry height="22" width="220" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRegimen_a1b" parent="clsRegimen" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- regimen: String" vertex="1">
+          <mxGeometry height="22" width="220" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRegimen_div" parent="clsRegimen" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="220" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRegimen_o1" parent="clsRegimen" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idRegimen): Regimen" vertex="1">
+          <mxGeometry height="34" width="220" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="rel5" edge="1" parent="1" source="clsPlanEstudio" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsDetalle" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel5lbl1" connectable="0" parent="rel5" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel5lbl2" connectable="0" parent="rel5" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="-15" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel6" edge="1" parent="1" source="clsDetalle" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsMateria" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel6lbl1" connectable="0" parent="rel6" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel6lbl2" connectable="0" parent="rel6" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="-5" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel7" edge="1" parent="1" source="clsDetalle" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsRegimen" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel7lbl1" connectable="0" parent="rel7" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel7lbl2" connectable="0" parent="rel7" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="-5" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      <mxCell id="clsPlanEstudio_new5" parent="clsPlanEstudio" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): PlanEstudio" vertex="1">
+          <mxGeometry height="34" width="260" y="140.0" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_new4" parent="clsMateria" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Materia" vertex="1">
+          <mxGeometry height="34" width="220" y="118.0" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRegimen_new4" parent="clsRegimen" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Regimen" vertex="1">
+          <mxGeometry height="34" width="220" y="118.0" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle_new10" parent="clsDetalle" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ vincular(): void" vertex="1">
+          <mxGeometry height="34" width="290" y="286.0" as="geometry" />
+        </mxCell>
+        </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,187 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="clases_diseno" name="Diagrama de Clases de Diseno - Registrar Inscripcion de Alumno">
+    <mxGraphModel dx="1751" dy="1658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="720" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="clsAlumno" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="346.0" width="240" x="230" y="-135" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_hdr" parent="clsAlumno" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Alumno&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="240" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_body" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="310.0" width="240" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_a0" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idAlumno: Integer" vertex="1">
+          <mxGeometry height="22" width="240" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_a1" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- nroLegajo: Integer" vertex="1">
+          <mxGeometry height="22" width="240" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_a2" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoAlumno: String" vertex="1">
+          <mxGeometry height="22" width="240" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_a3" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- presentaTitulo: Boolean" vertex="1">
+          <mxGeometry height="22" width="240" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_a4" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- tituloSecundario: String" vertex="1">
+          <mxGeometry height="22" width="240" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_a5" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- observaciones: String" vertex="1">
+          <mxGeometry height="22" width="240" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_a6" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- adeudaMateria: Boolean" vertex="1">
+          <mxGeometry height="22" width="240" y="168" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_a7" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoLegajo: String" vertex="1">
+          <mxGeometry height="22" width="240" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_div" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="240" y="212" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_o0" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;" value="&lt;i&gt;+ registrar_inscripcion(di): void&lt;/i&gt;" vertex="1">
+          <mxGeometry height="26" width="240" y="216" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_o1" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idAlumno): Alumno" vertex="1">
+          <mxGeometry height="26" width="240" y="242" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_o2" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Alumno" vertex="1">
+          <mxGeometry height="26" width="240" y="268" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_o3" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ generarNroLegajo(): Integer" vertex="1">
+          <mxGeometry height="26" width="240" y="294" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_o4" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ actualizarEstado(estadoAlumno, estadoLegajo): void" vertex="1">
+          <mxGeometry height="26" width="240" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="162.0" width="240" x="550" y="-30" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_hdr" parent="clsUsuario" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Usuario&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="240" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_body" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="126.0" width="240" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a0" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- dniUsuario: Integer" vertex="1">
+          <mxGeometry height="22" width="240" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a1" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- correoUsuario: String" vertex="1">
+          <mxGeometry height="22" width="240" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_div" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="240" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_o0" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(dni): Usuario" vertex="1">
+          <mxGeometry height="26" width="240" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_o1" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Usuario" vertex="1">
+          <mxGeometry height="26" width="240" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_o2" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ vincular(): void" vertex="1">
+          <mxGeometry height="26" width="240" y="136" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDocumento" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="232.0" width="260" x="890" y="-63" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDocumento_hdr" parent="clsDocumento" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;DocumentoPresentado&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDocumento_body" parent="clsDocumento" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="196.0" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDocumento_a0" parent="clsDocumento" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idDocumentoPresentado: Integer" vertex="1">
+          <mxGeometry height="22" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDocumento_a1" parent="clsDocumento" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- nombreDocumento: String" vertex="1">
+          <mxGeometry height="22" width="260" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDocumento_a2" parent="clsDocumento" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- fechaPresentacion: Date" vertex="1">
+          <mxGeometry height="22" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDocumento_a3" parent="clsDocumento" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoDocumento: String" vertex="1">
+          <mxGeometry height="22" width="260" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDocumento_div" parent="clsDocumento" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="260" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDocumento_o0" parent="clsDocumento" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ crear(): DocumentoPresentado" vertex="1">
+          <mxGeometry height="26" width="260" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDocumento_o1" parent="clsDocumento" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): DocumentoPresentado" vertex="1">
+          <mxGeometry height="26" width="260" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDocumento_o2" parent="clsDocumento" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ cargar(d): void" vertex="1">
+          <mxGeometry height="26" width="260" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDocumento_o3" parent="clsDocumento" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ vincular(): void" vertex="1">
+          <mxGeometry height="26" width="260" y="206" as="geometry" />
+        </mxCell>
+        <mxCell id="clsTipoDoc" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="136.0" width="240" x="1240" y="-28" as="geometry" />
+        </mxCell>
+        <mxCell id="clsTipoDoc_hdr" parent="clsTipoDoc" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;TipoDocumento&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="240" as="geometry" />
+        </mxCell>
+        <mxCell id="clsTipoDoc_body" parent="clsTipoDoc" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="100.0" width="240" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsTipoDoc_a0" parent="clsTipoDoc" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idTipoDocumento: Integer" vertex="1">
+          <mxGeometry height="22" width="240" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsTipoDoc_a1" parent="clsTipoDoc" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- descripcion: String" vertex="1">
+          <mxGeometry height="22" width="240" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsTipoDoc_div" parent="clsTipoDoc" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="240" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsTipoDoc_o0" parent="clsTipoDoc" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idTipoDocumento): TipoDocumento" vertex="1">
+          <mxGeometry height="26" width="240" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="clsTipoDoc_o1" parent="clsTipoDoc" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): TipoDocumento" vertex="1">
+          <mxGeometry height="26" width="240" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="relAlumnoUsuario" edge="1" parent="1" source="clsUsuario" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;edgeStyle=orthogonalEdgeStyle;" target="clsAlumno" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="relAlumnoUsuariolbl1" connectable="0" parent="relAlumnoUsuario" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="-23" y="15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relAlumnoUsuariolbl2" connectable="0" parent="relAlumnoUsuario" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="26" y="19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relUsuarioDoc" edge="1" parent="1" source="clsUsuario" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;edgeStyle=orthogonalEdgeStyle;" target="clsDocumento" value="contiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="relUsuarioDoclbl1" connectable="0" parent="relUsuarioDoc" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relUsuarioDoclbl2" connectable="0" parent="relUsuarioDoc" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relDocTipoDoc" edge="1" parent="1" source="clsDocumento" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;edgeStyle=orthogonalEdgeStyle;" target="clsTipoDoc" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="relDocTipoDoclbl1" connectable="0" parent="relDocTipoDoc" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="-4" y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relDocTipoDoclbl2" connectable="0" parent="relDocTipoDoc" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="-2" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

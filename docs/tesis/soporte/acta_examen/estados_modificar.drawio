@@ -1,0 +1,77 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="de_mod_acta" name="Diagrama de Estados - Modificar datos de Actas de Examen">
+    <mxGraphModel dx="2741" dy="1497" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1250" pageHeight="430" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="inicio" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="26" width="26" x="58" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" parent="1" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8b2a30;strokeWidth=1.5;fontSize=13;fontColor=#2a2020;align=center;verticalAlign=middle;" value="&lt;b&gt;P1&lt;/b&gt;&lt;br&gt;Gestion de Actas Examen" vertex="1">
+          <mxGeometry height="48" width="280" x="148" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" parent="1" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8b2a30;strokeWidth=1.5;fontSize=13;fontColor=#2a2020;align=center;verticalAlign=middle;" value="&lt;b&gt;P2&lt;/b&gt;&lt;br&gt;Formulario Modificar Acta Examen" vertex="1">
+          <mxGeometry height="48" width="305" x="643" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8b2a30;strokeWidth=1.5;fontSize=13;fontColor=#2a2020;align=center;verticalAlign=middle;" value="&lt;b&gt;P3&lt;/b&gt;&lt;br&gt;Confirmacion" vertex="1">
+          <mxGeometry height="48" width="248" x="672" y="263" as="geometry" />
+        </mxCell>
+        <mxCell id="fin" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="781" y="375" as="geometry" />
+        </mxCell>
+        <mxCell id="t0" edge="1" parent="1" source="inicio" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=11;align=left;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="p1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" edge="1" parent="1" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=11;align=left;labelBackgroundColor=#ffffff;verticalAlign=top;entryX=0.175;entryY=0;entryDx=0;entryDy=0;" target="p1" value="C: seleccionar una Carrera&lt;br&gt;A: se actualiza el listado de actas">
+          <mxGeometry relative="1" x="-1" y="5" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="197" y="40" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2" edge="1" parent="1" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=11;align=left;labelBackgroundColor=#ffffff;verticalAlign=top;entryX=0.1;entryY=1;entryDx=0;entryDy=0;" target="p1" value="C: Buscar por numero de acta&lt;br&gt;A: se actualiza el listado de actas">
+          <mxGeometry relative="1" x="-1" y="5" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="175" y="240" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3" edge="1" parent="1" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=11;align=left;labelBackgroundColor=#ffffff;verticalAlign=top;entryX=0.83;entryY=1;entryDx=0;entryDy=0;" target="p1" value="C: seleccionar Asentada No&lt;br&gt;A: se actualiza el listado de actas">
+          <mxGeometry relative="1" x="-1" y="5" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="380.4" y="240" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m1" edge="1" parent="1" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=11;align=left;labelBackgroundColor=#ffffff;verticalAlign=top;entryX=0.47;entryY=0;entryDx=0;entryDy=0;" target="p2" value="C: completar Docente y Rol en el Tribunal, click &#39;+ Agregar&#39;&lt;br&gt;A: Actualiza listado de tribunal">
+          <mxGeometry relative="1" x="-1" y="5" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="785" y="40" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" edge="1" parent="1" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=11;align=left;labelBackgroundColor=#ffffff;verticalAlign=top;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="p2" value="C: click&amp;nbsp; &#39;Eliminar(🗑)&#39; en un Docente del Tribunal&lt;br&gt;A: quita al Docente del listado de tribunal">
+          <mxGeometry relative="1" x="0.9355" y="8" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="1010" y="132" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t1" edge="1" parent="1" source="p1" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=11;align=left;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="p2" value="C: click &#39;(Modificar Acta de Examen)✎&#39;">
+          <mxGeometry relative="1" x="-0.9814" y="-18" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b1" edge="1" parent="1" source="p2" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=11;align=left;labelBackgroundColor=#ffffff;align=center;dashed=1;strokeColor=#a5a5a5;fontColor=#a5a5a5;exitX=0.31;exitY=0;entryX=0.7;entryY=0;" target="p1" value="C: click &#39;Cancelar&#39;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="737" y="96" />
+              <mxPoint x="344" y="96" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t2" edge="1" parent="1" source="p2" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=11;align=left;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="p3" value="C: click &#39;Guardar Cambios&#39;&lt;br&gt;A: guarda los cambios.">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" edge="1" parent="1" source="p3" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=11;align=left;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="fin" value="C: click &#39;Aceptar&#39;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

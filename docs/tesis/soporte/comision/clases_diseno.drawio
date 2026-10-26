@@ -1,0 +1,203 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="clases_diseno" name="Diagrama de Clases de Diseño - Nueva Comisión">
+    <mxGraphModel dx="1519" dy="908" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="520" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="clsCarrera" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="126" width="220" x="40" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_hdr" parent="clsCarrera" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Carrera&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="220" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_body" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="80" width="220" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_a1" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idCarrera: Integer" vertex="1">
+          <mxGeometry height="22" width="220" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_div" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="220" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_o1" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idCarrera): Carrera" vertex="1">
+          <mxGeometry height="26" width="220" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_o2" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Carrera" vertex="1">
+          <mxGeometry height="26" width="220" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="370" width="290" x="360" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_hdr" parent="clsComision" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Comision&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="290" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_body" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="314" width="290" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a1" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idComision: Integer" vertex="1">
+          <mxGeometry height="22" width="290" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a2" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- codigoComision: String" vertex="1">
+          <mxGeometry height="22" width="290" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a3" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- capacidadComision: Integer" vertex="1">
+          <mxGeometry height="22" width="290" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a4" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- cargaHorariaComision: Integer" vertex="1">
+          <mxGeometry height="22" width="290" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a5" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- horarioComision: String" vertex="1">
+          <mxGeometry height="22" width="290" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a6" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- anioCurso: Integer" vertex="1">
+          <mxGeometry height="22" width="290" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a7" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- anioLectivo: Integer" vertex="1">
+          <mxGeometry height="22" width="290" y="168" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a8" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoComision: String" vertex="1">
+          <mxGeometry height="22" width="290" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_div" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="290" y="212" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_o0" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;" value="+ registrar_comision(dc): void" vertex="1">
+          <mxGeometry height="26" width="290" y="216" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_o1" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ crear(): Comision" vertex="1">
+          <mxGeometry height="24" width="290" y="242" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_o2" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Comision" vertex="1">
+          <mxGeometry height="24" width="290" y="266" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_o3" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ cargar(c): void" vertex="1">
+          <mxGeometry height="26" width="290" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="clsModalidad" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="137" width="220" x="770" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="clsModalidad_hdr" parent="clsModalidad" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Modalidad&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="220" as="geometry" />
+        </mxCell>
+        <mxCell id="clsModalidad_body" parent="clsModalidad" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="98" width="220" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsModalidad_a1" parent="clsModalidad" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idModalidad: Integer" vertex="1">
+          <mxGeometry height="22" width="220" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsModalidad_a2" parent="clsModalidad" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- modalidad: String" vertex="1">
+          <mxGeometry height="22" width="220" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsModalidad_div" parent="clsModalidad" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="220" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsModalidad_o1" parent="clsModalidad" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idModalidad): Modalidad" vertex="1">
+          <mxGeometry height="26" width="220" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="clsModalidad_o2" parent="clsModalidad" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Modalidad" vertex="1">
+          <mxGeometry height="26" width="220" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="118" width="260" x="360" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_hdr" parent="clsDetallePlan" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;DetallePlanEstudio&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_body" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="82" width="260" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_a1" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idDetPlanEstudio: Integer" vertex="1">
+          <mxGeometry height="22" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_div" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="260" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_o1" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idDetPlanEstudio):&#10;DetallePlanEstudio" vertex="1">
+          <mxGeometry height="30" width="260" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_o2" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): DetallePlanEstudio" vertex="1">
+          <mxGeometry height="26" width="260" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="186" width="220" x="740" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision_hdr" parent="clsDetComision" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;DetComision&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="220" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision_body" parent="clsDetComision" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="150" width="220" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision_a1" parent="clsDetComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idDetComision: Integer" vertex="1">
+          <mxGeometry height="22" width="220" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision_a2" parent="clsDetComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoDetComision: String" vertex="1">
+          <mxGeometry height="22" width="220" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision_div" parent="clsDetComision" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="220" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision_o1" parent="clsDetComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ crear(): DetComision" vertex="1">
+          <mxGeometry height="24" width="220" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision_o2" parent="clsDetComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): DetComision" vertex="1">
+          <mxGeometry height="24" width="220" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision_o3" parent="clsDetComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ cargar(ddc): void" vertex="1">
+          <mxGeometry height="26" width="220" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="clsCarrera" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsComision" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1lbl1" connectable="0" parent="rel1" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel1lbl2" connectable="0" parent="rel1" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="clsModalidad" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsComision" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2lbl1" connectable="0" parent="rel2" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="-24" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2lbl2" connectable="0" parent="rel2" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="23" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3" edge="1" parent="1" source="clsComision" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsDetComision" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3lbl1" connectable="0" parent="rel3" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3lbl2" connectable="0" parent="rel3" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="-1" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4" edge="1" parent="1" source="clsDetallePlan" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsDetComision" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel4lbl1" connectable="0" parent="rel4" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="-6" y="-14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4lbl2" connectable="0" parent="rel4" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      <mxCell id="clsComision_o4" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ calcularCargaHoraria(): void" vertex="1"><mxGeometry height="26" width="290" y="316" as="geometry" /></mxCell><mxCell id="clsComision_o5" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ vincular(): void" vertex="1"><mxGeometry height="26" width="290" y="342" as="geometry" /></mxCell><mxCell id="clsDetComision_o4" parent="clsDetComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ vincular(): void" vertex="1"><mxGeometry height="26" width="220" y="158" as="geometry" /></mxCell></root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

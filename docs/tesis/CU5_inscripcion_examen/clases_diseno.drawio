@@ -1,0 +1,135 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="clases_diseno" name="Diagrama de Clases de Diseno - Inscripcion de Alumnos en Examenes">
+    <mxGraphModel dx="1835" dy="1097" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1240" pageHeight="348" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="clsDetalleActa" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="266" width="260" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalleActa_hdr" parent="clsDetalleActa" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;DetalleActa&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalleActa_body" parent="clsDetalleActa" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="230" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalleActa_a0" parent="clsDetalleActa" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idDetActa: Integer" vertex="1">
+          <mxGeometry height="22" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalleActa_a1" parent="clsDetalleActa" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- notaActa: Decimal" vertex="1">
+          <mxGeometry height="22" width="260" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalleActa_a2" parent="clsDetalleActa" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- observacion: String" vertex="1">
+          <mxGeometry height="22" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalleActa_a3" parent="clsDetalleActa" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoDetalleActa: String" vertex="1">
+          <mxGeometry height="22" width="260" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalleActa_div" parent="clsDetalleActa" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="260" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalleActa_o0" parent="clsDetalleActa" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;" value="+ registrar_inscripcion_examen(die): void" vertex="1">
+          <mxGeometry height="34" width="260" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalleActa_o1" parent="clsDetalleActa" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ crear(): DetalleActa" vertex="1">
+          <mxGeometry height="26" width="260" y="162" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalleActa_o2" parent="clsDetalleActa" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): DetalleActa" vertex="1">
+          <mxGeometry height="26" width="260" y="188" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalleActa_o3" parent="clsDetalleActa" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ cargar(dda): void" vertex="1">
+          <mxGeometry height="26" width="260" y="214" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="158.0" width="220" x="500" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_body" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="122.0" width="220" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_a0" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- nroLegajo: Integer" vertex="1">
+          <mxGeometry height="22" width="220" y="58.0" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_a1" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoAlumno: String" vertex="1">
+          <mxGeometry height="22" width="220" y="80.0" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_div" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="220" y="102.0" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_o0" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idAlumno): Alumno" vertex="1">
+          <mxGeometry height="26" width="220" y="106.0" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_o1" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Alumno" vertex="1">
+          <mxGeometry height="26" width="220" y="132.0" as="geometry" />
+        </mxCell>
+        <mxCell id="clsActaExamen" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="202.0" width="240" x="500" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="clsActaExamen_hdr" parent="clsActaExamen" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;ActaExamen&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="240" as="geometry" />
+        </mxCell>
+        <mxCell id="clsActaExamen_body" parent="clsActaExamen" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="166.0" width="240" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsActaExamen_a0" parent="clsActaExamen" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idActa: Integer" vertex="1">
+          <mxGeometry height="22" width="240" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsActaExamen_a1" parent="clsActaExamen" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- nroActa: Integer" vertex="1">
+          <mxGeometry height="22" width="240" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsActaExamen_a2" parent="clsActaExamen" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- fechaActa: Date" vertex="1">
+          <mxGeometry height="22" width="240" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsActaExamen_a3" parent="clsActaExamen" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoActa: String" vertex="1">
+          <mxGeometry height="22" width="240" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsActaExamen_a4" parent="clsActaExamen" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- asentada: String" vertex="1">
+          <mxGeometry height="22" width="240" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsActaExamen_div" parent="clsActaExamen" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="240" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="clsActaExamen_o0" parent="clsActaExamen" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idActa): ActaExamen" vertex="1">
+          <mxGeometry height="26" width="240" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="clsActaExamen_o1" parent="clsActaExamen" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): ActaExamen" vertex="1">
+          <mxGeometry height="26" width="240" y="176" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="clsDetalleActa" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsAlumno" value="se inscribe">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1lbl1" connectable="0" parent="rel1" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel1lbl2" connectable="0" parent="rel1" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="clsActaExamen" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsDetalleActa" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2lbl1" connectable="0" parent="rel2" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="-22" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2lbl2" connectable="0" parent="rel2" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="11" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="clsAlumno_hdr" parent="clsAlumno" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Alumno&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="220" as="geometry" />
+        </mxCell>
+        <mxCell id="JyPjiDr3DcwtGZ5Basiz-2" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idAlumno: Integer" vertex="1">
+          <mxGeometry height="22" width="220" y="36" as="geometry" />
+        </mxCell>
+      <mxCell id="clsDetalleActa_new8" parent="clsDetalleActa" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ vincular(): void" vertex="1">
+          <mxGeometry height="26" width="260" y="240" as="geometry" />
+        </mxCell>
+        </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

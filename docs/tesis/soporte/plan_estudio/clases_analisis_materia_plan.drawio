@@ -1,0 +1,155 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="clases_analisis_cargar_materia" name="Diagrama de Clases de Análisis">
+    <mxGraphModel dx="1449" dy="777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="420" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="clsPlanEstudio" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="106" width="240" x="60" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPlanEstudio_hdr" parent="clsPlanEstudio" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;PlanEstudio&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="240" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPlanEstudio_body" parent="clsPlanEstudio" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="70" width="240" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPlanEstudio_a1" parent="clsPlanEstudio" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idPlanEstudio" vertex="1">
+          <mxGeometry height="22" width="240" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPlanEstudio_a2" parent="clsPlanEstudio" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoPlanEstudio" vertex="1">
+          <mxGeometry height="22" width="240" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPlanEstudio_a3" parent="clsPlanEstudio" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- anioPlanEstudio" vertex="1">
+          <mxGeometry height="22" width="240" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="146" width="265" x="420" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_hdr" parent="clsDetallePlan" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;DetallePlanEstudio&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="265" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_body" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="110" width="265" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_a1" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idDetPlanEstudio" vertex="1">
+          <mxGeometry height="22" width="265" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_a2" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- codigoDetPlanEstudio" vertex="1">
+          <mxGeometry height="22" width="265" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_a2b" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoDetPlanEstudio" vertex="1">
+          <mxGeometry height="22" width="265" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_a3" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- cargaHorariaDetPlanEstudio" vertex="1">
+          <mxGeometry height="22" width="265" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_a4" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- anioCursoDetPlanEstudio" vertex="1">
+          <mxGeometry height="22" width="265" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="88" width="220" x="800" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_hdr" parent="clsMateria" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Materia&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="220" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_body" parent="clsMateria" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="52" width="220" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_a1" parent="clsMateria" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idMateria" vertex="1">
+          <mxGeometry height="26" width="220" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_a2" parent="clsMateria" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- nombreMateria" vertex="1">
+          <mxGeometry height="26" width="220" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRegimen" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="88" width="220" x="420" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRegimen_hdr" parent="clsRegimen" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Regimen&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="220" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRegimen_body" parent="clsRegimen" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="52" width="220" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRegimen_a1" parent="clsRegimen" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idRegimen" vertex="1">
+          <mxGeometry height="26" width="220" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsRegimen_a2" parent="clsRegimen" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- regimen" vertex="1">
+          <mxGeometry height="26" width="220" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuatrimestre" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="88" width="220" x="690" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuatrimestre_hdr" parent="clsCuatrimestre" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Cuatrimestre&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="220" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuatrimestre_body" parent="clsCuatrimestre" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="52" width="220" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuatrimestre_a1" parent="clsCuatrimestre" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idCuatrimestre" vertex="1">
+          <mxGeometry height="26" width="220" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuatrimestre_a2" parent="clsCuatrimestre" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- cuatrimestre" vertex="1">
+          <mxGeometry height="26" width="220" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="clsPlanEstudio" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsDetallePlan" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1lbl1" connectable="0" parent="rel1" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="-5" y="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel1lbl2" connectable="0" parent="rel1" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="-2" y="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="clsDetallePlan" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsMateria" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2lbl1" connectable="0" parent="rel2" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2lbl2" connectable="0" parent="rel2" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3" edge="1" parent="1" source="clsDetallePlan_a4" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.415;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" target="clsRegimen_hdr" value="tiene">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="210" as="sourcePoint" />
+            <mxPoint x="520" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3lbl1" connectable="0" parent="rel3" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="-18" y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3lbl2" connectable="0" parent="rel3" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4" edge="1" parent="1" source="clsDetallePlan_a4" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.946;exitY=0.909;exitDx=0;exitDy=0;exitPerimeter=0;" target="clsCuatrimestre_hdr" value="tiene">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="220" as="sourcePoint" />
+            <mxPoint x="690" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4lbl1" connectable="0" parent="rel4" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="20" y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4lbl2" connectable="0" parent="rel4" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="10" y="-16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

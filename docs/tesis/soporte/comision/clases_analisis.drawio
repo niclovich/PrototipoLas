@@ -1,0 +1,239 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="clases_analisis" name="Diagrama de Clases de Análisis">
+    <mxGraphModel dx="3200" dy="1233" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="500" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="clsCarrera" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="124" width="240" x="-20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_hdr" parent="clsCarrera" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Carrera&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="240" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_body" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="88" width="240" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_a1" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idCarrera" vertex="1">
+          <mxGeometry height="22" width="240" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_a2" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- resolucionCarrera" vertex="1">
+          <mxGeometry height="22" width="240" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_a3" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- nombreCarrera" vertex="1">
+          <mxGeometry height="22" width="240" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_a4" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoCarrera" vertex="1">
+          <mxGeometry height="22" width="240" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="212" width="270" x="360" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_hdr" parent="clsComision" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Comision&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="270" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_body" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="176" width="270" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a1" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idComision" vertex="1">
+          <mxGeometry height="22" width="270" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a2" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- codigoComision" vertex="1">
+          <mxGeometry height="22" width="270" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a3" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- capacidadComision" vertex="1">
+          <mxGeometry height="22" width="270" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a4" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- cargaHorariaComision" vertex="1">
+          <mxGeometry height="22" width="270" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a5" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- horarioComision" vertex="1">
+          <mxGeometry height="22" width="270" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a6" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoComision" vertex="1">
+          <mxGeometry height="22" width="270" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a7" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- anioCurso" vertex="1">
+          <mxGeometry height="22" width="270" y="168" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a8" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- anioLectivo" vertex="1">
+          <mxGeometry height="22" width="270" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="clsModalidad" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="88" width="220" x="760" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="clsModalidad_hdr" parent="clsModalidad" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Modalidad&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="220" as="geometry" />
+        </mxCell>
+        <mxCell id="clsModalidad_body" parent="clsModalidad" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="52" width="220" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsModalidad_a1" parent="clsModalidad" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idModalidad" vertex="1">
+          <mxGeometry height="26" width="220" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsModalidad_a2" parent="clsModalidad" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- modalidad" vertex="1">
+          <mxGeometry height="26" width="220" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="88" width="240" x="375" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision_hdr" parent="clsDetComision" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;DetComision&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="240" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision_body" parent="clsDetComision" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="52" width="240" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision_a1" parent="clsDetComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idDetComision" vertex="1">
+          <mxGeometry height="26" width="240" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision_a2" parent="clsDetComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoDetComision" vertex="1">
+          <mxGeometry height="26" width="240" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="140" width="260" x="360" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_hdr" parent="clsDetallePlan" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;DetallePlanEstudio&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_body" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="88" width="260" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_a1" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idDetPlanEstudio" vertex="1">
+          <mxGeometry height="22" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_a2" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- codigoDetPlanEstudio" vertex="1">
+          <mxGeometry height="22" width="260" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_a3" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- cargaHorariaDetPlanEstudio" vertex="1">
+          <mxGeometry height="22" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_a4" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- anioCursoDetPlanEstudio" vertex="1">
+          <mxGeometry height="22" width="260" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="clsComision" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsCarrera" value="pertenece a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1lbl1" connectable="0" parent="rel1" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="-23" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel1lbl2" connectable="0" parent="rel1" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="23" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="clsComision" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsModalidad" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2lbl1" connectable="0" parent="rel2" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2lbl2" connectable="0" parent="rel2" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3" edge="1" parent="1" source="clsComision" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsDetComision" value="contiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3lbl1" connectable="0" parent="rel3" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="-25" y="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3lbl2" connectable="0" parent="rel3" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="-5" y="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4" edge="1" parent="1" source="clsDetComision" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsDetallePlan" value="imparte">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel4lbl1" connectable="0" parent="rel4" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="-24" y="19" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4lbl2" connectable="0" parent="rel4" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="clsPlanEstudio" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="106" width="240" x="40" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPlanEstudio_hdr" parent="clsPlanEstudio" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;PlanEstudio&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="240" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPlanEstudio_body" parent="clsPlanEstudio" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="70" width="240" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPlanEstudio_a1" parent="clsPlanEstudio" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idPlanEstudio" vertex="1">
+          <mxGeometry height="22" width="240" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPlanEstudio_a2" parent="clsPlanEstudio" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoPlanEstudio" vertex="1">
+          <mxGeometry height="22" width="240" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPlanEstudio_a3" parent="clsPlanEstudio" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- anioPlanEstudio" vertex="1">
+          <mxGeometry height="22" width="240" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="88" width="220" x="770" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_hdr" parent="clsMateria" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Materia&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="220" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_body" parent="clsMateria" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="52" width="220" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_a1" parent="clsMateria" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idMateria" vertex="1">
+          <mxGeometry height="26" width="220" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_a2" parent="clsMateria" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- nombreMateria" vertex="1">
+          <mxGeometry height="26" width="220" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="rel5" edge="1" parent="1" source="clsPlanEstudio" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsCarrera" value="pertenece a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel5lbl1" connectable="0" parent="rel5" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel5lbl2" connectable="0" parent="rel5" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="33" y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel6" edge="1" parent="1" source="clsPlanEstudio" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsDetallePlan" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel6lbl1" connectable="0" parent="rel6" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="-5" y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel6lbl2" connectable="0" parent="rel6" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel7" edge="1" parent="1" source="clsDetallePlan" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsMateria" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel7lbl1" connectable="0" parent="rel7" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel7lbl2" connectable="0" parent="rel7" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

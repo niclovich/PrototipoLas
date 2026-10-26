@@ -1,0 +1,229 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="colaboracion_clasica" name="Colaboración Clásica - Nueva Comisión">
+    <mxGraphModel dx="3637" dy="1108" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="actor" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=#000000;fontSize=11;" value="Coordinador de Carrera" vertex="1">
+          <mxGeometry height="70" width="36" x="34" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-2" edge="1" parent="1" source="clsComision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="139.66666666666674" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="clsComision" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;" value="Comision" vertex="1">
+          <mxGeometry height="60" width="190" x="260" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;" value="Carrera" vertex="1">
+          <mxGeometry height="60" width="190" x="-10" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="clsModalidad" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;" value="Modalidad" vertex="1">
+          <mxGeometry height="60" width="190" x="750" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;" value="DetallePlanEstudio" vertex="1">
+          <mxGeometry height="60" width="220" x="890" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;" value="DetComision" vertex="1">
+          <mxGeometry height="60" width="190" x="460" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="instComision" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;fontStyle=4;" value="COM : Comision" vertex="1">
+          <mxGeometry height="60" width="190" x="260" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="instCarrera" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;fontStyle=4;" value="CAR : Carrera" vertex="1">
+          <mxGeometry height="60" width="190" x="-10" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="instModalidad" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;fontStyle=4;" value="M : Modalidad" vertex="1">
+          <mxGeometry height="60" width="190" x="750" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="instDetallePlan" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;fontStyle=4;" value="DPE : DetallePlanEstudio" vertex="1">
+          <mxGeometry height="60" width="220" x="890" y="694" as="geometry" />
+        </mxCell>
+        <mxCell id="instDetComision" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;fontStyle=4;" value="DC : DetComision" vertex="1">
+          <mxGeometry height="60" width="190" x="420" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="eActor" edge="1" parent="1" source="actor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=11;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=#ffffff;" target="clsComision" value="registrar_comision(dc)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="clsComision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;exitX=0.3;exitY=1;entryX=0.3;entryY=0;fontSize=10;align=left;labelBackgroundColor=#ffffff;" target="instComision" value="2: ubicar()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="clsComision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=0.3;exitY=1;entryX=0.5;entryY=0;labelBackgroundColor=#ffffff;entryDx=0;entryDy=0;" target="clsCarrera" value="4: CAR=buscar(idCarrera)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;labelBackgroundColor=#ffffff;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" value="5: ubicar()">
+          <mxGeometry relative="1" y="26" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="84" y="360" as="sourcePoint" />
+            <mxPoint x="84" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="instCarrera" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=1;exitY=0.5;entryX=0;entryY=0.3;labelBackgroundColor=#ffffff;" target="instComision" value="6: vincular()">
+          <mxGeometry relative="1" x="-0.0351" y="30" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="clsComision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=1;exitY=0.5;labelBackgroundColor=#ffffff;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="clsModalidad" value="7: M=buscar(idModalidad)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="240" />
+              <mxPoint x="797.5" y="240" />
+            </Array>
+            <mxPoint x="950" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="clsModalidad" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=0.3;exitY=1;entryX=0.3;entryY=0;labelBackgroundColor=#ffffff;align=left;" target="instModalidad" value="8: ubicar()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=0;exitY=0.5;entryX=1;entryY=0.5;labelBackgroundColor=#ffffff;" value="9: vincular()">
+          <mxGeometry relative="1" x="0.0625" y="20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="750" y="609" />
+              <mxPoint x="450" y="609" />
+            </Array>
+            <mxPoint x="750" y="618.9999999999998" as="sourcePoint" />
+            <mxPoint x="450" y="618.9999999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="clsComision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=#ffffff;" target="clsDetallePlan" value="10*[por cada materia del año de curso]:&lt;br&gt;DPE=buscar(idDetPlanEstudio)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="clsDetallePlan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=0.3;exitY=1;entryX=0.3;entryY=0;labelBackgroundColor=#ffffff;align=left;" target="instDetallePlan" value="10.1: ubicar()">
+          <mxGeometry relative="1" x="0.1336" y="4" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" edge="1" parent="1" source="clsComision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=0.3;exitY=1;entryX=0.3;entryY=0;labelBackgroundColor=#ffffff;align=left;" target="clsDetComision" value="&amp;lt;&amp;lt;Create&amp;gt;&amp;gt;&lt;br&gt;10.2: DC=crear()">
+          <mxGeometry relative="1" x="0.7073" y="3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" edge="1" parent="1" source="clsDetComision" style="rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=0.308;exitY=0.992;labelBackgroundColor=#ffffff;align=left;exitDx=0;exitDy=0;exitPerimeter=0;" target="instDetComision" value="10.3: ubicar()">
+          <mxGeometry relative="1" x="-0.3333" y="6" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="584" y="480" as="sourcePoint" />
+            <mxPoint x="584" y="720.0000000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" edge="1" parent="1" source="instDetComision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=0;exitY=0.3;labelBackgroundColor=#ffffff;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="instComision" value="10.5: vincular()">
+          <mxGeometry relative="1" x="0.0521" y="-27" as="geometry">
+            <mxPoint x="1" as="offset" />
+            <mxPoint x="355" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" edge="1" parent="1" source="instDetComision" style="rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=1;exitY=0.3;entryX=0;entryY=0.5;labelBackgroundColor=#ffffff;" target="instDetallePlan" value="10.6: vincular()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ddBox" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=middle;spacingLeft=14;fontSize=12;fontStyle=1;" value="DD's:&lt;br&gt;dc = idCarrera + idModalidad + codigoComision + capacidadComision + horarioComision + anioCurso + anioLectivo + estadoComision=&quot;Activa&quot; + {idDetPlanEstudio}&lt;br&gt;c = codigoComision + capacidadComision + horarioComision + anioCurso + anioLectivo + estadoComision=&quot;Activa&quot;&lt;br&gt;ddc = estadoDetComision=&quot;Activo&quot;" vertex="1">
+          <mxGeometry height="70" width="1280" x="40" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-size: 10px; text-align: left; white-space: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;&amp;lt;&amp;lt;Create&amp;gt;&amp;gt;&lt;/span&gt;&lt;br style=&quot;font-size: 10px; text-align: left; white-space: nowrap;&quot;&gt;&lt;span style=&quot;font-size: 10px; text-align: left; white-space: nowrap; background-color: rgb(255, 255, 255);&quot;&gt;1: COM=crear()&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="310" y="77" as="geometry" />
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-8" edge="1" parent="1" source="instComision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;innerLoopWaypoints=1;exitX=0;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;" target="instComision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="3: cargar(c)&lt;br&gt;11: calcularCargaHoraria()" vertex="1">
+          <mxGeometry height="40" width="150" x="200" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-11" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="150" y="158" as="sourcePoint" />
+            <mxPoint x="180" y="158" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-12" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="330" y="113" as="sourcePoint" />
+            <mxPoint x="360" y="113" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-13" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="300" y="380" as="sourcePoint" />
+            <mxPoint x="300" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-14" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="70" y="380" as="sourcePoint" />
+            <mxPoint x="70" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-15" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="500" y="340" as="sourcePoint" />
+            <mxPoint x="500" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-16" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="500" y="540" as="sourcePoint" />
+            <mxPoint x="500" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-17" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="790" y="500" as="sourcePoint" />
+            <mxPoint x="790" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-18" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="940" y="470" as="sourcePoint" />
+            <mxPoint x="940" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-19" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="203" y="508" as="sourcePoint" />
+            <mxPoint x="203" y="538" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-20" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="220" y="229" as="sourcePoint" />
+            <mxPoint x="190" y="229" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-22" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="609" y="591" as="sourcePoint" />
+            <mxPoint x="579" y="591" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-23" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="660" y="220" as="sourcePoint" />
+            <mxPoint x="690" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-24" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="640" y="150" as="sourcePoint" />
+            <mxPoint x="670" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-26" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="290" y="670" as="sourcePoint" />
+            <mxPoint x="320" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-27" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="750" y="740" as="sourcePoint" />
+            <mxPoint x="720" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="RH8SjDkAuuEKHAq4BVE2-28" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="390" y="681" as="sourcePoint" />
+            <mxPoint x="390" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      <mxCell id="loopDC" edge="1" parent="1" source="instDetComision" target="instDetComision" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;exitX=0.6;exitY=1;exitDx=0;exitDy=0;entryX=0.9;entryY=1;entryDx=0;entryDy=0;"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="534" y="795" /><mxPoint x="591" y="795" /></Array></mxGeometry></mxCell><mxCell id="lblDC" parent="1" vertex="1" value="10.4: cargar(ddc)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=10;"><mxGeometry x="505" y="815" width="110" height="20" as="geometry" /></mxCell><mxCell id="arrDC" edge="1" parent="1" value="" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;"><mxGeometry relative="1" width="50" height="50" as="geometry"><mxPoint x="548" y="808" as="sourcePoint" /><mxPoint x="578" y="808" as="targetPoint" /></mxGeometry></mxCell></root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

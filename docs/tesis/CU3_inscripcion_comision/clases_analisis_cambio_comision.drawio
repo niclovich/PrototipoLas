@@ -1,0 +1,604 @@
+<mxfile host="app.diagrams.net" pages="4">
+  <diagram id="clases_analisis_cambio_comision" name="Diagrama de Clases de Analisis - Registrar datos de Cambio de Comision">
+    <mxGraphModel dx="1941" dy="1047" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="clsUsuario" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="126" width="260" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_hdr" parent="clsUsuario" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Usuario&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_body" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="90" width="260" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a1" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idUsuario" vertex="1">
+          <mxGeometry height="22" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a2" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- dniUsuario" vertex="1">
+          <mxGeometry height="22" width="260" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a3" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- apellidoUsuario" vertex="1">
+          <mxGeometry height="22" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsUsuario_a4" parent="clsUsuario" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- nombreUsuario" vertex="1">
+          <mxGeometry height="22" width="260" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="126" width="260" x="420" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_hdr" parent="clsAlumno" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Alumno&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_body" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="90" width="260" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_a1" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idAlumno" vertex="1">
+          <mxGeometry height="22" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_a2" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- nroLegajo" vertex="1">
+          <mxGeometry height="22" width="260" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_a3" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoAlumno" vertex="1">
+          <mxGeometry height="22" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_a4" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoLegajo" vertex="1">
+          <mxGeometry height="22" width="260" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="126" width="260" x="800" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_hdr" parent="clsCarrera" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Carrera&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_body" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="90" width="260" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_a1" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idCarrera" vertex="1">
+          <mxGeometry height="22" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_a2" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- resolucionCarrera" vertex="1">
+          <mxGeometry height="22" width="260" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_a3" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- nombreCarrera" vertex="1">
+          <mxGeometry height="22" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_a4" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoCarrera" vertex="1">
+          <mxGeometry height="22" width="260" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumnoComision" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="258" width="260" x="420" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumnoComision_hdr" parent="clsAlumnoComision" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;AlumnoComision&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumnoComision_body" parent="clsAlumnoComision" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="222" width="260" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumnoComision_a1" parent="clsAlumnoComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idAlumnoComision" vertex="1">
+          <mxGeometry height="22" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumnoComision_a2" parent="clsAlumnoComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- fechaInscripcion" vertex="1">
+          <mxGeometry height="22" width="260" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumnoComision_a3" parent="clsAlumnoComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoAlumnoComision" vertex="1">
+          <mxGeometry height="22" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumnoComision_a4" parent="clsAlumnoComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- tipoInscripcion" vertex="1">
+          <mxGeometry height="22" width="260" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumnoComision_a5" parent="clsAlumnoComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- condicionFinal" vertex="1">
+          <mxGeometry height="22" width="260" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumnoComision_a6" parent="clsAlumnoComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- notaP1" vertex="1">
+          <mxGeometry height="22" width="260" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumnoComision_a7" parent="clsAlumnoComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- notaP2" vertex="1">
+          <mxGeometry height="22" width="260" y="168" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumnoComision_a8" parent="clsAlumnoComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- notaR1" vertex="1">
+          <mxGeometry height="22" width="260" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumnoComision_a9" parent="clsAlumnoComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- notaR2" vertex="1">
+          <mxGeometry height="22" width="260" y="212" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumnoComision_a10" parent="clsAlumnoComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- faltasAlumno" vertex="1">
+          <mxGeometry height="22" width="260" y="234" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="192" width="260" x="800" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_hdr" parent="clsComision" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Comision&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_body" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="156" width="260" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a1" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idComision" vertex="1">
+          <mxGeometry height="22" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a2" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- codigoComision" vertex="1">
+          <mxGeometry height="22" width="260" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a3" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- capacidadComision" vertex="1">
+          <mxGeometry height="22" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a4" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- horarioComision" vertex="1">
+          <mxGeometry height="22" width="260" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a5" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- anioCurso" vertex="1">
+          <mxGeometry height="22" width="260" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a6" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- anioLectivo" vertex="1">
+          <mxGeometry height="22" width="260" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision_a7" parent="clsComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoComision" vertex="1">
+          <mxGeometry height="22" width="260" y="168" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="104" width="260" x="1180" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_hdr" parent="clsMateria" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Materia&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_body" parent="clsMateria" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="68" width="260" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_a1" parent="clsMateria" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idMateria" vertex="1">
+          <mxGeometry height="22" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_a2" parent="clsMateria" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- nombreMateria" vertex="1">
+          <mxGeometry height="22" width="260" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMateria_a3" parent="clsMateria" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoMateria" vertex="1">
+          <mxGeometry height="22" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="82" width="260" x="800" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision_hdr" parent="clsDetComision" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;DetComision&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision_body" parent="clsDetComision" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="46" width="260" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision_a1" parent="clsDetComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idDetComision" vertex="1">
+          <mxGeometry height="22" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision_a2" parent="clsDetComision" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoDetComision" vertex="1">
+          <mxGeometry height="22" width="260" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="104" width="260" x="1180" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_hdr" parent="clsDetallePlan" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;DetallePlanEstudio&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_body" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="68" width="260" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_a1" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idDetPlanEstudio" vertex="1">
+          <mxGeometry height="22" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_a2" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- codigoDetPlanEstudio" vertex="1">
+          <mxGeometry height="22" width="260" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePlan_a3" parent="clsDetallePlan" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- anioCursoDetPlanEstudio" vertex="1">
+          <mxGeometry height="22" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="clsUsuario" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsAlumno" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1lbl1" connectable="0" parent="rel1" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel1lbl2" connectable="0" parent="rel1" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="clsAlumno" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsCarrera" value="pertenece a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2lbl1" connectable="0" parent="rel2" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel2lbl2" connectable="0" parent="rel2" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3" edge="1" parent="1" source="clsAlumno" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsAlumnoComision" value="pertenece">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3lbl1" connectable="0" parent="rel3" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="-20" y="16" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel3lbl2" connectable="0" parent="rel3" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relCA" edge="1" parent="1" source="clsAlumno" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.85;exitDx=0;exitDy=0;entryX=0.2;entryY=0;entryDx=0;entryDy=0;" target="clsComision" value="cursa actualmente en">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="147" />
+              <mxPoint x="720" y="230" />
+              <mxPoint x="852" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relCAl1" connectable="0" parent="relCA" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relCAl2" connectable="0" parent="relCA" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="0..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4" edge="1" parent="1" source="clsComision" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsCarrera" value="pertenece a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel4lbl1" connectable="0" parent="rel4" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel4lbl2" connectable="0" parent="rel4" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="20" y="28" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel5" edge="1" parent="1" source="clsComision" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsDetComision" value="contiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel5lbl1" connectable="0" parent="rel5" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="-20" y="13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel5lbl2" connectable="0" parent="rel5" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="-2" y="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel6" edge="1" parent="1" source="clsDetComision" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsAlumnoComision" value="corresponde a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel6lbl1" connectable="0" parent="rel6" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel6lbl2" connectable="0" parent="rel6" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="22" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel7" edge="1" parent="1" source="clsDetComision" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsDetallePlan" value="imparte">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel7lbl1" connectable="0" parent="rel7" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel7lbl2" connectable="0" parent="rel7" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel8" edge="1" parent="1" source="clsDetallePlan" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsMateria" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel8lbl1" connectable="0" parent="rel8" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel8lbl2" connectable="0" parent="rel8" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="20" y="23" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="P1 - Gestion de Actas Examen" id="ooDQhos7x_Tp5mqVXesT">
+    <mxGraphModel dx="1941" dy="1047" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="438" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8b2a30;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="90" width="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="titulo_modulo" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=none;align=left;verticalAlign=middle;spacingLeft=16;fontSize=13;fontStyle=1;fontColor=#2a2020;" value="GESTION DE ACTAS EXAMEN" vertex="1">
+          <mxGeometry height="40" width="650" x="30" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="sel_carrera_lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#6b5f5f;" value="Seleccionar Carrera" vertex="1">
+          <mxGeometry height="16" width="360" x="390" y="116" as="geometry" />
+        </mxCell>
+        <mxCell id="sel_carrera" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8b2a30;strokeWidth=1.5;align=left;verticalAlign=middle;spacingLeft=14;fontSize=11;fontColor=#2a2020;" value="Licenciatura en Analisis de Sistemas   ▼" vertex="1">
+          <mxGeometry height="36" width="360" x="280" y="131" as="geometry" />
+        </mxCell>
+        <mxCell id="thead1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8b2a30;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="30" width="940" x="30" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="th_nroActa" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8.5;fontStyle=1;fontColor=#ffffff;" value="Nro Acta" vertex="1">
+          <mxGeometry height="30" width="76" x="30" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="th_materia" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8.5;fontStyle=1;fontColor=#ffffff;" value="Materia" vertex="1">
+          <mxGeometry height="30" width="220" x="106" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="th_modalidad" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8.5;fontStyle=1;fontColor=#ffffff;" value="Modalidad" vertex="1">
+          <mxGeometry height="30" width="110" x="326" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="th_llamado" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8.5;fontStyle=1;fontColor=#ffffff;" value="Llamado" vertex="1">
+          <mxGeometry height="30" width="100" x="436" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="th_tipoActa" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8.5;fontStyle=1;fontColor=#ffffff;" value="Tipo Acta" vertex="1">
+          <mxGeometry height="30" width="110" x="536" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="th_fecha" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8.5;fontStyle=1;fontColor=#ffffff;" value="Fecha" vertex="1">
+          <mxGeometry height="30" width="90" x="646" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="th_asentada" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8.5;fontStyle=1;fontColor=#ffffff;" value="Asentada" vertex="1">
+          <mxGeometry height="30" width="70" x="736" y="238" as="geometry" />
+        </mxCell>
+        <mxCell id="th_accion" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8.5;fontStyle=1;fontColor=#ffffff;" value="Accion" vertex="1">
+          <mxGeometry height="30" width="80" x="880" y="237" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e6d9da;strokeWidth=0.5;" value="" vertex="1">
+          <mxGeometry height="34" width="940" x="30" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_0_nroActa" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="0142" vertex="1">
+          <mxGeometry height="34" width="76" x="30" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_0_materia" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="Analisis Matematico I" vertex="1">
+          <mxGeometry height="34" width="220" x="106" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_0_modalidad" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="Presencial" vertex="1">
+          <mxGeometry height="34" width="110" x="326" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_0_llamado" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="&amp;nbsp;2° Llamado" vertex="1">
+          <mxGeometry height="34" width="100" x="436" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_0_tipoActa" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="Regular" vertex="1">
+          <mxGeometry height="34" width="110" x="536" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_0_fecha" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="05/11/2026" vertex="1">
+          <mxGeometry height="34" width="90" x="646" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_0_asentada" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="No" vertex="1">
+          <mxGeometry height="34" width="70" x="736" y="268" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_0_ver" parent="1" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;fillColor=#8b2a30;strokeColor=none;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;" value="👁" vertex="1">
+          <mxGeometry height="30" width="30" x="886" y="269" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_0_del" parent="1" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;fillColor=#8b2a30;strokeColor=none;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;" value="🗑" vertex="1">
+          <mxGeometry height="30" width="30" x="924" y="269" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#faf7f7;strokeColor=#e6d9da;strokeWidth=0.5;" value="" vertex="1">
+          <mxGeometry height="34" width="940" x="30" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_1_nroActa" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="0141" vertex="1">
+          <mxGeometry height="34" width="76" x="30" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_1_materia" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="Base de Datos I" vertex="1">
+          <mxGeometry height="34" width="220" x="106" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_1_modalidad" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="Presencial" vertex="1">
+          <mxGeometry height="34" width="110" x="326" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_1_llamado" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="1° Llamado" vertex="1">
+          <mxGeometry height="34" width="100" x="437" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_1_tipoActa" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="Libre" vertex="1">
+          <mxGeometry height="34" width="110" x="536" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_1_fecha" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="12/10/2026" vertex="1">
+          <mxGeometry height="34" width="90" x="646" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_1_asentada" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="Si" vertex="1">
+          <mxGeometry height="34" width="70" x="736" y="302" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_1_ver" parent="1" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;fillColor=#8b2a30;strokeColor=none;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;" value="👁" vertex="1">
+          <mxGeometry height="30" width="30" x="886" y="303" as="geometry" />
+        </mxCell>
+        <mxCell id="row1_1_del" parent="1" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;fillColor=#8b2a30;strokeColor=none;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;" value="🗑" vertex="1">
+          <mxGeometry height="30" width="30" x="924" y="303" as="geometry" />
+        </mxCell>
+        <mxCell id="btn_registrar1" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#8b2a30;strokeColor=none;fontColor=#ffffff;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;" value="Registrar Acta" vertex="1">
+          <mxGeometry height="38" width="160" x="810" y="192" as="geometry" />
+        </mxCell>
+        <mxCell id="IfOJyySopKHLv1iw3P2E-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#8b2a30;fontStyle=1;" value="Filtrar" vertex="1">
+          <mxGeometry height="16" width="200" x="30" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="IfOJyySopKHLv1iw3P2E-2" parent="1" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e6d9da;align=left;verticalAlign=middle;spacingLeft=14;fontSize=11;fontColor=#2a2020;" value="Buscar.." vertex="1">
+          <mxGeometry height="32" width="280" x="30" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="IfOJyySopKHLv1iw3P2E-4" parent="1" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e6d9da;align=left;verticalAlign=middle;spacingLeft=14;fontSize=11;fontColor=#2a2020;" value="No/Si▼" vertex="1">
+          <mxGeometry height="32" width="100" x="326" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="IfOJyySopKHLv1iw3P2E-5" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#8b2a30;fontStyle=1;" value="Asentada" vertex="1">
+          <mxGeometry height="16" width="200" x="326" y="182" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="P2 - Formulario Registrar Acta Examen" id="ZnP2s6XILJKyId8QUqzv">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1000" pageHeight="690" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8b2a30;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="90" width="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="titulo_modulo" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=none;align=left;verticalAlign=middle;spacingLeft=16;fontSize=13;fontStyle=1;fontColor=#2a2020;" value="GESTION DE ACTAS EXAMEN" vertex="1">
+          <mxGeometry height="40" width="650" x="30" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="c_datos" parent="1" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e6d9da;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="180" width="940" x="30" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="c_datos_tit" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#8b2a30;spacingLeft=4;" value="Datos del Acta" vertex="1">
+          <mxGeometry height="20" width="908" x="46" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_carrera2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#6b5f5f;" value="Carrera" vertex="1">
+          <mxGeometry height="16" width="300" x="56" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="in_carrera2" parent="1" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;fillColor=#f5f0f0;strokeColor=#e6d9da;align=left;verticalAlign=middle;spacingLeft=14;fontSize=11;fontColor=#2a2020;" value="Licenciatura en Analisis de Sistemas" vertex="1">
+          <mxGeometry height="34" width="300" x="56" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_materia2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#6b5f5f;" value="Materia" vertex="1">
+          <mxGeometry height="16" width="300" x="386" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="sel_materia2" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e6d9da;align=left;verticalAlign=middle;spacingLeft=14;fontSize=11;fontColor=#2a2020;" value="Analisis Matematico I   ▼" vertex="1">
+          <mxGeometry height="34" width="300" x="386" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_fecha2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#6b5f5f;" value="Fecha de Examen" vertex="1">
+          <mxGeometry height="16" width="220" x="716" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="in_fecha2" parent="1" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e6d9da;align=left;verticalAlign=middle;spacingLeft=14;fontSize=11;fontColor=#2a2020;" value="05/11/2026" vertex="1">
+          <mxGeometry height="34" width="220" x="716" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_modalidad2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#6b5f5f;" value="Modalidad" vertex="1">
+          <mxGeometry height="16" width="220" x="56" y="216" as="geometry" />
+        </mxCell>
+        <mxCell id="sel_modalidad2" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e6d9da;align=left;verticalAlign=middle;spacingLeft=14;fontSize=11;fontColor=#2a2020;" value="Regular   ▼" vertex="1">
+          <mxGeometry height="34" width="220" x="56" y="234" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_llamado2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#6b5f5f;" value="Llamado" vertex="1">
+          <mxGeometry height="16" width="220" x="306" y="216" as="geometry" />
+        </mxCell>
+        <mxCell id="sel_llamado2" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e6d9da;align=left;verticalAlign=middle;spacingLeft=14;fontSize=11;fontColor=#2a2020;" value="S · 2° Llamado   ▼" vertex="1">
+          <mxGeometry height="34" width="220" x="306" y="234" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_tipoActa2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#6b5f5f;" value="Tipo de Acta" vertex="1">
+          <mxGeometry height="16" width="220" x="556" y="216" as="geometry" />
+        </mxCell>
+        <mxCell id="sel_tipoActa2" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e6d9da;align=left;verticalAlign=middle;spacingLeft=14;fontSize=11;fontColor=#2a2020;" value="Final   ▼" vertex="1">
+          <mxGeometry height="34" width="220" x="556" y="234" as="geometry" />
+        </mxCell>
+        <mxCell id="c_tribunal" parent="1" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e6d9da;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="260" width="940" x="30" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="c_tribunal_tit" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#8b2a30;spacingLeft=4;" value="Tribunal Examinador" vertex="1">
+          <mxGeometry height="20" width="908" x="46" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_docente2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#6b5f5f;" value="Docente" vertex="1">
+          <mxGeometry height="16" width="380" x="56" y="352" as="geometry" />
+        </mxCell>
+        <mxCell id="in_docente2" parent="1" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e6d9da;align=left;verticalAlign=middle;spacingLeft=14;fontSize=11;fontColor=#2a2020;" value="Buscar docente por apellido..." vertex="1">
+          <mxGeometry height="34" width="380" x="56" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_rol2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#6b5f5f;" value="Rol en el Tribunal" vertex="1">
+          <mxGeometry height="16" width="260" x="456" y="352" as="geometry" />
+        </mxCell>
+        <mxCell id="sel_rol2" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e6d9da;align=left;verticalAlign=middle;spacingLeft=14;fontSize=11;fontColor=#2a2020;" value="Presidente   ▼" vertex="1">
+          <mxGeometry height="34" width="260" x="456" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="btn_agregar_doc" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8b2a30;strokeWidth=1.5;fontColor=#8b2a30;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;" value="+  Agregar" vertex="1">
+          <mxGeometry height="34" width="160" x="736" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="thead_trib" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8b2a30;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="28" width="860" x="56" y="422" as="geometry" />
+        </mxCell>
+        <mxCell id="th_docente" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8.5;fontStyle=1;fontColor=#ffffff;" value="Docente" vertex="1">
+          <mxGeometry height="28" width="460" x="56" y="422" as="geometry" />
+        </mxCell>
+        <mxCell id="th_rol" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8.5;fontStyle=1;fontColor=#ffffff;" value="Rol" vertex="1">
+          <mxGeometry height="28" width="220" x="516" y="422" as="geometry" />
+        </mxCell>
+        <mxCell id="th_accion" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=8.5;fontStyle=1;fontColor=#ffffff;" value="Accion" vertex="1">
+          <mxGeometry height="28" width="74" x="736" y="422" as="geometry" />
+        </mxCell>
+        <mxCell id="rowt_0" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e6d9da;strokeWidth=0.5;" value="" vertex="1">
+          <mxGeometry height="30" width="860" x="56" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="rowt_0_docente" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="Gutierrez, Marcelo" vertex="1">
+          <mxGeometry height="30" width="460" x="56" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="rowt_0_rol" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="Presidente" vertex="1">
+          <mxGeometry height="30" width="220" x="516" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="rowt_0_del" parent="1" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;fillColor=#8b2a30;strokeColor=none;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;" value="🗑" vertex="1">
+          <mxGeometry height="28" width="28" x="736" y="451" as="geometry" />
+        </mxCell>
+        <mxCell id="rowt_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#faf7f7;strokeColor=#e6d9da;strokeWidth=0.5;" value="" vertex="1">
+          <mxGeometry height="30" width="860" x="56" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="rowt_1_docente" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="Romero, Paula" vertex="1">
+          <mxGeometry height="30" width="460" x="56" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="rowt_1_rol" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="Vocal 1" vertex="1">
+          <mxGeometry height="30" width="220" x="516" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="rowt_1_del" parent="1" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;fillColor=#8b2a30;strokeColor=none;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;" value="🗑" vertex="1">
+          <mxGeometry height="28" width="28" x="736" y="481" as="geometry" />
+        </mxCell>
+        <mxCell id="rowt_2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e6d9da;strokeWidth=0.5;" value="" vertex="1">
+          <mxGeometry height="30" width="860" x="56" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="rowt_2_docente" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="Sosa, Diego" vertex="1">
+          <mxGeometry height="30" width="460" x="56" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="rowt_2_rol" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;fontColor=#2a2020;" value="Vocal 2" vertex="1">
+          <mxGeometry height="30" width="220" x="516" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="rowt_2_del" parent="1" style="rounded=1;arcSize=25;whiteSpace=wrap;html=1;fillColor=#8b2a30;strokeColor=none;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;" value="🗑" vertex="1">
+          <mxGeometry height="28" width="28" x="736" y="511" as="geometry" />
+        </mxCell>
+        <mxCell id="btn_cancelar2" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8b2a30;strokeWidth=1.5;fontColor=#8b2a30;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;" value="Cancelar" vertex="1">
+          <mxGeometry height="38" width="160" x="630" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="btn_registrar2" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#8b2a30;strokeColor=none;fontColor=#ffffff;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;" value="Registrar Acta" vertex="1">
+          <mxGeometry height="38" width="160" x="810" y="620" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="P3 - Confirmacion" id="SZkVz5CNdfxTM1-HZacH">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1000" pageHeight="550" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#8b2a30;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="90" width="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="titulo_modulo" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=none;align=left;verticalAlign=middle;spacingLeft=16;fontSize=13;fontStyle=1;fontColor=#2a2020;" value="GESTION DE ACTAS EXAMEN" vertex="1">
+          <mxGeometry height="40" width="650" x="30" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="icon_ok" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#eef7ef;strokeColor=#3f9142;strokeWidth=2;fontColor=#3f9142;fontSize=28;fontStyle=1;" value="✓" vertex="1">
+          <mxGeometry height="80" width="80" x="460" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_ok" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#2a2020;" value="Acta de Examen registrada exitosamente" vertex="1">
+          <mxGeometry height="20" width="540" x="230" y="214" as="geometry" />
+        </mxCell>
+        <mxCell id="msg_sub" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10.5;fontColor=#6b5f5f;" value="Se genero el numero de acta y quedo disponible para el asentamiento de las notas." vertex="1">
+          <mxGeometry height="16" width="600" x="200" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="c_resumen" parent="1" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e6d9da;strokeWidth=1.5;" value="" vertex="1">
+          <mxGeometry height="170" width="520" x="240" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="c_resumen_tit" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#8b2a30;spacingLeft=4;" value="Detalle del Registro" vertex="1">
+          <mxGeometry height="20" width="488" x="256" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="res_txt" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=10.5;fontColor=#2a2020;" value="Nro Acta: 0143    ·    Materia: Analisis Matematico I&#xa;Modalidad: Regular    ·    Llamado: S · 2° Llamado    ·    Tipo: Final&#xa;Fecha: 05/11/2026    ·    Estado: Pendiente    ·    Asentada: No&#xa;Tribunal: Gutierrez (Presidente), Romero (Vocal 1), Sosa (Vocal 2)" vertex="1">
+          <mxGeometry height="110" width="460" x="270" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="btn_aceptar" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#8b2a30;strokeColor=none;fontColor=#ffffff;fontStyle=1;fontSize=11;align=center;verticalAlign=middle;" value="Aceptar" vertex="1">
+          <mxGeometry height="38" width="160" x="420" y="480" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

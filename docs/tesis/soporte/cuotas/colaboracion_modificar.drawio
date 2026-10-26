@@ -1,0 +1,80 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="colaboracion_modificar_cuota" name="Colaboracion Clasica - Modificar datos de Cuotas por Carrera">
+    <mxGraphModel dx="1903" dy="1040" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="760" pageHeight="620" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="actor" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=#000000;fontSize=12;" value="Director General" vertex="1">
+          <mxGeometry height="70" width="36" x="40" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCU" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;" value="Cuota" vertex="1">
+          <mxGeometry height="40" width="240" x="240" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="instCU" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;fontStyle=4;" value="CU : Cuota" vertex="1">
+          <mxGeometry height="40" width="240" x="240" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="eActor" edge="1" parent="1" source="actor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;align=center;verticalAlign=middle;" target="clsCU" value="modificar_cuota(dmc)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr1" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="170" as="sourcePoint" />
+            <mxPoint x="160" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="clsCU" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;labelBackgroundColor=#ffffff;exitX=0.15;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;align=center;verticalAlign=middle;" target="clsCU" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="276" y="100" />
+              <mxPoint x="360" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="txt2" parent="1" style="text;whiteSpace=wrap;html=1;fontSize=10;align=center;verticalAlign=top;" value="1: CU=buscar(idCuota)" vertex="1">
+          <mxGeometry height="20" width="160" x="250" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="arr3" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="94" as="sourcePoint" />
+            <mxPoint x="330" y="94" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="clsCU" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;labelBackgroundColor=#ffffff;exitX=0.3;exitY=1;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;align=left;verticalAlign=middle;" target="instCU" value="2: ubicar()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr4" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="220" as="sourcePoint" />
+            <mxPoint x="290" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="instCU" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;labelBackgroundColor=#ffffff;exitX=0.2;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;align=center;verticalAlign=middle;" target="instCU" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="288" y="350" />
+              <mxPoint x="360" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="txt5" parent="1" style="text;whiteSpace=wrap;html=1;fontSize=10;align=center;verticalAlign=top;" value="&amp;lt;&amp;lt;Update&amp;gt;&amp;gt;&lt;br&gt;3: actualizar(monto)" vertex="1">
+          <mxGeometry height="34" width="160" x="250" y="353" as="geometry" />
+        </mxCell>
+        <mxCell id="arr6" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="305" y="342" as="sourcePoint" />
+            <mxPoint x="335" y="342" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ddBox" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=middle;spacingLeft=14;fontSize=12;fontStyle=1;" value="DD&#39;s:&lt;br&gt;dmc = idCuota + monto" vertex="1">
+          <mxGeometry height="50" width="700" x="20" y="387" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

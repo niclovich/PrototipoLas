@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="de_asentamiento_acta" name="Diagrama de Estados - Registrar Datos de Asentamiento de Acta">
+    <mxGraphModel dx="1305" dy="1193" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1050" pageHeight="480" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="inicio" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="20" width="20" x="30" y="67" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" parent="1" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8b2a30;strokeWidth=1.5;fontSize=11;fontColor=#2a2020;align=center;verticalAlign=middle;" value="&lt;b&gt;P1&lt;/b&gt;&#xa;Gestion de Actas Examen" vertex="1">
+          <mxGeometry height="37" width="210" x="110" y="58.5" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" parent="1" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8b2a30;strokeWidth=1.5;fontSize=11;fontColor=#2a2020;align=center;verticalAlign=middle;" value="&lt;b&gt;P2&lt;/b&gt;&#xa;Alumnos Inscriptos al Acta" vertex="1">
+          <mxGeometry height="45" width="220" x="525" y="54.5" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8b2a30;strokeWidth=1.5;fontSize=11;fontColor=#2a2020;align=center;verticalAlign=middle;" value="&lt;b&gt;P3&lt;/b&gt;&#xa;Formulario Registrar Nota del Alumno" vertex="1">
+          <mxGeometry height="45" width="230" x="520" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8b2a30;strokeWidth=1.5;fontSize=11;fontColor=#2a2020;align=center;verticalAlign=middle;" value="&lt;b&gt;P4&lt;/b&gt;&#xa;Confirmacion" vertex="1">
+          <mxGeometry height="30" width="170" x="273" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="fin" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="24" width="24" x="346" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="t0" edge="1" parent="1" source="inicio" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=#ffffff;align=left;" target="p1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l0" edge="1" parent="1" style="rounded=0;html=1;endArrow=block;endFill=1;entryX=0.465;entryY=0.072;fontSize=9;align=left;verticalAlign=top;labelBackgroundColor=#ffffff;entryDx=0;entryDy=0;entryPerimeter=0;" target="p1" value="C: seleccionar una Carrera&amp;nbsp;&lt;div&gt;A: se actualiza el listado con las actas de esa carrera&lt;/div&gt;">
+          <mxGeometry relative="1" x="-0.673" y="2" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="210" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fBusq-1" edge="1" parent="1" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;align=left;verticalAlign=top;labelBackgroundColor=#ffffff;entryX=0.133;entryY=0.999;entryDx=0;entryDy=0;entryPerimeter=0;" target="p1" value="C: Buscar por numero de Acta,Asentado&amp;nbsp;&lt;div&gt;&amp;nbsp;A: se actualiza la listado de actas&lt;/div&gt;">
+          <mxGeometry relative="1" x="0.4669" y="-12" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="137.93" y="150" as="sourcePoint" />
+            <mxPoint x="260" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t1" edge="1" parent="1" source="p1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=#ffffff;align=left;" target="p2" value="C: click en el icono ‘Ver’ de la fila del acta&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;">
+          <mxGeometry relative="1" x="-0.8016" y="-13" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t2" edge="1" parent="1" source="p2" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;entryX=1.004;entryY=0.595;labelBackgroundColor=#ffffff;align=left;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;entryPerimeter=0;" target="p3" value="C: click en el icono de lapiz de la fila del alumno&amp;nbsp;&lt;div&gt;&amp;nbsp;A: muestra el formulario para registrar la nota del alumno&lt;/div&gt;">
+          <mxGeometry relative="1" x="0.2184" y="3" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="810" y="81" />
+              <mxPoint x="810" y="256.81" />
+            </Array>
+            <mxPoint x="759.9999999999997" y="80.00000000000001" as="sourcePoint" />
+            <mxPoint x="766.1" y="257.26" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b0" edge="1" parent="1" source="p3" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;entryX=0.25;entryY=1;labelBackgroundColor=#ffffff;align=left;dashed=1;strokeColor=#a5a5a5;fontColor=#a5a5a5;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" target="p2" value="C: click ‘Cancelar’">
+          <mxGeometry relative="1" x="-0.0171" y="-15" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="585.09" y="230" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t3" edge="1" parent="1" source="p3" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;entryX=0.735;entryY=0.993;labelBackgroundColor=#ffffff;align=left;exitX=0.735;exitY=0.053;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" target="p2" value="C: click ‘Guardar’&amp;nbsp;&lt;div&gt;A. Guarda los cambios&lt;/div&gt;">
+          <mxGeometry relative="1" x="-0.0349" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t4" edge="1" parent="1" source="p2" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;entryX=0.5;entryY=0;labelBackgroundColor=#ffffff;align=left;exitX=0.15;exitY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="p4" value="C: click ‘Asentar Acta’&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;">
+          <mxGeometry relative="1" x="0.7544" y="-92" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t5" edge="1" parent="1" source="p4" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;exitX=0.5;exitY=1;labelBackgroundColor=#ffffff;align=left;exitDx=0;exitDy=0;" target="fin" value="C: click ‘Aceptar’">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,186 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="colaboracion_cierre_caja" name="Colaboracion Clasica - Registrar Cierre de Caja">
+    <mxGraphModel dx="1903" dy="1040" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1460" pageHeight="700" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="actor" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=#000000;fontSize=12;" value="Cajero" vertex="1">
+          <mxGeometry height="70" width="36" x="40" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCA" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;" value="Caja" vertex="1">
+          <mxGeometry height="40" width="240" x="240" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="instCA" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;fontStyle=4;" value="CA : Caja" vertex="1">
+          <mxGeometry height="40" width="240" x="240" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDCC" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;" value="DetalleCierreCaja" vertex="1">
+          <mxGeometry height="40" width="240" x="700" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="instDCC" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;fontStyle=4;" value="DCC : DetalleCierreCaja" vertex="1">
+          <mxGeometry height="40" width="240" x="700" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMP" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;" value="MedioPago" vertex="1">
+          <mxGeometry height="40" width="240" x="1160" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="instMP" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;fontStyle=4;" value="MP : MedioPago" vertex="1">
+          <mxGeometry height="40" width="240" x="1160" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="eActor" edge="1" parent="1" source="actor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;align=center;verticalAlign=middle;" target="clsCA" value="registrar_cierre_caja(dcc)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr1" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="177" as="sourcePoint" />
+            <mxPoint x="160" y="177" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="clsCA" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;labelBackgroundColor=#ffffff;exitX=0.15;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;align=center;verticalAlign=middle;" target="clsCA" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="276" y="100" />
+              <mxPoint x="360" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="txt2" parent="1" style="text;whiteSpace=wrap;html=1;fontSize=10;align=center;verticalAlign=top;" value="1: CA=buscar(idCaja)" vertex="1">
+          <mxGeometry height="20" width="160" x="240" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="arr3" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="94" as="sourcePoint" />
+            <mxPoint x="330" y="94" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="clsCA" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;labelBackgroundColor=#ffffff;exitX=0.3;exitY=1;exitDx=0;exitDy=0;entryX=0.3;entryY=0;entryDx=0;entryDy=0;align=left;verticalAlign=middle;" target="instCA" value="2: ubicar()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr4" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="275" as="sourcePoint" />
+            <mxPoint x="300" y="305" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="instCA" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;labelBackgroundColor=#ffffff;exitX=0.2;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;align=center;verticalAlign=middle;" target="instCA" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="288" y="480" />
+              <mxPoint x="360" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="txt5" parent="1" style="text;whiteSpace=wrap;html=1;fontSize=10;align=center;verticalAlign=top;" value="&amp;lt;&amp;lt;Update&amp;gt;&amp;gt;&lt;br&gt;3: actualizar(dca)" vertex="1">
+          <mxGeometry height="34" width="150" x="250" y="483" as="geometry" />
+        </mxCell>
+        <mxCell id="arr6" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="305" y="472" as="sourcePoint" />
+            <mxPoint x="335" y="472" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="clsCA" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;labelBackgroundColor=#ffffff;exitX=0.8;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;align=center;verticalAlign=middle;" target="clsMP" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="432" y="90" />
+              <mxPoint x="1280" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="txt7" parent="1" style="text;whiteSpace=wrap;html=1;fontSize=10;align=left;verticalAlign=top;" value="4*[por cada medio de pago]: MP=buscar(idMedioPago)" vertex="1">
+          <mxGeometry height="20" width="340" x="660" y="64" as="geometry" />
+        </mxCell>
+        <mxCell id="arr8" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="100" as="sourcePoint" />
+            <mxPoint x="790" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e41" edge="1" parent="1" source="clsMP" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;align=left;verticalAlign=middle;" target="instMP" value="4.1: ubicar()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr9" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1265" y="275" as="sourcePoint" />
+            <mxPoint x="1265" y="305" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e42" edge="1" parent="1" source="clsCA" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;align=center;verticalAlign=middle;" target="clsDCC" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="txt10" parent="1" style="text;whiteSpace=wrap;html=1;fontSize=10;align=center;verticalAlign=top;" value="&amp;lt;&amp;lt;Create&amp;gt;&amp;gt;&lt;br&gt;4.2: DCC=crear()" vertex="1">
+          <mxGeometry height="34" width="150" x="500" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="arr11" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="152" as="sourcePoint" />
+            <mxPoint x="590" y="152" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e43" edge="1" parent="1" source="clsDCC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;align=left;verticalAlign=middle;" target="instDCC" value="4.3: ubicar()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr12" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="805" y="275" as="sourcePoint" />
+            <mxPoint x="805" y="305" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e44" edge="1" parent="1" source="instDCC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;labelBackgroundColor=#ffffff;exitX=0.2;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;align=center;verticalAlign=middle;" target="instDCC" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="748" y="480" />
+              <mxPoint x="820" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="txt13" parent="1" style="text;whiteSpace=wrap;html=1;fontSize=10;align=center;verticalAlign=top;" value="4.4: cargar(ddc)" vertex="1">
+          <mxGeometry height="20" width="140" x="720" y="483" as="geometry" />
+        </mxCell>
+        <mxCell id="arr14" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="765" y="472" as="sourcePoint" />
+            <mxPoint x="795" y="472" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e45" edge="1" parent="1" source="instCA" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;align=center;verticalAlign=middle;" target="instDCC" value="4.5: vincular()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr15" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="564" y="431" as="sourcePoint" />
+            <mxPoint x="594" y="431" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e46" edge="1" parent="1" source="instMP" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;align=center;verticalAlign=middle;" target="instDCC" value="4.6: vincular()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr16" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1067" y="426" as="sourcePoint" />
+            <mxPoint x="1037" y="426" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ddBox" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=middle;spacingLeft=14;fontSize=12;fontStyle=1;" value="DD&#39;s:&lt;br&gt;dcc = idCaja + dca + {idMedioPago + ddc}&lt;br&gt;dca = fechaCierre + diferenciaTotal + [observacionCierre] + estadoCaja=&quot;Cerrada&quot;&lt;br&gt;ddc = montoEsperado + montoContado + diferencia" vertex="1">
+          <mxGeometry height="76" width="1420" x="20" y="560" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

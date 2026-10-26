@@ -1,0 +1,205 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="colaboracion_clasica" name="Colaboracion Clasica - Inscripcion a Comision">
+    <mxGraphModel dx="1618" dy="873" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="actor" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=#000000;fontSize=12;" value="Preceptor" vertex="1">
+          <mxGeometry height="70" width="36" x="40" y="135" as="geometry" />
+        </mxCell>
+        <mxCell id="ML1T3_R9vX5LCMJg9lXE-13" edge="1" parent="1" source="clsAlumno" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="139.66666666666674" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="clsAlumno" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;" value="Alumno" vertex="1">
+          <mxGeometry height="42" width="190" x="260" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="clsComision" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;" value="Comision" vertex="1">
+          <mxGeometry height="40" width="190" x="700" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetComision" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;" value="DetComision" vertex="1">
+          <mxGeometry height="40" width="200" x="930" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumnoComision" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;" value="AlumnoComision" vertex="1">
+          <mxGeometry height="40" width="190" x="560" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="ML1T3_R9vX5LCMJg9lXE-3" edge="1" parent="1" source="instAlumno" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" target="instAlumnoComision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ML1T3_R9vX5LCMJg9lXE-4" connectable="0" parent="ML1T3_R9vX5LCMJg9lXE-3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="5.5: vincular()" vertex="1">
+          <mxGeometry relative="1" x="-0.2083" y="1" as="geometry">
+            <mxPoint x="9" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="instAlumno" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;fontStyle=4;" value="AL : Alumno" vertex="1">
+          <mxGeometry height="39" width="190" x="298" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="instComision" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;fontStyle=4;" value="COM : Comision" vertex="1">
+          <mxGeometry height="40" width="190" x="700" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="instDetComision" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;fontStyle=4;" value="DC : DetComision" vertex="1">
+          <mxGeometry height="39" width="200" x="938" y="527" as="geometry" />
+        </mxCell>
+        <mxCell id="instAlumnoComision" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;fontStyle=4;" value="AC : AlumnoComision" vertex="1">
+          <mxGeometry height="39" width="200" x="568" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="eActor" edge="1" parent="1" source="actor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=11;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=#ffffff;" target="clsAlumno" value="registrar_inscripcion_comision(di)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="clsAlumno" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;entryX=0.3;entryY=0;fontSize=10;align=left;labelBackgroundColor=#ffffff;" target="instAlumno" value="2: ubicar()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="327" y="190" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="clsAlumno" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=#ffffff;" target="clsComision" value="3: COM=buscar(idComision)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="clsComision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=0.3;exitY=1;entryX=0.3;entryY=0;labelBackgroundColor=#ffffff;align=left;" target="instComision" value="4: ubicar()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" style="rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=1;exitY=0.5;labelBackgroundColor=#ffffff;align=left;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" value="5*[por cada materia habilitada]:&lt;br&gt;DC=buscar(idDetComision)">
+          <mxGeometry relative="1" x="-0.8" y="20" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="889" y="320" as="sourcePoint" />
+            <mxPoint x="1029" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="clsDetComision" style="rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=0.5;exitY=1;entryX=0.46;entryY=0.043;labelBackgroundColor=#ffffff;align=left;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;" target="instDetComision" value="5.1: ubicar()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="1030" y="430" as="sourcePoint" />
+            <mxPoint x="1030" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="clsAlumno" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;entryX=0.3;entryY=0;labelBackgroundColor=#ffffff;align=left;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" target="clsAlumnoComision" value="&amp;lt;&amp;lt;Create&amp;gt;&amp;gt;&lt;br&gt;5.2: AC=crear()">
+          <mxGeometry relative="1" x="0.313" y="1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="650" y="171.49" />
+              <mxPoint x="650" y="410" />
+            </Array>
+            <mxPoint x="330" y="190" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="clsAlumnoComision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=0.5;exitY=1;entryX=0.437;entryY=0.059;labelBackgroundColor=#ffffff;align=left;exitDx=0;exitDy=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="instAlumnoComision" value="5.3: ubicar()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ddBox" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=middle;spacingLeft=14;fontSize=12;fontStyle=1;" value="DD&#39;s:&lt;br&gt;di = idAlumno + idComision + {idDetComision}&lt;br&gt;dac = fechaInscripcion + estadoAlumnoComision=&quot;Activo&quot; + tipoInscripcion=&quot;Por Comisión&quot;" vertex="1">
+          <mxGeometry height="56" width="1048" x="90" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="ML1T3_R9vX5LCMJg9lXE-1" edge="1" parent="1" source="instDetComision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.984;entryY=0.408;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" target="instAlumnoComision">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ML1T3_R9vX5LCMJg9lXE-2" connectable="0" parent="ML1T3_R9vX5LCMJg9lXE-1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="5.6: vincular()" vertex="1">
+          <mxGeometry relative="1" x="-0.1233" y="-4" as="geometry">
+            <mxPoint y="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ML1T3_R9vX5LCMJg9lXE-7" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="340" y="340" as="sourcePoint" />
+            <mxPoint x="340" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ML1T3_R9vX5LCMJg9lXE-8" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1010" y="470" as="sourcePoint" />
+            <mxPoint x="1010" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ML1T3_R9vX5LCMJg9lXE-9" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="640" y="479" as="sourcePoint" />
+            <mxPoint x="640" y="509" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ML1T3_R9vX5LCMJg9lXE-10" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="744" y="250" as="sourcePoint" />
+            <mxPoint x="744" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ML1T3_R9vX5LCMJg9lXE-14" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 10px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: nowrap; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;&quot;&gt;1: AL=buscar(idAlumno)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="140" x="290" y="81" as="geometry" />
+        </mxCell>
+        <mxCell id="ML1T3_R9vX5LCMJg9lXE-22" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="630" y="270" as="sourcePoint" />
+            <mxPoint x="630" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ML1T3_R9vX5LCMJg9lXE-25" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="520" y="557" as="sourcePoint" />
+            <mxPoint x="550" y="557" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ML1T3_R9vX5LCMJg9lXE-26" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="888" y="560" as="sourcePoint" />
+            <mxPoint x="858" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ML1T3_R9vX5LCMJg9lXE-29" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="131" y="144" as="sourcePoint" />
+            <mxPoint x="161" y="144" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ML1T3_R9vX5LCMJg9lXE-30" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="549" y="140" as="sourcePoint" />
+            <mxPoint x="579" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ML1T3_R9vX5LCMJg9lXE-31" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="338" y="111" as="sourcePoint" />
+            <mxPoint x="368" y="111" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ML1T3_R9vX5LCMJg9lXE-32" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="960" y="332" as="sourcePoint" />
+            <mxPoint x="990" y="332" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eCargarAC" edge="1" parent="1" source="instAlumnoComision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;exitX=0.2;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="instAlumnoComision" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="608" y="598" />
+              <mxPoint x="668" y="598" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="txtCargarAC" parent="1" style="text;whiteSpace=wrap;html=1;fontSize=10;align=left;verticalAlign=top;" value="5.4: cargar(dac)" vertex="1">
+          <mxGeometry height="20" width="110" x="678" y="586" as="geometry" />
+        </mxCell>
+        <mxCell id="arrCargarAC" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="608" as="sourcePoint" />
+            <mxPoint x="650" y="608" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eVincCom" edge="1" parent="1" source="instAlumno" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;exitX=0.9;exitY=0;exitDx=0;exitDy=0;entryX=0.526;entryY=1;entryDx=0;entryDy=0;" target="instComision" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="469" y="465" />
+              <mxPoint x="800" y="465" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eVincCom_txt" parent="1" style="text;whiteSpace=wrap;html=1;fontSize=10;align=left;verticalAlign=top;" value="6: vincular()" vertex="1">
+          <mxGeometry height="20" width="90" x="808" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="eVincCom_arr" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="790" y="400" as="sourcePoint" />
+            <mxPoint x="790" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

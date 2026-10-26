@@ -1,0 +1,325 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="clases_diseno" name="Diagrama de Clases de Diseno - Registrar Pago de Cuotas">
+    <mxGraphModel dx="2284" dy="1248" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2390" pageHeight="1590" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="clsPago" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="258.0" width="220" x="960" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_hdr" parent="clsPago" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Pago&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="220" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_body" parent="clsPago" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="222.0" width="220" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_a0" parent="clsPago" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idPago: Integer" vertex="1">
+          <mxGeometry height="22" width="220" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_a1" parent="clsPago" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- fechaPago: Date" vertex="1">
+          <mxGeometry height="22" width="220" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_a2" parent="clsPago" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- montoTotal: Decimal" vertex="1">
+          <mxGeometry height="22" width="220" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_a3" parent="clsPago" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoPago: String" vertex="1">
+          <mxGeometry height="22" width="220" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_div" parent="clsPago" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="220" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_o0" parent="clsPago" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;" value="&lt;i&gt;+ registrar_pago(dpc): void&lt;/i&gt;" vertex="1">
+          <mxGeometry height="26" width="220" y="128" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_o1" parent="clsPago" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ crear(): Pago" vertex="1">
+          <mxGeometry height="26" width="220" y="154" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_o2" parent="clsPago" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Pago" vertex="1">
+          <mxGeometry height="26" width="220" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_o3" parent="clsPago" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ cargar(dp): void" vertex="1">
+          <mxGeometry height="26" width="220" y="206" as="geometry" />
+        </mxCell>
+        <mxCell id="clsPago_o4" parent="clsPago" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ vincular(): void" vertex="1">
+          <mxGeometry height="26" width="220" y="232" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="136.0" width="200" x="660" y="552" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_hdr" parent="clsAlumno" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Alumno&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_body" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="100.0" width="200" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_a0" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idAlumno: Integer" vertex="1">
+          <mxGeometry height="22" width="200" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_div" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="200" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_o0" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idAlumno): Alumno" vertex="1">
+          <mxGeometry height="26" width="200" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_o1" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Alumno" vertex="1">
+          <mxGeometry height="26" width="200" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="clsAlumno_a1" parent="clsAlumno" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- nroLegajo: Integer" vertex="1">
+          <mxGeometry height="22" width="200" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="114.0" width="200" x="740" y="980" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_hdr" parent="clsCaja" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Caja&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_body" parent="clsCaja" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="78.0" width="200" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_a0" parent="clsCaja" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idCaja: Integer" vertex="1">
+          <mxGeometry height="22" width="200" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_div" parent="clsCaja" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="200" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_o0" parent="clsCaja" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idCaja): Caja" vertex="1">
+          <mxGeometry height="26" width="200" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCaja_o1" parent="clsCaja" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Caja" vertex="1">
+          <mxGeometry height="26" width="200" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMedioPago" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="136.0" width="220" x="1340" y="748" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMedioPago_hdr" parent="clsMedioPago" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;MedioPago&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="220" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMedioPago_body" parent="clsMedioPago" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="100.0" width="220" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMedioPago_a0" parent="clsMedioPago" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idMedioPago: Integer" vertex="1">
+          <mxGeometry height="22" width="220" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMedioPago_a1" parent="clsMedioPago" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- medioPago: String" vertex="1">
+          <mxGeometry height="22" width="220" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMedioPago_div" parent="clsMedioPago" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="220" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMedioPago_o0" parent="clsMedioPago" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idMedioPago): MedioPago" vertex="1">
+          <mxGeometry height="26" width="220" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="clsMedioPago_o1" parent="clsMedioPago" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): MedioPago" vertex="1">
+          <mxGeometry height="26" width="220" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="114.0" width="200" x="1610" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota_hdr" parent="clsCuota" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Cuota&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota_body" parent="clsCuota" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="78.0" width="200" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota_a0" parent="clsCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idCuota: Integer" vertex="1">
+          <mxGeometry height="22" width="200" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota_div" parent="clsCuota" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="200" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota_o0" parent="clsCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idCuota): Cuota" vertex="1">
+          <mxGeometry height="26" width="200" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota_o1" parent="clsCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Cuota" vertex="1">
+          <mxGeometry height="26" width="200" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePagoCuota" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="210.0" width="260" x="1240" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePagoCuota_hdr" parent="clsDetallePagoCuota" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;DetallePagoCuota&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePagoCuota_body" parent="clsDetallePagoCuota" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="174.0" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePagoCuota_a0" parent="clsDetallePagoCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idDetallePagoCuota: Integer" vertex="1">
+          <mxGeometry height="22" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePagoCuota_a1" parent="clsDetallePagoCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- montoAplicado: Decimal" vertex="1">
+          <mxGeometry height="22" width="260" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePagoCuota_div" parent="clsDetallePagoCuota" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="260" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePagoCuota_o0" parent="clsDetallePagoCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ crear(): DetallePagoCuota" vertex="1">
+          <mxGeometry height="26" width="260" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePagoCuota_o1" parent="clsDetallePagoCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): DetallePagoCuota" vertex="1">
+          <mxGeometry height="26" width="260" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePagoCuota_o2" parent="clsDetallePagoCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ cargar(ddp): void" vertex="1">
+          <mxGeometry height="26" width="260" y="158" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePagoCuota_a2" parent="clsDetallePagoCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- montoBonificado: Decimal" vertex="1">
+          <mxGeometry height="22" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetallePagoCuota_o3" parent="clsDetallePagoCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ vincular(): void" vertex="1">
+          <mxGeometry height="26" width="260" y="184" as="geometry" />
+        </mxCell>
+        <mxCell id="clsFacturaComprobante" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="210.0" width="260" x="1310" y="980" as="geometry" />
+        </mxCell>
+        <mxCell id="clsFacturaComprobante_hdr" parent="clsFacturaComprobante" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;FacturaComprobante&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="260" as="geometry" />
+        </mxCell>
+        <mxCell id="clsFacturaComprobante_body" parent="clsFacturaComprobante" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="174.0" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsFacturaComprobante_a0" parent="clsFacturaComprobante" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idFactura: Integer" vertex="1">
+          <mxGeometry height="22" width="260" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsFacturaComprobante_a1" parent="clsFacturaComprobante" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- numeroComprobante: Integer" vertex="1">
+          <mxGeometry height="22" width="260" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsFacturaComprobante_a2" parent="clsFacturaComprobante" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoFactura: String" vertex="1">
+          <mxGeometry height="22" width="260" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsFacturaComprobante_div" parent="clsFacturaComprobante" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="260" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsFacturaComprobante_o0" parent="clsFacturaComprobante" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ crear(): FacturaComprobante" vertex="1">
+          <mxGeometry height="26" width="260" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="clsFacturaComprobante_o1" parent="clsFacturaComprobante" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): FacturaComprobante" vertex="1">
+          <mxGeometry height="26" width="260" y="159" as="geometry" />
+        </mxCell>
+        <mxCell id="clsFacturaComprobante_o2" parent="clsFacturaComprobante" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- generarNumeroComprobante(): void" vertex="1">
+          <mxGeometry height="26" width="260" y="184" as="geometry" />
+        </mxCell>
+        <mxCell id="Yc1WSvQpAEwg0PVwos02-11" parent="clsFacturaComprobante" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ cargar(dfc): void" vertex="1">
+          <mxGeometry height="26" width="260" y="133" as="geometry" />
+        </mxCell>
+        <mxCell id="relAL" edge="1" parent="1" source="clsAlumno" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsPago" value="realiza">
+          <mxGeometry relative="1" x="0.0052" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relALlbl1" connectable="0" parent="relAL" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="7" y="21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relALlbl2" connectable="0" parent="relAL" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="-5" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relCAJ" edge="1" parent="1" source="clsCaja" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsPago" value="registra">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="relCAJlbl1" connectable="0" parent="relCAJ" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="-18" y="-6" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relCAJlbl2" connectable="0" parent="relCAJ" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="-7" y="8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relMP" edge="1" parent="1" source="clsMedioPago" style="html=1;fontSize=10;fontColor=#333333;endArrow=none;startArrow=classic;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=0;startFill=1;" target="clsPago" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="relMPlbl1" connectable="0" parent="relMP" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="-19" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relMPlbl2" connectable="0" parent="relMP" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relPago_DPC" edge="1" parent="1" source="clsPago" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsDetallePagoCuota" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="relPago_DPClbl1" connectable="0" parent="relPago_DPC" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relPago_DPClbl2" connectable="0" parent="relPago_DPC" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="-10" y="13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relCuota_DPC" edge="1" parent="1" source="clsCuota" style="html=1;fontSize=10;fontColor=#333333;endArrow=none;startArrow=block;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=0;startFill=1;" target="clsDetallePagoCuota" value="cancela">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="relCuota_DPClbl1" connectable="0" parent="relCuota_DPC" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="-23" y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relCuota_DPClbl2" connectable="0" parent="relCuota_DPC" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="8" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relFC" edge="1" parent="1" source="clsPago" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsFacturaComprobante" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="relFClbl1" connectable="0" parent="relFC" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint x="3" y="9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relFClbl2" connectable="0" parent="relFC" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint x="7" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="clsBeca" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="158.0" width="230" x="920" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="clsBeca_hdr" parent="clsBeca" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Beca&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="230" as="geometry" />
+        </mxCell>
+        <mxCell id="clsBeca_body" parent="clsBeca" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="122.0" width="230" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsBeca_a0" parent="clsBeca" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idBeca: Integer" vertex="1">
+          <mxGeometry height="22" width="230" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsBeca_a1" parent="clsBeca" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- valorBeca: Decimal" vertex="1">
+          <mxGeometry height="22" width="230" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsBeca_a2" parent="clsBeca" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoBeca: String" vertex="1">
+          <mxGeometry height="22" width="230" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsBeca_div" parent="clsBeca" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="230" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsBeca_o0" parent="clsBeca" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscarBecaActiva(idAlumno): Beca" vertex="1">
+          <mxGeometry height="26" width="230" y="106" as="geometry" />
+        </mxCell>
+        <mxCell id="clsBeca_o1" parent="clsBeca" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Beca" vertex="1">
+          <mxGeometry height="26" width="230" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="relBeca" edge="1" parent="1" source="clsBeca" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsDetallePagoCuota" value="bonifica">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="relBecalbl1" connectable="0" parent="relBeca" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1" vertex="1">
+          <mxGeometry relative="1" x="-0.85" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="relBecalbl2" connectable="0" parent="relBeca" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry relative="1" x="0.85" as="geometry">
+            <mxPoint x="-13" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

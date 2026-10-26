@@ -1,0 +1,89 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="clases_diseno" name="Diagrama de Clases de Diseño - Cuotas por Carrera">
+    <mxGraphModel dx="1305" dy="713" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="380" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="clsCarrera" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="114.0" width="230" x="40" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_hdr" parent="clsCarrera" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Carrera&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="230" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_body" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="78.0" width="230" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_a1" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idCarrera: Integer" vertex="1">
+          <mxGeometry height="22" width="230" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_div" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="230" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_o1" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ buscar(idCarrera): Carrera" vertex="1">
+          <mxGeometry height="26" width="230" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCarrera_o2" parent="clsCarrera" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Carrera" vertex="1">
+          <mxGeometry height="26" width="230" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota" connectable="0" parent="1" style="group;rounded=0;" value="" vertex="1">
+          <mxGeometry height="310.0" width="280" x="360" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota_hdr" parent="clsCuota" style="rounded=0;arcSize=12;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=#2457b8;strokeWidth=2;fontColor=#ffffff;fontSize=12;align=center;verticalAlign=middle;shadow=1;" value="&lt;b&gt;Cuota&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="280" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota_body" parent="clsCuota" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#2457b8;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="274.0" width="280" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota_a1" parent="clsCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- idCuota: Integer" vertex="1">
+          <mxGeometry height="22" width="280" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota_a2" parent="clsCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- monto: Decimal" vertex="1">
+          <mxGeometry height="22" width="280" y="58" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota_a3" parent="clsCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- mes: Integer" vertex="1">
+          <mxGeometry height="22" width="280" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota_a4" parent="clsCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="&lt;font&gt;- anio: Integer&lt;/font&gt;" vertex="1">
+          <mxGeometry height="22" width="280" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota_a5" parent="clsCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- descripcion: String" vertex="1">
+          <mxGeometry height="22" width="280" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota_div" parent="clsCuota" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#2457b8;strokeColor=none;" value="" vertex="1">
+          <mxGeometry height="4" width="280" y="168" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota_o0" parent="clsCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;fontStyle=1;" value="+ registrar_cuota(dc): void" vertex="1">
+          <mxGeometry height="34" width="280" y="172" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota_o1" parent="clsCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ crear(): Cuota" vertex="1">
+          <mxGeometry height="26" width="280" y="206" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota_o2" parent="clsCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ ubicar(): Cuota" vertex="1">
+          <mxGeometry height="26" width="280" y="232" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCuota_o3" parent="clsCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ cargar(c): void" vertex="1">
+          <mxGeometry height="26" width="280" y="258" as="geometry" />
+        </mxCell>
+        <mxCell id="d6_vIhYPuQ2F-PqVPriW-1" parent="clsCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="- estadoCuota: String" vertex="1">
+          <mxGeometry height="22" width="280" y="146" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="clsCarrera" style="html=1;fontSize=10;fontColor=#333333;endArrow=block;startArrow=none;startSize=8;endSize=8;strokeColor=#3a5da8;rounded=0;strokeWidth=2;endFill=1;" target="clsCuota" value="tiene">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1lbl1" connectable="0" parent="rel1" style="edgeLabel;html=1;fontSize=9;align=left;verticalAlign=bottom;rounded=0;" value="1..1" vertex="1">
+          <mxGeometry relative="1" x="-0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel1lbl2" connectable="0" parent="rel1" style="edgeLabel;html=1;fontSize=9;align=right;verticalAlign=bottom;rounded=0;" value="1..*" vertex="1">
+          <mxGeometry relative="1" x="0.9" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      <mxCell id="clsCuota_new11" parent="clsCuota" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=12;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" value="+ vincular(): void" vertex="1">
+          <mxGeometry height="26" width="280" y="284.0" as="geometry" />
+        </mxCell>
+        </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

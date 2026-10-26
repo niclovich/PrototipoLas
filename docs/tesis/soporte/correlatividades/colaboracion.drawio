@@ -1,0 +1,146 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="colaboracion_correlatividades" name="Colaboración Clásica - Registrar Correlatividades de Materia">
+    <mxGraphModel dx="2707" dy="765" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="620" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="actor" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=#000000;fontSize=12;" value="Coordinador de Carrera" vertex="1">
+          <mxGeometry height="70" width="36" x="40" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="clsCorrelativa" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;" value="Correlativa" vertex="1">
+          <mxGeometry height="60" width="220" x="260" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="instCorrelativa" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;fontStyle=4;" value="COR : Correlativa" vertex="1">
+          <mxGeometry height="60" width="220" x="260" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="clsDetalle" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;" value="DetallePlanEstudio" vertex="1">
+          <mxGeometry height="60" width="220" x="709" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="instDetalle" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;fontStyle=4;" value="DPE : DetallePlanEstudio" vertex="1">
+          <mxGeometry height="60" width="220" x="710" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="instDPC" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1.5;align=center;verticalAlign=middle;fontSize=13;fontStyle=4;" value="DPC : DetallePlanEstudio" vertex="1">
+          <mxGeometry height="60" width="220" x="840" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="eActor" edge="1" parent="1" source="actor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=11;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=#ffffff;" target="clsCorrelativa" value="registrar_correlativa(dc)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="selfCreate" edge="1" parent="1" source="clsCorrelativa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="398.16" y="130.9" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="selfCreateLbl" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&amp;lt;&amp;lt;Create&amp;gt;&amp;gt;&lt;/div&gt;&lt;div&gt;1*[hasta completar correlativas]:&lt;/div&gt;COR=crear()" vertex="1">
+          <mxGeometry height="46" width="200" x="280" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="clsCorrelativa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;exitX=0.3;exitY=1;entryX=0.3;entryY=0;fontSize=10;align=left;labelBackgroundColor=#ffffff;" target="instCorrelativa" value="1.1: ubicar()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eSelfCargar" edge="1" parent="1" source="instCorrelativa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;innerLoopWaypoints=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.6;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="instCorrelativa">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="315" y="440" />
+              <mxPoint x="392" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eSelfCargarLbl" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1.2: cargar(c)" vertex="1">
+          <mxGeometry height="30" width="90" x="300" y="447" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=1;exitY=0.3;entryX=0;entryY=0.5;labelBackgroundColor=#ffffff;" value="1.3: DPE=buscar(idDetPlanEstudio)">
+          <mxGeometry relative="1" x="0.0002" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="480" y="182.9999999999999" as="sourcePoint" />
+            <mxPoint x="709" y="193" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="clsDetalle" style="rounded=0;html=1;endArrow=none;endFill=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=10;align=left;labelBackgroundColor=#ffffff;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="instDetalle" value="1.4: ubicar()">
+          <mxGeometry relative="1" x="0.143" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="771" y="110" as="sourcePoint" />
+            <mxPoint x="797.0000000000005" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="instDetalle" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=0;exitY=0.5;entryX=1;entryY=0.25;labelBackgroundColor=#ffffff;entryDx=0;entryDy=0;exitDx=0;exitDy=0;" target="instCorrelativa" value="1.5: vincular()">
+          <mxGeometry relative="1" x="-0.5691" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="640" y="220" as="sourcePoint" />
+            <mxPoint x="460" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" style="rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=1;exitY=0.15;entryX=0;entryY=0.15;labelBackgroundColor=#ffffff;" value="1.6: DPC=buscar(idDetPlanCorrelativa)">
+          <mxGeometry relative="1" x="0.048" y="17" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="480" y="148" as="sourcePoint" />
+            <mxPoint x="709" y="146.0000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="clsDetalle" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=1;exitY=0.8;entryX=0.553;entryY=0.03;labelBackgroundColor=#ffffff;entryDx=0;entryDy=0;entryPerimeter=0;" target="instDPC" value="1.7: ubicar()">
+          <mxGeometry relative="1" x="0.0055" y="28" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="instDPC" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;endFill=0;fontSize=10;exitX=0;exitY=0.5;entryX=1;entryY=0.7;labelBackgroundColor=#ffffff;exitDx=0;exitDy=0;" target="instCorrelativa" value="1.8: vincular()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dd" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=middle;spacingLeft=14;fontSize=12;fontStyle=1;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;DD's:&lt;br&gt;dc = idDetPlanEstudio + {idDetPlanCorrelativa + pCursar + pRendir}&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;c=&lt;/font&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;pCursar + pRendir&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="950" x="175" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="arr1" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="195" y="145" as="sourcePoint" />
+            <mxPoint x="220" y="145" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr2" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="340" y="90" as="sourcePoint" />
+            <mxPoint x="370" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr3" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="305" y="243" as="sourcePoint" />
+            <mxPoint x="305" y="273" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr4" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="340" y="447" as="sourcePoint" />
+            <mxPoint x="370" y="447" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr7" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="570" y="159" as="sourcePoint" />
+            <mxPoint x="595" y="159" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IKQlPjXWj38Urr9RHROI-1" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="949.76" y="230" as="sourcePoint" />
+            <mxPoint x="949.76" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IKQlPjXWj38Urr9RHROI-2" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="680" y="300" as="sourcePoint" />
+            <mxPoint x="650" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IKQlPjXWj38Urr9RHROI-3" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="697" y="401" as="sourcePoint" />
+            <mxPoint x="667" y="401" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IKQlPjXWj38Urr9RHROI-4" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;endSize=10;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="804" y="213" as="sourcePoint" />
+            <mxPoint x="804" y="243" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

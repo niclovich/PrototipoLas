@@ -1,0 +1,57 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="de_cargar_materia" name="Diagrama de Estados - Cargar Materia al Plan de Estudio">
+    <mxGraphModel dx="1182" dy="642" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1080" pageHeight="280" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="inicio" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="20" width="20" x="30" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" parent="1" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8b2a30;strokeWidth=1.5;fontSize=11;fontColor=#2a2020;align=center;verticalAlign=middle;" value="&lt;b&gt;P1&lt;/b&gt;&lt;br&gt;Gestion de Plan de Estudio&amp;nbsp;&lt;div&gt;[con Plan Estudio Activo]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="220" x="100" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" parent="1" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8b2a30;strokeWidth=1.5;fontSize=11;fontColor=#2a2020;align=center;verticalAlign=middle;" value="&lt;b&gt;P2&lt;/b&gt;&#xa;Formulario Registrar Materia" vertex="1">
+          <mxGeometry height="40" width="200" x="440" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#8b2a30;strokeWidth=1.5;fontSize=11;fontColor=#2a2020;align=center;verticalAlign=middle;" value="&lt;b&gt;P3&lt;/b&gt;&#xa;Confirmacion" vertex="1">
+          <mxGeometry height="40" width="170" x="455" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="fin" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=2;" value="" vertex="1">
+          <mxGeometry height="24" width="24" x="528" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="t0" edge="1" parent="1" source="inicio" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=#ffffff;align=left;" target="p1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="l0" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;fontSize=9;align=left;verticalAlign=top;labelBackgroundColor=#ffffff;" value="C: seleccionar una Carrera con plan registrado&lt;div&gt;A: se muestra el anio del plan y la tabla de materias cargadas&lt;/div&gt;&lt;div&gt;C: escribir en el filtro&lt;/div&gt;&lt;div&gt;A: se filtra la tabla de materias por nombre o codigo&lt;/div&gt;">
+          <mxGeometry relative="1" x="-1" y="60" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t1" edge="1" parent="1" source="p1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;exitX=1;exitY=0.3;entryX=0;entryY=0.3;labelBackgroundColor=#ffffff;align=left;" target="p2" value="C: click &#39;Cargar Materia&#39;">
+          <mxGeometry relative="1" x="-1" y="7" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t2" edge="1" parent="1" source="p2" style="rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;entryX=0.5;entryY=0;labelBackgroundColor=#ffffff;align=left;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="p3" value="C: click &#39;Agregar Materia&#39;&lt;div&gt;A: guarda los cambios&lt;/div&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="730" y="140" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b0" edge="1" parent="1" source="p2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;exitX=0.5;exitY=0;entryX=0.5;entryY=0;labelBackgroundColor=#ffffff;align=left;dashed=1;strokeColor=#a5a5a5;fontColor=#a5a5a5;" target="p1" value="C: click &#39;Cancelar&#39;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="60" />
+              <mxPoint x="210" y="60" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t3" edge="1" parent="1" source="p3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;fontSize=9;entryX=0.5;entryY=0;labelBackgroundColor=#ffffff;align=left;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="fin" value="C: click &#39;Aceptar&#39;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="300" as="sourcePoint" />
+            <mxPoint x="526" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
