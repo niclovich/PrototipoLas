@@ -6,6 +6,20 @@ Sistema de gestión académica y administrativa del Instituto Superior del Milag
 
 El inicio de sesión se realiza con **correo electrónico y contraseña**. El DNI no se utiliza para ingresar.
 
+Para que el navegador identifique este proyecto como un sitio independiente del sistema anterior, acceda siempre mediante:
+
+```text
+http://sistema-las.localhost:8000
+```
+
+Puede iniciar el entorno local completo con:
+
+```bash
+composer dev
+```
+
+No utilice la antigua dirección basada en `http://localhost/...`, porque los gestores de contraseñas agrupan las credenciales guardadas por sitio y podrían volver a mostrar las del sistema anterior.
+
 ### Usuarios de demostración
 
 Estos usuarios se crean mediante `DemoSeeder` cuando la aplicación se ejecuta con `APP_ENV=local`.
@@ -55,3 +69,10 @@ php artisan db:seed --class=DemoSeeder
 ```
 
 El `DemoSeeder` requiere que previamente existan los roles, permisos y catálogos del sistema.
+
+## Despliegue en Hostinger
+
+El despliegue de producción se ejecuta manualmente desde GitHub Actions y mantiene
+el código Laravel en `laravel/`, fuera de `public_html/`. La configuración completa
+de secretos, la preparación inicial de Hostinger, la validación y el rollback está
+documentada en [docs/deployment-hostinger.md](docs/deployment-hostinger.md).

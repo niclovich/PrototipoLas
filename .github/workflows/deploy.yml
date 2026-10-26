@@ -1,0 +1,103 @@
+name: Deploy Laravel to Hostinger
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Git ref to deploy
+        required: true
+        default: dev
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hostinger-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: bcmath, ctype, curl, dom, exif, fileinfo, gd, intl, mbstring, mysqli, pdo, pdo_mysql, pdo_sqlite, soap, xml, zip
+          tools: composer:v2
+          coverage: none
+
+      - name: Install production PHP dependencies
+        run: composer install --no-dev --prefer-dist --no-interaction --no-progress --optimize-autoloader
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Build frontend assets
+        run: |
+          npm ci
+          npm run build
+
+      - name: Prepare release directories
+        run: |
+          chmod +x scripts/prepare-deployment.sh scripts/deploy-hostinger.sh
+          scripts/prepare-deployment.sh "$GITHUB_WORKSPACE" "$RUNNER_TEMP/laravel-release" "$RUNNER_TEMP/public-release"
+
+      - name: Configure SSH verification
+        env:
+          HOSTINGER_KNOWN_HOSTS: ${{ secrets.HOSTINGER_KNOWN_HOSTS }}
+          HOSTINGER_SSH_PRIVATE_KEY: ${{ secrets.HOSTINGER_SSH_PRIVATE_KEY }}
+        run: |
+          set -Eeuo pipefail
+          test -n "$HOSTINGER_KNOWN_HOSTS"
+          test -n "$HOSTINGER_SSH_PRIVATE_KEY"
+          install -m 700 -d "$HOME/.ssh"
+          printf '%s\n' "$HOSTINGER_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+          chmod 600 "$HOME/.ssh/known_hosts"
+          printf '%s\n' "$HOSTINGER_SSH_PRIVATE_KEY" > "$HOME/.ssh/hostinger_deploy"
+          chmod 600 "$HOME/.ssh/hostinger_deploy"
+
+      - name: Validate SSH access
+        env:
+          HOSTINGER_HOST: ${{ secrets.HOSTINGER_HOST }}
+          HOSTINGER_PORT: ${{ secrets.HOSTINGER_PORT }}
+          HOSTINGER_USERNAME: ${{ secrets.HOSTINGER_USERNAME }}
+        run: ssh -i "$HOME/.ssh/hostinger_deploy" -p "$HOSTINGER_PORT" -o BatchMode=yes "$HOSTINGER_USERNAME@$HOSTINGER_HOST" 'printf "SSH OK\n"'
+
+      - name: Upload release
+        env:
+          HOSTINGER_HOST: ${{ secrets.HOSTINGER_HOST }}
+          HOSTINGER_PORT: ${{ secrets.HOSTINGER_PORT }}
+          HOSTINGER_USERNAME: ${{ secrets.HOSTINGER_USERNAME }}
+          HOSTINGER_DEPLOY_ROOT: ${{ secrets.HOSTINGER_DEPLOY_ROOT }}
+        run: |
+          set -Eeuo pipefail
+          RELEASE_ID="${GITHUB_SHA}"
+          ssh -i "$HOME/.ssh/hostinger_deploy" -p "$HOSTINGER_PORT" -o BatchMode=yes "$HOSTINGER_USERNAME@$HOSTINGER_HOST" "mkdir -p '$HOSTINGER_DEPLOY_ROOT/.deployments/$RELEASE_ID/laravel' '$HOSTINGER_DEPLOY_ROOT/.deployments/$RELEASE_ID/public'"
+          rsync -az --partial -e "ssh -i $HOME/.ssh/hostinger_deploy -p $HOSTINGER_PORT -o BatchMode=yes" "$RUNNER_TEMP/laravel-release/" "$HOSTINGER_USERNAME@$HOSTINGER_HOST:$HOSTINGER_DEPLOY_ROOT/.deployments/$RELEASE_ID/laravel/"
+          rsync -az --partial -e "ssh -i $HOME/.ssh/hostinger_deploy -p $HOSTINGER_PORT -o BatchMode=yes" "$RUNNER_TEMP/public-release/" "$HOSTINGER_USERNAME@$HOSTINGER_HOST:$HOSTINGER_DEPLOY_ROOT/.deployments/$RELEASE_ID/public/"
+          scp -i "$HOME/.ssh/hostinger_deploy" -P "$HOSTINGER_PORT" -o BatchMode=yes scripts/deploy-hostinger.sh "$HOSTINGER_USERNAME@$HOSTINGER_HOST:/tmp/deploy-hostinger-$RELEASE_ID.sh"
+
+      - name: Activate release and run production commands
+        env:
+          HOSTINGER_HOST: ${{ secrets.HOSTINGER_HOST }}
+          HOSTINGER_PORT: ${{ secrets.HOSTINGER_PORT }}
+          HOSTINGER_USERNAME: ${{ secrets.HOSTINGER_USERNAME }}
+          HOSTINGER_DEPLOY_ROOT: ${{ secrets.HOSTINGER_DEPLOY_ROOT }}
+        run: |
+          set -Eeuo pipefail
+          RELEASE_ID="${GITHUB_SHA}"
+          ssh -i "$HOME/.ssh/hostinger_deploy" -p "$HOSTINGER_PORT" -o BatchMode=yes "$HOSTINGER_USERNAME@$HOSTINGER_HOST" \
+            "bash /tmp/deploy-hostinger-$RELEASE_ID.sh '$HOSTINGER_DEPLOY_ROOT' '$RELEASE_ID'; rm -f /tmp/deploy-hostinger-$RELEASE_ID.sh"
