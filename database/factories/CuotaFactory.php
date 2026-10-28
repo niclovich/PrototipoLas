@@ -20,7 +20,8 @@ class CuotaFactory extends Factory
         return [
             'carrera_id' => Carrera::factory(),
             'monto' => fake()->randomFloat(2, 20000, 150000),
-            'mes_id' => Mes::factory(),
+            // Reutiliza los Meses precargados (id = orden); los crea si la base no tiene seeder.
+            'mes_id' => fn () => Mes::precargados()->random()->id,
             'anio' => (int) now()->format('Y'),
             'estado_cuota' => EstadoGeneral::Activo,
         ];

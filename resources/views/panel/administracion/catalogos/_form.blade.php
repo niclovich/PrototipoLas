@@ -11,8 +11,9 @@
                     <div class="col-12 col-md-6">
                         @switch($catalogo->tipo($campo))
                             @case('select')
+                            @case('lista')
                                 <x-form.select :name="$campo" :label="$def['label']" :opciones="$catalogo->opciones($campo)"
-                                               :value="$registro->{$campo}" :requerido="true" :select2="true" />
+                                               :value="$registro->{$campo}" :requerido="true" :select2="$catalogo->tipo($campo) === 'select'" />
                                 @break
                             @case('numero')
                                 <x-form.input :name="$campo" type="number" :label="$def['label']" :value="$registro->{$campo}" :requerido="true"

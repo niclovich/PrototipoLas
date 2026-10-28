@@ -18,7 +18,7 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
         then: function () {
-            Route::middleware(['web', 'auth', 'cuenta.activa', 'verified'])
+            Route::middleware(['web', 'auth', 'verified'])
                 ->prefix('panel')
                 ->name('panel.')
                 ->group(base_path('routes/panel.php'));
@@ -31,6 +31,10 @@ return Application::configure(basePath: dirname(__DIR__))
             'role_or_permission' => RoleOrPermissionMiddleware::class,
             'cuenta.activa' => AsegurarCuentaActiva::class,
         ]);
+
+        // estadoCuenta controla el acceso en TODAS las rutas web con sesión: panel y rutas de Fortify
+        // (email/verify*, user/confirm-password…). Para invitados no hace nada.
+        $middleware->appendToGroup('web', AsegurarCuentaActiva::class);
 
         $middleware->redirectGuestsTo(fn () => route('login'));
         $middleware->redirectUsersTo(fn () => route('panel.inicio'));

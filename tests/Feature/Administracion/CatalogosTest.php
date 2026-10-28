@@ -5,6 +5,7 @@ namespace Tests\Feature\Administracion;
 use App\Enums\RolSistema;
 use App\Models\Localidad;
 use App\Models\Modalidad;
+use App\Models\Motivo;
 use App\Models\Provincia;
 use App\Support\DefinicionCatalogo;
 use Database\Seeders\CatalogosSeeder;
@@ -80,6 +81,61 @@ class CatalogosTest extends TestCase
                 'duracion' => 'El campo duración es obligatorio.',
                 'cantidad_anios' => 'El campo cantidad de años no debe ser mayor que 10.',
             ]);
+    }
+
+    public function test_la_unicidad_incluye_los_registros_dados_de_baja(): void
+    {
+        Modalidad::factory()->create(['modalidad' => 'Virtual'])->delete();
+
+        $this->actingAs($this->superAdmin())
+            ->post(route('panel.catalogos.registros.store', 'modalidades'), ['modalidad' => 'Virtual'])
+            ->assertSessionHasErrors(['modalidad' => 'Ya existe un registro con ese valor (revise también la pestaña Eliminados).']);
+
+        $this->assertSame(1, Modalidad::withTrashed()->where('modalidad', 'Virtual')->count());
+    }
+
+    public function test_no_acepta_un_padre_dado_de_baja_ni_lo_ofrece_en_el_select(): void
+    {
+        $admin = $this->superAdmin();
+        $eliminada = Provincia::factory()->create(['provincia' => 'Provincia eliminada']);
+        $eliminada->delete();
+
+        $this->actingAs($admin)->get(route('panel.catalogos.registros.create', 'localidades'))
+            ->assertOk()->assertDontSee('Provincia eliminada');
+
+        $this->actingAs($admin)->post(route('panel.catalogos.registros.store', 'localidades'), ['provincia_id' => $eliminada->id, 'localidad' => 'Nueva'])
+            ->assertSessionHasErrors(['provincia_id' => 'El valor seleccionado en provincia no es válido.']);
+    }
+
+    public function test_no_se_da_de_baja_una_provincia_con_localidades_activas(): void
+    {
+        $admin = $this->superAdmin();
+        $provincia = Provincia::factory()->create();
+        $localidad = Localidad::factory()->create(['provincia_id' => $provincia->id]);
+
+        $this->actingAs($admin)->delete(route('panel.catalogos.registros.destroy', ['provincias', $provincia->id]))
+            ->assertSessionHasErrors(['accion' => 'No se puede dar de baja una provincia con localidades activas. Dé de baja primero sus localidades.']);
+        $this->assertNotSoftDeleted($provincia);
+
+        $localidad->delete();
+        $this->actingAs($admin)->delete(route('panel.catalogos.registros.destroy', ['provincias', $provincia->id]))
+            ->assertSessionHas('success', 'Provincia dada de baja.');
+        $this->assertSoftDeleted($provincia);
+    }
+
+    public function test_motivo_solo_acepta_acciones_conocidas_y_textos_con_genero(): void
+    {
+        $admin = $this->superAdmin();
+
+        $this->actingAs($admin)->get(route('panel.catalogos.registros.create', 'motivos'))
+            ->assertOk()->assertSee('Nuevo motivo')->assertSee('value="'.Motivo::ACCION_BAJA_PERSONAL.'"', false);
+        $this->actingAs($admin)->get(route('panel.catalogos.registros.index', 'localidades'))->assertSee('Nueva localidad');
+
+        $this->actingAs($admin)->post(route('panel.catalogos.registros.store', 'motivos'), ['descripcion' => 'Traslado', 'accion' => 'Baja de personal'])
+            ->assertSessionHasErrors(['accion' => 'El valor seleccionado en acción no es válido.']);
+
+        $this->actingAs($admin)->post(route('panel.catalogos.registros.store', 'motivos'), ['descripcion' => 'Traslado', 'accion' => Motivo::ACCION_BAJA_PERSONAL])
+            ->assertSessionHas('success', 'Motivo registrado.');
     }
 
     public function test_un_preceptor_no_accede_a_catalogos(): void

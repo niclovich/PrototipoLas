@@ -54,16 +54,21 @@ class RolesPermisosSeederTest extends TestCase
             'Docente' => ['listar_comision', 'crear_regularidad'],
             'Cajero' => ['listar_alumno', 'listar_caja', 'crear_caja', 'editar_caja', 'crear_pago', 'exportar_pago'],
             'Alumno' => ['listar_alumno', 'crear_inscripcion_examen', 'exportar_inscripcion_examen'],
-            'SUPERADMIN' => [],
         ];
 
-        $this->assertEqualsCanonicalizing(array_keys($matriz), Rol::pluck('name')->all());
+        $this->assertEqualsCanonicalizing([...array_keys($matriz), RolSistema::SuperAdmin->value], Rol::pluck('name')->all());
 
         foreach ($matriz as $rol => $esperados) {
             $reales = Rol::findByName($rol)->permissions->pluck('name')->all();
 
             $this->assertEqualsCanonicalizing($esperados, $reales, "Permisos de {$rol}");
         }
+
+        $this->assertEqualsCanonicalizing(
+            Permission::pluck('name')->all(),
+            Rol::findByName(RolSistema::SuperAdmin->value)->permissions->pluck('name')->all(),
+            'SUPERADMIN debe tener asignados todos los permisos existentes.',
+        );
     }
 
     public function test_matriz_del_plan_general(): void
@@ -78,7 +83,7 @@ class RolesPermisosSeederTest extends TestCase
         $this->assertCount(2, $permisos(RolSistema::Docente));
         $this->assertCount(6, $permisos(RolSistema::Cajero));
         $this->assertCount(3, $permisos(RolSistema::Alumno));
-        $this->assertCount(0, $permisos(RolSistema::SuperAdmin));
+        $this->assertCount(Permission::count(), $permisos(RolSistema::SuperAdmin));
 
         $this->assertTrue($permisos(RolSistema::Cajero)->contains('crear_pago'));
         $this->assertFalse($permisos(RolSistema::Cajero)->contains('listar_carrera'));

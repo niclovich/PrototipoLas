@@ -13,6 +13,7 @@ use App\Services\Finanzas\DeudaCuotasService;
 use Carbon\CarbonImmutable;
 use Database\Seeders\CatalogosSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\DB;
 use Tests\TestCase;
 
 /** Aclaración "Meses y vencimiento de las Cuotas" (CU 33): vencimiento, Inscripción y deuda. */
@@ -80,8 +81,55 @@ class DeudaCuotasServiceTest extends TestCase
 
     public function test_la_inscripcion_nunca_cuenta_como_vencida(): void
     {
-        $this->assertFalse($this->servicio->estaVencida($this->cuota(Mes::INSCRIPCION), $this->alumno, CarbonImmutable::create(self::ANIO + 1, 1, 1)));
-        $this->assertTrue($this->servicio->cuotasVencidas($this->alumno, CarbonImmutable::create(self::ANIO + 1, 1, 1))->isEmpty());
+        // Alumno con ingreso 2026 (Inscripción pagada), Inscripción 2027 impaga y todas las mensuales vencidas.
+        $this->pagar($this->cuota(Mes::INSCRIPCION));
+        $inscripcion2027 = Cuota::factory()->create(['carrera_id' => $this->alumno->carrera_id, 'mes_id' => Mes::inscripcion()->id, 'anio' => self::ANIO + 1]);
+        $enero2028 = CarbonImmutable::create(self::ANIO + 2, 1, 15);
+
+        $vencidas = $this->servicio->cuotasVencidas($this->alumno, $enero2028);
+
+        $this->assertCount(10, $vencidas, 'Las 10 mensuales de 2026 están vencidas.');
+        $this->assertFalse($vencidas->contains(fn (Cuota $c) => $c->mes->esInscripcion()));
+        $this->assertNotContains($inscripcion2027->id, $vencidas->pluck('id'));
+        $this->assertFalse($this->servicio->estaVencida($inscripcion2027, $this->alumno, $enero2028));
+        $this->assertFalse($this->servicio->estaVencida($this->cuota(Mes::INSCRIPCION), $this->alumno, $enero2028));
+    }
+
+    public function test_esta_vencida_usa_la_misma_regla_que_cuotas_vencidas(): void
+    {
+        $abril = CarbonImmutable::create(self::ANIO, 4, 20);
+        $marzo = $this->cuota('Marzo');
+
+        // Preinscripto (sin Inscripción pagada): ninguna mensual cuenta como vencida.
+        $this->assertFalse($this->servicio->estaVencida($marzo, $this->alumno, $abril));
+        $this->assertTrue($this->servicio->cuotasVencidas($this->alumno, $abril)->isEmpty());
+
+        // Mensual de un año anterior al ingreso: no se debe.
+        $this->pagar($this->cuota(Mes::INSCRIPCION));
+        $marzoAnterior = Cuota::factory()->create(['carrera_id' => $this->alumno->carrera_id, 'mes_id' => $marzo->mes_id, 'anio' => self::ANIO - 1]);
+        $this->assertFalse($this->servicio->estaVencida($marzoAnterior, $this->alumno, $abril));
+
+        // Con ingreso: ambas formas dicen lo mismo para cada cuota mensual del año.
+        $vencidas = $this->servicio->cuotasVencidas($this->alumno, $abril)->pluck('id')->all();
+        foreach (Cuota::mensuales()->where('anio', self::ANIO)->get() as $cuota) {
+            $this->assertSame(in_array($cuota->id, $vencidas, true), $this->servicio->estaVencida($cuota, $this->alumno, $abril), $cuota->mes->descripcion);
+        }
+        $this->assertSame(['Marzo', 'Abril'], Cuota::whereIn('id', $vencidas)->with('mes')->orderBy('mes_id')->get()->pluck('mes.descripcion')->all());
+    }
+
+    public function test_filtrar_vencidas_en_listados_sin_n_mas_1(): void
+    {
+        $this->pagar($this->cuota(Mes::INSCRIPCION));
+        $this->pagar($this->cuota('Marzo'));
+        $cuotas = Cuota::query()->orderBy('mes_id')->get();
+
+        DB::enableQueryLog();
+        $vencidas = $this->servicio->filtrarVencidas($this->alumno, $cuotas, CarbonImmutable::create(self::ANIO, 12, 31));
+        $consultas = count(DB::getQueryLog());
+        DB::disableQueryLog();
+
+        $this->assertCount(9, $vencidas, 'Abril a Diciembre (Marzo está pagada; la Inscripción no vence).');
+        $this->assertLessThanOrEqual(3, $consultas, 'Año de ingreso + meses + cancelaciones, sin importar la cantidad de cuotas.');
     }
 
     public function test_scopes_de_inscripcion_y_mensuales(): void

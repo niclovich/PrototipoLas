@@ -14,6 +14,12 @@ enum Asentada: string
     case Si = 'S';
     case No = 'N';
 
+    /** "Si" / "No" (columna Asentada de P1 Gestión de Actas). */
+    public function label(): string
+    {
+        return $this->name;
+    }
+
     public function badge(): string
     {
         return match ($this) {

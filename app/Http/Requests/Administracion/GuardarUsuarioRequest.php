@@ -4,6 +4,7 @@ namespace App\Http\Requests\Administracion;
 
 use App\Enums\EstadoGeneral;
 use App\Enums\RolSistema;
+use App\Http\Requests\Concerns\ReglasDatosUsuario;
 use App\Models\Rol;
 use App\Services\Usuarios\UsuarioService;
 use Closure;
@@ -15,17 +16,11 @@ use Illuminate\Validation\Rule;
  */
 class GuardarUsuarioRequest extends FormRequest
 {
+    use ReglasDatosUsuario;
+
     public function authorize(): bool
     {
         return true;
-    }
-
-    protected function prepareForValidation(): void
-    {
-        $this->merge([
-            'email' => mb_strtolower(trim((string) $this->input('email'))),
-            'dni_usuario' => preg_replace('/\D/', '', (string) $this->input('dni_usuario')),
-        ]);
     }
 
     /** @return array<string, mixed> */
@@ -34,10 +29,10 @@ class GuardarUsuarioRequest extends FormRequest
         $id = $this->route('usuario')?->getKey();
 
         return [
-            'dni_usuario' => ['required', 'regex:/^\d{7,8}$/', Rule::unique('users', 'dni_usuario')->ignore($id)],
+            'dni_usuario' => ['required', ...static::reglaDni($id)],
             'apellido_usuario' => ['required', 'string', 'max:100'],
             'nombre_usuario' => ['required', 'string', 'max:100'],
-            'email' => ['required', 'email', 'max:150', Rule::unique('users', 'email')->ignore($id)],
+            'email' => ['required', ...static::reglaEmail($id)],
             'rol' => [
                 'required',
                 Rule::notIn([RolSistema::Alumno->value]),
@@ -55,9 +50,7 @@ class GuardarUsuarioRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'dni_usuario.regex' => 'El DNI debe tener 7 u 8 dígitos.',
-            'dni_usuario.unique' => 'Ya existe un usuario con ese DNI.',
-            'email.unique' => 'Ya existe un usuario con ese correo electrónico.',
+            ...static::mensajesDatosUsuario(),
             'rol.not_in' => 'Los usuarios Alumno se registran desde la Preinscripción.',
         ];
     }

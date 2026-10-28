@@ -152,6 +152,46 @@ class User extends Authenticatable implements MustVerifyEmail
         return $query->role($rol->value);
     }
 
+    /** Usuarios del Personal: rol entre los 6 actores del personal (sin Alumno ni SUPERADMIN). */
+    public function scopePersonal(Builder $query): Builder
+    {
+        return $query->whereHas('roles', fn (Builder $roles) => $roles->whereIn('name', RolSistema::valoresDelPersonal()));
+    }
+
+    /** Personal con cuenta Activo (CU 26 y 27 operan solo sobre esos). */
+    public function scopePersonalActivo(Builder $query): Builder
+    {
+        return $query->personal()->conEstadoCuenta(EstadoCuenta::Activo);
+    }
+
+    /**
+     * Búsqueda de P1 Gestión de Personal ("Buscar por DNI o nombre"): palabra por palabra, cada una en el DNI,
+     * el apellido o el nombre. "Fernández, Laura" y "Laura Fernández" encuentran lo mismo. Escapa % y _.
+     */
+    public function scopeBuscar(Builder $query, ?string $texto): Builder
+    {
+        $palabras = preg_split('/[\s,]+/u', trim((string) $texto), -1, PREG_SPLIT_NO_EMPTY);
+
+        foreach ($palabras as $palabra) {
+            $patron = '%'.addcslashes($palabra, '\\%_').'%';
+            $query->where(fn (Builder $q) => $q
+                ->where('dni_usuario', 'like', $patron)
+                ->orWhere('apellido_usuario', 'like', $patron)
+                ->orWhere('nombre_usuario', 'like', $patron));
+        }
+
+        return $query;
+    }
+
+    /** Última Novedad de baja de personal (FECHA BAJA y MOTIVO DE BAJA de P1 Eliminados). */
+    public function ultimaBaja(): HasOne
+    {
+        return $this->hasOne(Novedad::class)->ofMany(
+            ['fecha_novedad' => 'max', 'id' => 'max'],
+            fn (Builder $q) => $q->whereHas('motivo', fn (Builder $m) => $m->where('accion', Motivo::ACCION_BAJA_PERSONAL)),
+        );
+    }
+
     public function scopeDocentes(Builder $query): Builder
     {
         return $query->conRol(RolSistema::Docente);

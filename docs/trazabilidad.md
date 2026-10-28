@@ -285,3 +285,83 @@ Lo mantiene el Agente Desarrollador al crear migraciones y modelos.
 | FacturaComprobante | fechaEmision | facturas_comprobante | fecha_emision | date |  |
 | FacturaComprobante | estadoFactura | facturas_comprobante | estado_factura | varchar(20) | Enum `EstadoGeneral` |
 | FacturaComprobante | — | facturas_comprobante | uuid | char(36) | nuevo: identificador público para el QR |
+
+## Pantallas de Personal (E2) → código
+
+| Pantalla (wireframe) | Vista | Controller / ruta | Notas |
+|---|---|---|---|
+| P1 Gestión de Personal — Activos / Eliminados | `resources/views/panel/personal/index.blade.php`, `_acciones.blade.php` | `PersonalController@index`, `@datatable` (`panel.personal.index`, `panel.personal.datatable`) | `PersonalDataTable` con filtros `buscar` y `rol` |
+| P2 Registrar Personal + P3 DNI ya registrado + P4 Contraseña inválida | `registrar.blade.php`, `_form.blade.php`, `<x-modal-aviso>` | `@create`, `@store`, `@verificarDni` | Localidades: `panel.personal.localidades` |
+| P2 Modificar Datos del Personal + Datos inválidos | `modificar.blade.php`, `_form.blade.php` | `@edit`, `@update` | DNI de solo lectura |
+| P2 Modal Registrar Baja de Personal | `_modal-baja.blade.php` | `@registrarBaja` (`panel.personal.baja`) | Crea Novedad con Motivo "Baja de Personal" |
+| P5 / P3 Confirmación | `confirmacion.blade.php` | `@confirmacion` | Mensaje en sesión |
+| Usuario.ultimaBaja (derivado) | — | `User::ultimaBaja()` | Última Novedad con Motivo de acción "Baja de Personal" (FECHA BAJA, MOTIVO DE BAJA) |
+
+## Usuarios Alumno (E3, CU 9)
+
+| Clase (tesis) | Atributo (tesis) | Tabla | Columna | Tipo | Notas |
+|---|---|---|---|---|---|
+| Usuario | paisUsuario | users | pais_usuario | string(80) null | CU 9: `config('las.pais_por_defecto')` ("Argentina"); P2 no tiene el campo (D4) |
+| Usuario | fotoUsuario | users | foto_usuario | string(255) null | Ruta en el disco `public`, carpeta `fotos-usuarios/` |
+| EncuestaSocioeconomica | nivelEstudiosMadre / nivelEstudiosPadre | encuestas_socioeconomicas | nivel_estudios_madre / nivel_estudios_padre | string(50) null | Enum `NivelEstudios` |
+| EncuestaSocioeconomica | idiomas | encuestas_socioeconomicas | idiomas | string(255) null | Lista del Enum `Idioma`, separada por ", " (el modelo la lee como array) |
+| CU 9 | Registrar Usuario Alumno (pasos 9–10) | users + encuestas_socioeconomicas | — | — | `App\Services\Alumnos\UsuarioAlumnoService::registrar()`; contrato de P2/P3 en `DatosPersonalesAlumnoRequest` y `EncuestaSocioeconomicaRequest` |
+
+## Pantallas de Carrera (E4) → código
+
+| Pantalla (wireframe) | Vista | Controller / ruta | Notas |
+|---|---|---|---|
+| P1 Gestión de Carreras (`Registrar_P1.png`) | `resources/views/panel/academico/carreras/index.blade.php`, `_acciones.blade.php` | `CarreraController@index`, `@datatable` (`panel.carreras.index`, `panel.carreras.datatable`) | `CarreraDataTable`; filtro `buscar` → `Carrera::scopeBuscar` |
+| P2 Registrar Carrera (`Registrar_P2.png`) | `registrar.blade.php` + `_form.blade.php` | `@create`, `@store` | Modales "Carrera ya existente" / "Resolución inválida" (`<x-modal-aviso-errores>`) |
+| P2 Modificar Carrera (`Modificar_P2.png`) | `modificar.blade.php` + `_form.blade.php` | `@edit`, `@update` | Con Plan de Estudio activo solo se habilita el Estado |
+| P3 Confirmación (`Registrar_P3.png`) | `resources/views/panel/_confirmacion.blade.php` | `@confirmacion` | Título + 3 líneas, en sesión (`ConPantallaConfirmacion`) |
+| Carrera.resolucion_texto (derivado) | — | `Carrera::resolucionTexto()` | "Resolución N° " + `resolucion_carrera` |
+
+## Pantallas de Materia (E5) → código
+
+| Pantalla (wireframe) | Vista | Controller / ruta | Estado / notas |
+|---|---|---|---|
+| P1 Gestión de Materias (`P1.png`) | `resources/views/panel/academico/materias/index.blade.php`, `_acciones.blade.php` | `MateriaController@index`, `@datatable` (`panel.materias.index`, `panel.materias.datatable`) | `MateriaDataTable`; filtro `buscar`. Implementada, revisión visual pendiente |
+| P2 Registrar Materia (`P2.png`) | `registrar.blade.php` + `_form.blade.php` | `@create`, `@store` | E5-D1 resuelta por Nicolás (2026-10-26): Estado visible con `Activo`, select deshabilitado y valor forzado por el servidor. El servicio traduce una colisión SQL de nombre al mismo error de validación |
+| P2 Modificar Materia (`P3.png`, numerado P2 por la tesis) | `modificar.blade.php` + `_form.blade.php` | `@edit`, `@update` | D2 resuelta por Nicolás (2026-10-26): abre P2 y controla el vínculo al guardar; si está vinculada vuelve a P1 sin modificar. Una colisión SQL de nombre también conserva el mensaje exacto de la spec |
+| P3 Confirmación (sin PNG específico) | `resources/views/panel/_confirmacion.blade.php` | `@confirmacion` | Título + Materia + Estado, mediante `ConPantallaConfirmacion` |
+| Modal materia vinculada | `<x-modal-aviso>` en `index.blade.php` | aviso de `MateriaController` | Mensaje exacto centralizado en `MateriaService`; se abre después del intento de guardar bloqueado (D2) |
+
+## Pantallas de Plan de Estudio (E6–E8) → código
+
+| Pantalla (wireframe) | Vista | Controller / ruta | Notas |
+|---|---|---|---|
+| P1c / P1 Gestión de Plan de Estudio (`Registrar_Plan_P1c.png`, `Registrar_Materia_P1.png`) | `resources/views/panel/academico/planes/index.blade.php`, `_sin-plan`, `_con-plan`, `_acciones`, `_correlativas` | `PlanEstudioController@index`, `@datatable` | `DetallePlanEstudioDataTable` (detalles Activo); combos recargan P1 (`plan-estudio.js`) |
+| CU 5 P2 Registrar Plan (`Registrar_Plan_P1b.png`) | `planes/registrar.blade.php` | `PlanEstudioController@create`, `@store` | Modal "Año inválido" |
+| CU 6 P2 Registrar Materia al Plan (`Registrar_Materia_P2.png`) | `planes/materias/registrar.blade.php` | `DetallePlanEstudioController@create`, `@store` | Modales alt. 8, 11, 23 |
+| CU 7 P2 Modal Dar de Baja (`Baja_Materia_P2.png`) | `planes/_modal-baja-materia.blade.php` | `DetallePlanEstudioController@registrarBaja` | Aviso alt. 6 `modal-comisiones-dictandose` |
+| CU 8 P2 Registrar Correlatividades (`Correlatividades_P2.png`) | `planes/correlatividades/registrar.blade.php` | `CorrelatividadController@create`, `@store` | Tabla armada en el navegador; se guarda completa |
+| P3 Confirmación (CU 5–8) | `panel/_confirmacion.blade.php` | `PlanEstudioController@confirmacion` | Título + líneas en sesión; "Aceptar" → P1 con la carrera |
+| Cuatrimestre.abreviatura (derivado) | — | `Cuatrimestre::abreviatura()` | "1er Cuatrimestre" → "1C" |
+
+Sin columnas nuevas: `planes_estudio`, `detalles_plan_estudio` (incluida `fecha_baja`) y `correlativas` ya existían (E1).
+
+## E9–E11 Comisión, Cuotas por Carrera y Acta de Examen
+Sin columnas nuevas: `comisiones`, `det_comisiones`, `cuotas`, `actas_examen`, `tribunales` e `integrantes_tribunal` ya existían (E1). Derivados: `ActaExamen::nro_acta_texto` (4 dígitos), `Asentada::label()` ("Si"/"No"), `App\Support\Moneda::formatear` ("$45.000"). Numeración: `App\Services\Numeracion\NumeradorService`.
+
+## E12 Preinscripción (CU1)
+Sin columnas nuevas. Alumno.observaciones = campo "Observaciones" de P4 (E12-D1 resuelta: agregado). DocumentoPresentado: `archivo_documento` en el disco `local` (`documentos/{user_id}/`); `nombre_documento` = `TipoDocumento::FOTOCOPIA_DNI` / `CERTIFICADO_TITULO`. Etiquetas de la encuesta: `EncuestaSocioeconomica::SECCIONES`.
+
+## E13 Pago de Cuotas y Caja (CU7, 35, 36)
+Sin columnas nuevas. Pago.monto_total = Σ DetallePagoCuota.monto_aplicado; DetallePagoCuota.beca_id solo si hubo bonificación. FacturaComprobante.numero_comprobante con `NumeradorService` (visible `numeroFormateado()`), `uuid` para `validar/comprobante/{uuid}`. Caja.monto_final = Σ DetalleCierreCaja.monto_contado; `MedioPago::EFECTIVO`.
+
+## E14 Inscripción (CU2)
+Sin columnas nuevas. Alumno.nro_legajo con `NumeradorService` (desde `LAS_LEGAJO_INICIAL`); estado_alumno = Inscripto, estado_legajo = Activo. DocumentoPresentado nuevo por documento adjuntado (el anterior del mismo tipo pasa a Inactivo). Cuota de Inscripción del año lectivo: `DeudaCuotasService::cuotaInscripcionVigente()`.
+
+## E15 Inscripción en Comisiones y Cambio de Comisión (CU3, CU 19)
+Sin columnas nuevas. AlumnoComision: fecha_inscripcion = hoy, estado Activo/Caducado, tipo "Por Comisión". Alumno.comision_actual_id = comisión inscripta / de destino.
+
+## E16 Regularidad Académica (CU4)
+Sin columnas nuevas. AlumnoComision.nota_p1..nota_r2, faltas_alumno, condicion_final (Regular/Libre; null = "En Curso"). EstadoCurricular nuevo por registro: condicion = condicion_final, fecha_condicion = hoy, nota_condicion = promedio de las notas definitivas (E16-D2), nro_acta = null.
+
+## E17 Inscripción a Exámenes (CU5)
+Sin columnas nuevas. DetalleActa: acta_examen_id, alumno_id, estado_detalle_acta = "Activo", uuid (QR del comprobante); nota_acta, observacion y condicion_final null hasta CU6.
+
+## E18 Asentamiento de Acta (CU6)
+Sin columnas nuevas. DetalleActa.notaActa → nota_acta (1–10, 2 decimales), observacion, condicionFinal → condicion_final (Aprobado/Desaprobado calculado). EstadoCurricular: condicion = condicion_final, fecha_condicion = fecha del acta, nota_condicion = nota_acta, nro_acta. ActaExamen: nro_folio, estado_acta = "Finalizado", asentada = "S". TituloTramite: fecha_creacion = hoy, estado_tramite = "Sin Gestión", tipo_gestion_titulo_id null; Alumno.estado_alumno = "Título en Trámite".
+

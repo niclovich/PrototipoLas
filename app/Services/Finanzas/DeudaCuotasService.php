@@ -5,9 +5,11 @@ namespace App\Services\Finanzas;
 use App\Enums\EstadoGeneral;
 use App\Models\Alumno;
 use App\Models\Cuota;
+use App\Models\DetallePagoCuota;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection as EloquentCollection;
 use Illuminate\Support\Collection;
 
 /**
@@ -18,6 +20,9 @@ use Illuminate\Support\Collection;
  * - La cuota de Inscripción no vence y nunca cuenta como vencida.
  * - Una cuota está cancelada si tiene un DetallePagoCuota de un Pago "Activo" del alumno.
  * - Supuesto de la tesis: el alumno debe todas las cuotas mensuales desde el año lectivo de la Inscripción que pagó.
+ *
+ * Regla única de "vencida" (filtrarVencidas): cuota mensual de la carrera del alumno, de un año >= su año de ingreso,
+ * con la fecha de vencimiento ya pasada y no cancelada por un Pago Activo. estaVencida y cuotasVencidas la reutilizan.
  */
 class DeudaCuotasService
 {
@@ -30,13 +35,43 @@ class DeudaCuotasService
             : CarbonImmutable::create($cuota->anio, $mes, config('las.cuota_dia_vencimiento'))->endOfDay();
     }
 
+    /** Una cuota: misma regla que cuotasVencidas. Para listados usar filtrarVencidas (sin N+1). */
     public function estaVencida(Cuota $cuota, Alumno $alumno, ?CarbonInterface $hoy = null): bool
     {
-        $vencimiento = $this->vencimiento($cuota);
+        return $this->filtrarVencidas($alumno, collect([$cuota]), $hoy)->isNotEmpty();
+    }
 
-        return $vencimiento !== null
-            && ($hoy ?? now())->greaterThan($vencimiento)
-            && ! $this->estaCancelada($cuota, $alumno);
+    /**
+     * Devuelve, de las cuotas dadas, las vencidas para el alumno. Precarga los meses y resuelve las cancelaciones
+     * con una sola consulta, para usarlo en listados (p. ej. CU7 P2).
+     *
+     * @param  Collection<int, Cuota>  $cuotas
+     * @return Collection<int, Cuota>
+     */
+    public function filtrarVencidas(Alumno $alumno, Collection $cuotas, ?CarbonInterface $hoy = null): Collection
+    {
+        $anioIngreso = $this->anioIngreso($alumno);
+
+        if ($anioIngreso === null || $cuotas->isEmpty()) {
+            return collect();
+        }
+
+        $hoy ??= now();
+        $cuotas = (new EloquentCollection($cuotas->all()))->loadMissing('mes');
+        $canceladas = $this->idsCanceladas($alumno, $cuotas);
+
+        return $cuotas
+            ->filter(function (Cuota $cuota) use ($alumno, $anioIngreso, $hoy, $canceladas) {
+                $vencimiento = $this->vencimiento($cuota);
+
+                return $vencimiento !== null
+                    && (int) $cuota->carrera_id === (int) $alumno->carrera_id
+                    && $cuota->anio >= $anioIngreso
+                    && $hoy->greaterThan($vencimiento)
+                    && ! in_array((int) $cuota->id, $canceladas, true);
+            })
+            ->values()
+            ->toBase();
     }
 
     public function estaCancelada(Cuota $cuota, Alumno $alumno): bool
@@ -47,6 +82,19 @@ class DeudaCuotasService
     public function cuotaInscripcion(Alumno $alumno, int $anio): ?Cuota
     {
         return $this->cuotasDeLaCarrera($alumno)->deInscripcion()->where('anio', $anio)->first();
+    }
+
+    /**
+     * CU2 pasos 16 y 19 (E14-D1): Cuota de Inscripción del año lectivo de la Carrera. Entre las de un año >= el actual,
+     * la que el alumno ya pagó; si no pagó ninguna, la más próxima. Null si la carrera no tiene cuota de Inscripción.
+     */
+    public function cuotaInscripcionVigente(Alumno $alumno): ?Cuota
+    {
+        $cuotas = $this->cuotasDeLaCarrera($alumno)->deInscripcion()->where('anio', '>=', now()->year)
+            ->with('mes')->orderBy('anio')->get();
+        $canceladas = $this->idsCanceladas($alumno, $cuotas);
+
+        return $cuotas->first(fn (Cuota $cuota) => in_array((int) $cuota->id, $canceladas, true)) ?? $cuotas->first();
     }
 
     /** CU2 paso 19: la Cuota de Inscripción del año lectivo debe estar pagada. */
@@ -96,15 +144,7 @@ class DeudaCuotasService
      */
     public function cuotasVencidas(Alumno $alumno, ?CarbonInterface $hoy = null): Collection
     {
-        if ($this->anioIngreso($alumno) === null) {
-            return collect();
-        }
-
-        $hoy ??= now();
-
-        return $this->cuotasPendientes($alumno)
-            ->filter(fn (Cuota $cuota) => $hoy->greaterThan($this->vencimiento($cuota)))
-            ->values();
+        return $this->filtrarVencidas($alumno, $this->cuotasPendientes($alumno), $hoy);
     }
 
     public function tieneCuotasVencidas(Alumno $alumno, ?CarbonInterface $hoy = null): bool
@@ -116,6 +156,22 @@ class DeudaCuotasService
     private function cuotasDeLaCarrera(Alumno $alumno): Builder
     {
         return Cuota::query()->activas()->where('carrera_id', $alumno->carrera_id);
+    }
+
+    /**
+     * @param  EloquentCollection<int, Cuota>  $cuotas
+     * @return list<int>
+     */
+    private function idsCanceladas(Alumno $alumno, EloquentCollection $cuotas): array
+    {
+        return DetallePagoCuota::query()
+            ->whereIn('cuota_id', $cuotas->modelKeys())
+            ->whereHas('pago', fn (Builder $pago) => $this->pagoActivoDe($pago, $alumno))
+            ->pluck('cuota_id')
+            ->map(fn ($id) => (int) $id)
+            ->unique()
+            ->values()
+            ->all();
     }
 
     private function pagoActivoDe(Builder $pago, Alumno $alumno): Builder

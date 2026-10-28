@@ -64,7 +64,6 @@ class RelacionesModelosTest extends TestCase
             'IntegranteTribunal' => [Models\IntegranteTribunal::class, 'integrantes_tribunal', ['tribunal' => $b, 'docente' => $b, 'rolTribunal' => $b]],
             'DetalleActa' => [Models\DetalleActa::class, 'detalles_acta', ['acta' => $b, 'alumno' => $b]],
             'TituloTramite' => [Models\TituloTramite::class, 'titulos_tramite', ['alumno' => $b, 'tipoGestion' => $b]],
-            'Mes' => [Models\Mes::class, 'meses', ['cuotas' => $m]],
             'Cuota' => [Models\Cuota::class, 'cuotas', ['carrera' => $b, 'mes' => $b, 'detallesPago' => $m]],
             'TipoBeca' => [Models\TipoBeca::class, 'tipos_beca', ['convocatorias' => $m]],
             'ConvocatoriaBeca' => [Models\ConvocatoriaBeca::class, 'convocatorias_beca', ['tipoBeca' => $b, 'solicitudes' => $m, 'becas' => $m]],
@@ -126,6 +125,18 @@ class RelacionesModelosTest extends TestCase
         $this->assertSame('0001-00000025', $factura->numeroFormateado());
         $this->assertMatchesRegularExpression('/^[0-9a-f-]{36}$/', $factura->uuid);
         $this->assertSame(1, $usuario->alumnos()->conLegajoActivo()->count());
+    }
+
+    /** Mes no tiene factory (sus valores son fijos, id = orden): se prueba con los precargados. */
+    public function test_mes_precargado_y_su_relacion_con_cuotas(): void
+    {
+        $marzo = Models\Mes::precargados()->firstWhere('descripcion', 'Marzo');
+        $cuota = Models\Cuota::factory()->create(['mes_id' => $marzo->id]);
+
+        $this->assertSame('meses', $marzo->getTable());
+        $this->assertInstanceOf(HasMany::class, $marzo->cuotas());
+        $this->assertTrue($marzo->cuotas()->whereKey($cuota->id)->exists());
+        $this->assertTrue($cuota->mes->is($marzo));
     }
 
     public function test_scopes_de_subclases_de_usuario(): void

@@ -12,7 +12,7 @@
 <x-form.grupo :id="$id" :label="$label" :error="$error" :requerido="$requerido" :ayuda="$ayuda" :class="$grupoClase">
     <select name="{{ $name }}" id="{{ $id }}"
             {{ $attributes->except('id')->class(['form-control', 'is-invalid' => $errors->has($error)]) }}
-            @if ($select2) data-select2 data-placeholder="{{ $placeholder }}" @endif
+            @if ($select2) data-las-select2 data-placeholder="{{ $placeholder }}" @endif
             @if ($multiple) multiple @endif
             @if ($requerido) required aria-required="true" @endif
             @if ($describe) aria-describedby="{{ $describe }}" @endif

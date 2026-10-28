@@ -3,7 +3,21 @@
 namespace Tests\Feature\Autorizacion;
 
 use App\Enums\RolSistema;
+use App\Models\ActaExamen;
+use App\Models\Alumno;
+use App\Models\AlumnoComision;
+use App\Models\Caja;
+use App\Models\Carrera;
+use App\Models\Comision;
+use App\Models\Cuota;
+use App\Models\DetalleActa;
+use App\Models\DetallePlanEstudio;
+use App\Models\DetComision;
+use App\Models\FacturaComprobante;
+use App\Models\Materia;
 use App\Models\Modalidad;
+use App\Models\PlanEstudio;
+use App\Models\Provincia;
 use App\Models\Rol;
 use App\Models\User;
 use Illuminate\Routing\Route as RutaLaravel;
@@ -48,7 +62,23 @@ class RutasPanelTest extends TestCase
         $parametros = collect($ruta->parameterNames())->mapWithKeys(fn (string $nombre) => [$nombre => match ($nombre) {
             'usuario' => User::factory()->sinContrasenia()->create()->assignRole(RolSistema::Cajero->value)->id,
             'rol' => Rol::create(['name' => 'Rol '.Str::random(6), 'guard_name' => 'web'])->id,
+            'personal' => User::factory()->personal(RolSistema::Cajero)->create()->id,
+            'provincia' => Provincia::factory()->create()->id,
+            'carrera' => Carrera::factory()->create()->id,
+            'materia' => Materia::factory()->create()->id,
+            'plan' => PlanEstudio::factory()->create()->id,
+            'detalle' => DetallePlanEstudio::factory()->create()->id,
+            'cuota' => Cuota::factory()->create(['anio' => (int) now()->format('Y')])->id,
+            'acta' => ActaExamen::factory()->create()->id,
+            'detalleActa' => DetalleActa::factory()->create()->id,
+            'alumno' => Alumno::factory()->create()->id,
+            'comision' => Comision::factory()->create()->id,
+            'detComision' => DetComision::factory()->create()->id,
+            'inscripcion' => AlumnoComision::factory()->create()->id,
+            'caja' => Caja::factory()->create()->id,
+            'factura' => FacturaComprobante::factory()->create()->id,
             'catalogo' => 'modalidades',
+            'actividad' => activity('pruebas')->log('created')->id,
             'registro' => Modalidad::factory()->create()->id,
         }]);
 

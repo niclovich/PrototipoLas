@@ -1,78 +1,93 @@
 # Sistema LAS
 
-Sistema de gestión académica y administrativa del Instituto Superior del Milagro.
+Sistema de gestión académica y administrativa del Instituto Superior del Milagro (prototipo de la tesis LAS).
+Laravel 12 + MySQL/MariaDB + AdminLTE 3. Casos de uso principales: CU1 Preinscripción, CU2 Inscripción,
+CU3 Inscripción en Comisiones (y Cambio de Comisión), CU4 Regularidad Académica, CU5 Inscripción a Exámenes,
+CU6 Asentamiento de Acta y CU7 Pago de Cuotas (con Apertura y Cierre de Caja), más los CU de soporte y el
+módulo de Auditoría.
 
-## Acceso
+Estado del desarrollo por etapa: [docs/ESTADO.md](docs/ESTADO.md).
 
-El inicio de sesión se realiza con **correo electrónico y contraseña**. El DNI no se utiliza para ingresar.
+## Requisitos
 
-Para que el navegador identifique este proyecto como un sitio independiente del sistema anterior, acceda siempre mediante:
+- PHP 8.2 o superior con las extensiones `pdo_mysql`, `mbstring`, `openssl`, `fileinfo`, `gd`, `zip` e `intl`.
+- Composer 2.
+- Node.js 20 o superior y npm (solo para compilar el CSS/JS propio con Vite).
+- MySQL 8 o MariaDB 10.4+ (en desarrollo, el de XAMPP).
 
-```text
-http://sistema-las.localhost:8000
-```
-
-Puede iniciar el entorno local completo con:
-
-```bash
-composer dev
-```
-
-No utilice la antigua dirección basada en `http://localhost/...`, porque los gestores de contraseñas agrupan las credenciales guardadas por sitio y podrían volver a mostrar las del sistema anterior.
-
-### Usuarios de demostración
-
-Estos usuarios se crean mediante `DemoSeeder` cuando la aplicación se ejecuta con `APP_ENV=local`.
-
-| Rol | Nombre | Correo electrónico | DNI | Contraseña |
-| --- | --- | --- | --- | --- |
-| Director General | Laura Fernández | `director@las.test` | `20111111` | `Demo1234` |
-| Coordinador | Martín Gómez | `coordinador@las.test` | `20222222` | `Demo1234` |
-| Preceptor | Carla López | `preceptor@las.test` | `20333333` | `Demo1234` |
-| Auxiliar Administrativo | Diego Martínez | `auxiliar@las.test` | `20444444` | `Demo1234` |
-| Docente | Sofía Rodríguez | `docente@las.test` | `20555555` | `Demo1234` |
-| Cajero | Pablo Sánchez | `cajero@las.test` | `20666666` | `Demo1234` |
-| Alumno | Juan Pérez | `alumno@las.test` | `40777777` | `Demo1234` |
-
-> Estas credenciales son únicamente para desarrollo y demostración. No deben utilizarse en producción.
-
-### Superadministrador
-
-La cuenta de superadministrador se configura en el archivo `.env` antes de ejecutar los seeders:
-
-```dotenv
-ADMIN_NOMBRE=Administrador
-ADMIN_APELLIDO=Sistema
-ADMIN_DNI=00000000
-ADMIN_EMAIL=admin@las.test
-ADMIN_PASSWORD=UnaClaveSegura123
-```
-
-`ADMIN_PASSWORD` es obligatorio. La contraseña real es la que se haya definido en el entorno y no debe publicarse en este archivo.
-
-### Usuario preinscripto
-
-El seeder también crea `preinscripto@las.test` (Ana Ramírez, DNI `40888888`). Esta cuenta todavía no tiene contraseña definida y, por lo tanto, no puede iniciar sesión hasta completar el proceso de alta.
-
-## Crear los usuarios
-
-Para preparar la base de datos desde cero con los usuarios y datos de demostración:
+## Instalación
 
 ```bash
-php artisan migrate:fresh --seed
+composer install
+npm ci && npm run build
+cp .env.example .env
+php artisan key:generate
 ```
 
-Para ejecutar únicamente los datos de demostración sobre una base ya preparada:
+Configurar en `.env` al menos:
+
+- `APP_URL` (en local, `http://sistema-las.localhost:8000`).
+- `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD` (por ejemplo, base `sistema_las`).
+- `MAIL_MAILER=log` en desarrollo (o los datos de Mailtrap/SMTP).
+- `ADMIN_EMAIL` y `ADMIN_PASSWORD` del superadministrador inicial (obligatorio para el seeder).
+- Los usuarios y datos de demostración se crean al ejecutar el seeder.
+
+Luego crear las tablas, los roles y permisos, los catálogos, el administrador y (en `local`) los datos demo:
 
 ```bash
-php artisan db:seed --class=DemoSeeder
+php artisan migrate --seed
+php artisan storage:link
 ```
 
-El `DemoSeeder` requiere que previamente existan los roles, permisos y catálogos del sistema.
+Para volver a empezar desde cero: `php artisan migrate:fresh --seed`.
 
-## Despliegue en Hostinger
+## Ejecución
 
-El despliegue de producción se ejecuta manualmente desde GitHub Actions y mantiene
-el código Laravel en `laravel/`, fuera de `public_html/`. La configuración completa
-de secretos, la preparación inicial de Hostinger, la validación y el rollback está
-documentada en [docs/deployment-hostinger.md](docs/deployment-hostinger.md).
+```bash
+php artisan serve            # o el servidor de XAMPP apuntando a public/
+php artisan queue:work       # correos al alumno (CU2–CU6) y notificaciones: van por la cola "database"
+```
+
+`composer dev` levanta servidor, cola, logs y Vite juntos.
+
+Acceda siempre con `http://sistema-las.localhost:8000` (no con `http://localhost/...`) para que el navegador no mezcle
+las credenciales guardadas con las del sistema anterior.
+
+## Acceso y usuarios de demostración
+
+El inicio de sesión es con **correo electrónico y contraseña** (el DNI no se usa para ingresar).
+Los usuarios demo los crea `DemoSeeder` al ejecutar el seeder. Contraseña de todos: `Demo1234`.
+
+| Rol | Nombre | Correo electrónico | Para probar |
+| --- | --- | --- | --- |
+| Director General | Laura Fernández | `director@las.test` | Personal, Cuotas por Carrera |
+| Coordinador | Martín Gómez | `coordinador@las.test` | Carreras, Materias, Planes, Correlatividades, Comisiones, Actas, Cuotas |
+| Preceptor | Carla López | `preceptor@las.test` | CU1–CU6 (Gestión de Alumnos, Regularidad, Asentamiento del acta 0001) |
+| Auxiliar Administrativo | Diego Martínez | `auxiliar@las.test` | CU1, CU2 |
+| Docente | Sofía Rodríguez | `docente@las.test` | CU4 Regularidad |
+| Cajero | Pablo Sánchez | `cajero@las.test` | CU7 Pago de Cuotas, Cajas (tiene una caja Abierta) |
+| Alumno | Juan Pérez | `alumno@las.test` | CU5: al día, Regular en Programación I y Matemática, inscripto al acta 0001 |
+| Alumno | Lucía Torres | `moroso@las.test` | Bloqueos por cuotas vencidas (CU3, CU5) |
+
+`preinscripto@las.test` (Ana Ramírez) no tiene contraseña: sirve para CU2 (Inscripción) y para pagar la cuota de Inscripción.
+
+El **superadministrador** (`ADMIN_EMAIL` / `ADMIN_PASSWORD` del `.env`) tiene todos los permisos, incluido el módulo
+**Auditoría** (Administración → Auditoría). Estas credenciales son solo para desarrollo; no usarlas en producción.
+
+## Tests
+
+Los tests usan una base aparte (`sistema_las_test`, ver `phpunit.xml`), que debe existir y estar vacía:
+
+```bash
+php artisan test                         # suite completa
+php artisan test --filter=InscripcionExamenTest
+vendor/bin/pint --test                   # estilo de código
+```
+
+## Documentación
+
+- [docs/ESTADO.md](docs/ESTADO.md): estado de cada etapa y entorno local.
+- [docs/planes/](docs/planes/): plan general (modelo, permisos, decisiones) y plan de cada etapa.
+- [docs/diferencias-tesis.md](docs/diferencias-tesis.md) y [docs/trazabilidad.md](docs/trazabilidad.md): diferencias con la tesis y atributo → columna.
+- [docs/deployment-hostinger.md](docs/deployment-hostinger.md): despliegue en Hostinger con GitHub Actions
+  (el código Laravel queda en `laravel/`, fuera de `public_html/`; secretos, preparación inicial, validación y rollback).

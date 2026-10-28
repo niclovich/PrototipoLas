@@ -39,4 +39,10 @@ class Rol extends Role
     {
         return $query->where('estado', EstadoGeneral::Activo->value);
     }
+
+    /** Roles activos de los 6 actores del personal (CU 25/26). */
+    public function scopeDelPersonal(Builder $query): Builder
+    {
+        return $query->activos()->whereIn('name', RolSistema::valoresDelPersonal());
+    }
 }

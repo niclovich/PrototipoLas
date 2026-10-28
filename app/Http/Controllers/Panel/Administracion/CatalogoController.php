@@ -45,7 +45,7 @@ class CatalogoController extends Controller
     {
         $this->catalogos->crear($catalogo, $request->validated());
 
-        return redirect()->route('panel.catalogos.registros.index', $catalogo->clave)->with('success', "{$catalogo->singular} registrado/a.");
+        return redirect()->route('panel.catalogos.registros.index', $catalogo->clave)->with('success', $catalogo->singular.' '.$catalogo->participio('registrad').'.');
     }
 
     public function edit(DefinicionCatalogo $catalogo, Model $registro): View
@@ -57,20 +57,20 @@ class CatalogoController extends Controller
     {
         $this->catalogos->actualizar($registro, $request->validated());
 
-        return redirect()->route('panel.catalogos.registros.index', $catalogo->clave)->with('success', "{$catalogo->singular} modificado/a.");
+        return redirect()->route('panel.catalogos.registros.index', $catalogo->clave)->with('success', $catalogo->singular.' '.$catalogo->participio('modificad').'.');
     }
 
     public function destroy(DefinicionCatalogo $catalogo, Model $registro): RedirectResponse
     {
-        $this->catalogos->darDeBaja($registro);
+        $this->catalogos->darDeBaja($catalogo, $registro);
 
-        return back()->with('success', "{$catalogo->singular} dado/a de baja.");
+        return back()->with('success', $catalogo->singular.' '.$catalogo->participio('dad').' de baja.');
     }
 
     public function restaurar(DefinicionCatalogo $catalogo, Model $registro): RedirectResponse
     {
         $this->catalogos->restaurar($registro);
 
-        return back()->with('success', "{$catalogo->singular} reactivado/a.");
+        return back()->with('success', $catalogo->singular.' '.$catalogo->participio('reactivad').'.');
     }
 }

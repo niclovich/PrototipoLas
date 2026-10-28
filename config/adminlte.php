@@ -44,7 +44,7 @@ return [
     'layout_topnav' => null,
     'layout_boxed' => null,
     'layout_fixed_sidebar' => true,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
 
@@ -55,7 +55,7 @@ return [
     'classes_auth_icon' => '',
     'classes_auth_btn' => 'btn-las',
 
-    'classes_body' => '',
+    'classes_body' => 'las-panel',
     'classes_brand' => 'bg-las',
     'classes_brand_text' => '',
     'classes_content_wrapper' => '',
@@ -63,7 +63,7 @@ return [
     'classes_content' => 'container-fluid',
     'classes_sidebar' => 'sidebar-dark-las elevation-4',
     'classes_sidebar_nav' => 'nav-child-indent',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-white navbar-light las-navbar',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -103,9 +103,10 @@ return [
         ['text' => 'Planes de Estudio', 'route' => 'panel.planes.index', 'icon' => 'fas fa-fw fa-sitemap', 'can' => 'listar_plan_estudio'],
         ['text' => 'Comisiones', 'route' => 'panel.comisiones.index', 'icon' => 'fas fa-fw fa-users', 'can' => 'listar_comision'],
 
-        ['header' => 'ALUMNOS', 'can' => ['crear_preinscripcion', 'listar_alumno']],
+        ['header' => 'ALUMNOS', 'can' => ['crear_preinscripcion', 'listar_alumno', 'crear_regularidad']],
         ['text' => 'Preinscripción', 'route' => 'panel.preinscripcion.create', 'icon' => 'fas fa-fw fa-user-plus', 'can' => 'crear_preinscripcion'],
         ['text' => 'Gestión de Alumnos', 'route' => 'panel.alumnos.index', 'icon' => 'fas fa-fw fa-user-graduate', 'can' => 'listar_alumno'],
+        ['text' => 'Regularidad Académica', 'route' => 'panel.regularidad.index', 'icon' => 'fas fa-fw fa-clipboard-check', 'can' => 'crear_regularidad'],
 
         ['header' => 'EXÁMENES', 'can' => 'listar_acta_examen'],
         ['text' => 'Actas de Examen', 'route' => 'panel.actas.index', 'icon' => 'fas fa-fw fa-file-signature', 'can' => 'listar_acta_examen'],

@@ -24,5 +24,8 @@
 @stop
 
 @section('footer')
-    <small>{{ config('las.instituto_nombre') }} &middot; {{ config('app.name') }}</small>
+    <div class="las-footer-contenido">
+        <small>&copy; {{ now()->year }} {{ config('las.instituto_nombre') }}</small>
+        <small>{{ config('app.name') }} &middot; Gestión académica</small>
+    </div>
 @stop

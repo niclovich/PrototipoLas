@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
     /**
-     * Roles/permisos, admin y catálogos siempre; datos de demostración solo en local.
+     * Crea los roles, permisos, usuarios, catálogos y datos de demostración.
      */
     public function run(): void
     {
@@ -17,8 +17,6 @@ class DatabaseSeeder extends Seeder
             CatalogosSeeder::class,
         ]);
 
-        if (app()->environment('local')) {
-            $this->call(DemoSeeder::class);
-        }
+        $this->call(DemoSeeder::class);
     }
 }

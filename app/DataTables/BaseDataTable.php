@@ -34,6 +34,16 @@ abstract class BaseDataTable
     /** Vista parcial con los botones de cada fila (recibe $fila). */
     abstract protected function vistaAcciones(): string;
 
+    /**
+     * Columnas propias que traen HTML (además de estado y acciones).
+     *
+     * @return list<string>
+     */
+    protected function columnasHtml(): array
+    {
+        return [];
+    }
+
     /** Variables extra para la vista de acciones. */
     /** @return array<string, mixed> */
     protected function datosAcciones(Model $fila): array
@@ -48,7 +58,7 @@ abstract class BaseDataTable
 
         return $this->columnas($tabla)
             ->only([...$this->campos(), 'estado', 'acciones'])
-            ->rawColumns(['estado', 'acciones'])
+            ->rawColumns(['estado', 'acciones', ...$this->columnasHtml()])
             ->toJson();
     }
 

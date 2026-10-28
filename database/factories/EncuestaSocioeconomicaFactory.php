@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Enums\Idioma;
+use App\Enums\NivelEstudios;
 use App\Models\EncuestaSocioeconomica;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -20,9 +22,9 @@ class EncuestaSocioeconomicaFactory extends Factory
             'trabaja' => fake()->boolean(),
             'sabe_usar_pc' => true,
             'es_usuario_internet' => true,
-            'nivel_estudios_madre' => 'Secundario completo',
-            'nivel_estudios_padre' => 'Secundario completo',
-            'idiomas' => 'Español',
+            'nivel_estudios_madre' => fake()->randomElement(NivelEstudios::cases()),
+            'nivel_estudios_padre' => fake()->randomElement(NivelEstudios::cases()),
+            'idiomas' => [Idioma::Espanol],
         ];
     }
 }

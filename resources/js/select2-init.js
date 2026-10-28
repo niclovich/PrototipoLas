@@ -1,5 +1,5 @@
 /*
- * Select2 (tema Bootstrap 4, español) sobre <select data-select2>. Admite data-placeholder.
+ * Select2 (tema Bootstrap 4, español) sobre <select data-las-select2> (no usar data-select2: choca con la clave interna de Select2). Admite data-placeholder.
  * Se puede llamar con un contenedor (p. ej. un modal recién abierto).
  */
 const $ = window.jQuery;
@@ -9,7 +9,7 @@ export function iniciarSelect2(contenedor = document) {
         return;
     }
 
-    $(contenedor).find('select[data-select2]').each(function () {
+    $(contenedor).find('select[data-las-select2]').each(function () {
         const $select = $(this);
         const $modal = $select.closest('.modal');
 

@@ -4,7 +4,10 @@ namespace App\Models;
 
 use App\Enums\Asentada;
 use App\Enums\EstadoActa;
+use App\Enums\EstadoDetalleActa;
 use App\Models\Concerns\AuditaCambios;
+use App\Models\Concerns\BuscaPorPalabras;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -13,7 +16,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 /** Clase ActaExamen (Hoja 3): se crea "Pendiente" con asentada = N; al asentar → "Finalizado", S y nro_folio. */
 class ActaExamen extends Model
 {
-    use AuditaCambios, HasFactory;
+    use AuditaCambios, BuscaPorPalabras, HasFactory;
 
     protected $table = 'actas_examen';
 
@@ -63,5 +66,17 @@ class ActaExamen extends Model
     public function detalles(): HasMany
     {
         return $this->hasMany(DetalleActa::class);
+    }
+
+    /** Alumnos inscriptos (DetalleActa "Activo", CU5). */
+    public function inscriptos(): HasMany
+    {
+        return $this->detalles()->where('estado_detalle_acta', EstadoDetalleActa::Activo->value);
+    }
+
+    /** Nro de acta con 4 dígitos ("0142"), como en los wireframes. */
+    protected function nroActaTexto(): Attribute
+    {
+        return Attribute::get(fn () => str_pad((string) $this->nro_acta, 4, '0', STR_PAD_LEFT));
     }
 }

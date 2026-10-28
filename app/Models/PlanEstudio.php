@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Enums\EstadoGeneral;
 use App\Models\Concerns\AuditaCambios;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -23,6 +24,11 @@ class PlanEstudio extends Model
     protected function casts(): array
     {
         return ['anio_plan_estudio' => 'integer', 'estado_plan_estudio' => EstadoGeneral::class];
+    }
+
+    public function scopeActivos(Builder $query): Builder
+    {
+        return $query->where('estado_plan_estudio', EstadoGeneral::Activo->value);
     }
 
     public function carrera(): BelongsTo

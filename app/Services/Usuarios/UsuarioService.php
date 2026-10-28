@@ -7,6 +7,7 @@ use App\Enums\RolSistema;
 use App\Models\Rol;
 use App\Models\User;
 use App\Notifications\DefinirContrasenia;
+use App\Support\DatosUsuario;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Str;
@@ -20,6 +21,24 @@ class UsuarioService
 {
     public const MENSAJE_SOLO_SUPERADMIN = 'Solo un SUPERADMIN puede asignar o modificar el rol SUPERADMIN.';
 
+    public const MENSAJE_PROPIO_ROL = 'No puede cambiar su propio rol.';
+
+    public const MENSAJE_PROPIA_BAJA = 'No puede dar de baja su propio usuario.';
+
+    /** CU 25 alt. 4.1; lo usan también Usuarios Alumno (CU 9) y CU1. */
+    public const MENSAJE_DNI_REGISTRADO = 'Ya existe un usuario registrado con el DNI ingresado';
+
+    /** Correo único (el acceso es por correo): Personal (D10 de E2) y Usuarios Alumno (CU 9). */
+    public const MENSAJE_CORREO_REGISTRADO = 'Ya existe un usuario registrado con el correo ingresado.';
+
+    /** Usuario.buscar(dni): cualquier usuario (personal, alumno o inactivo) con ese DNI, normalizado a dígitos. */
+    public function buscarPorDni(string $dni): ?User
+    {
+        $soloDigitos = DatosUsuario::normalizarDni($dni);
+
+        return $soloDigitos === '' ? null : User::query()->where('dni_usuario', $soloDigitos)->first();
+    }
+
     /**
      * @param  array{dni_usuario: string, apellido_usuario: string, nombre_usuario: string, email: string}  $datos
      */
@@ -27,17 +46,7 @@ class UsuarioService
     {
         $this->validarRolAsignable($rol, $actor);
 
-        $usuario = DB::transaction(function () use ($datos, $rol) {
-            $usuario = new User($datos);
-            $usuario->forceFill([
-                'password' => null,
-                'fecha_alta' => today(),
-                'estado_cuenta' => EstadoCuenta::Activo,
-            ])->save();
-            $usuario->syncRoles([$rol]);
-
-            return $usuario;
-        });
+        $usuario = DB::transaction(fn () => $this->crearCuenta($datos, $rol, null));
 
         $this->enviarLinkAlta($usuario);
 
@@ -45,15 +54,34 @@ class UsuarioService
     }
 
     /**
+     * Crea la cuenta (Activo, fecha de alta hoy) con un rol. Sin contraseña (alta por link) o con la que carga
+     * el Director General (CU 25). Debe llamarse dentro de una transacción.
+     *
+     * @param  array<string, mixed>  $datos  atributos fillable de User
+     */
+    public function crearCuenta(array $datos, string $rol, ?string $password): User
+    {
+        $usuario = new User($datos);
+        $usuario->forceFill([
+            'password' => $password,
+            'fecha_alta' => today(),
+            'estado_cuenta' => EstadoCuenta::Activo,
+        ])->save();
+        $usuario->syncRoles([$rol]);
+
+        return $usuario;
+    }
+
+    /**
      * @param  array{dni_usuario: string, apellido_usuario: string, nombre_usuario: string, email: string}  $datos
      */
-    public function actualizar(User $usuario, array $datos, string $rol, User $actor): User
+    public function actualizar(User $usuario, array $datos, string $rol, User $actor, string $campoRol = 'rol'): User
     {
         $this->validarGestion($usuario, $actor);
         $this->validarRolAsignable($rol, $actor);
 
         if ($usuario->is($actor) && $usuario->nombreRol() !== $rol) {
-            throw ValidationException::withMessages(['rol' => 'No puede cambiar su propio rol.']);
+            throw ValidationException::withMessages([$campoRol => self::MENSAJE_PROPIO_ROL]);
         }
 
         return DB::transaction(function () use ($usuario, $datos, $rol) {
@@ -73,20 +101,26 @@ class UsuarioService
     public function darDeBaja(User $usuario, User $actor): void
     {
         if ($usuario->is($actor)) {
-            throw ValidationException::withMessages(['accion' => 'No puede dar de baja su propio usuario.']);
+            throw ValidationException::withMessages(['accion' => self::MENSAJE_PROPIA_BAJA]);
         }
 
         $this->validarGestion($usuario, $actor);
 
-        DB::transaction(function () use ($usuario) {
-            // Corta el acceso ya: invalida "Recordarme" y las sesiones abiertas (además del middleware cuenta.activa).
-            $usuario->forceFill([
-                'estado_cuenta' => EstadoCuenta::Inactivo,
-                'remember_token' => Str::random(60),
-            ])->save();
+        DB::transaction(fn () => $this->desactivarCuenta($usuario));
+    }
 
-            DB::table(config('session.table', 'sessions'))->where('user_id', $usuario->getKey())->delete();
-        });
+    /**
+     * Cuenta "Inactivo" y corta el acceso ya: invalida "Recordarme" y borra las sesiones abiertas
+     * (además del middleware cuenta.activa). Lo usan la baja de Usuarios y la de Personal (CU 27).
+     */
+    public function desactivarCuenta(User $usuario): void
+    {
+        $usuario->forceFill([
+            'estado_cuenta' => EstadoCuenta::Inactivo,
+            'remember_token' => Str::random(60),
+        ])->save();
+
+        DB::table(config('session.table', 'sessions'))->where('user_id', $usuario->getKey())->delete();
     }
 
     public function reactivar(User $usuario, User $actor): void

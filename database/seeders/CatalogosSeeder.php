@@ -73,14 +73,12 @@ class CatalogosSeeder extends Seeder
         $this->simples(Llamado::class, 'llamado', ['P · 1° Llamado', 'S · 2° Llamado', 'E · Extraordinario']);
         $this->simples(TipoActa::class, 'descripcion', ['Regular', 'Libre']);
         $this->simples(RolTribunal::class, 'descripcion', ['Presidente', 'Vocal 1', 'Vocal 2']);
-        $this->simples(TipoDocumento::class, 'descripcion', ['Fotocopia de DNI', 'Certificado de Título']);
-        $this->simples(MedioPago::class, 'medio_pago', ['Efectivo', 'Transferencia', 'Tarjeta de Débito']);
+        $this->simples(TipoDocumento::class, 'descripcion', [TipoDocumento::FOTOCOPIA_DNI, TipoDocumento::CERTIFICADO_TITULO]);
+        $this->simples(MedioPago::class, 'medio_pago', [MedioPago::EFECTIVO, 'Transferencia', 'Tarjeta de Débito']);
 
-        foreach (array_keys(Mes::VALORES) as $orden => $mes) {
-            Mes::updateOrCreate(['id' => $orden + 1], ['descripcion' => $mes]);
-        }
+        Mes::precargados();
 
-        foreach ([2, 3, 4] as $anios) {
+        foreach ([2, 3, 4, 5] as $anios) {
             Duracion::withTrashed()->updateOrCreate(['duracion' => "{$anios} años"], ['cantidad_anios' => $anios]);
         }
 

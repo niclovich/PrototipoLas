@@ -70,7 +70,7 @@ class UsuariosTest extends TestCase
 
         $this->actingAs($admin)->post(route('panel.usuarios.store'), $this->datos(['rol' => RolSistema::Alumno->value, 'email' => 'x']))
             ->assertSessionHasErrors([
-                'dni_usuario' => 'Ya existe un usuario con ese DNI.',
+                'dni_usuario' => UsuarioService::MENSAJE_DNI_REGISTRADO,
                 'email' => 'El campo correo electrónico debe ser un correo electrónico válido.',
                 'rol' => 'Los usuarios Alumno se registran desde la Preinscripción.',
             ]);

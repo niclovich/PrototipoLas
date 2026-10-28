@@ -4,6 +4,8 @@ namespace App\Models;
 
 use App\Enums\EstadoGeneral;
 use App\Models\Concerns\AuditaCambios;
+use App\Models\Concerns\BuscaPorPalabras;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -12,7 +14,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 /** Clase DetallePlanEstudio (Hoja 2): materia dentro de un plan (código, carga horaria, año de cursado). */
 class DetallePlanEstudio extends Model
 {
-    use AuditaCambios, HasFactory;
+    use AuditaCambios, BuscaPorPalabras, HasFactory;
 
     protected $table = 'detalles_plan_estudio';
 
@@ -31,6 +33,24 @@ class DetallePlanEstudio extends Model
             'estado_det_plan_estudio' => EstadoGeneral::class,
             'fecha_baja' => 'date',
         ];
+    }
+
+    public function scopeActivos(Builder $query): Builder
+    {
+        return $query->where('estado_det_plan_estudio', EstadoGeneral::Activo->value);
+    }
+
+    /** Detalle "Activo" de un Plan de Estudio "Activo" de una carrera gestionable (CU 7 y CU 8). */
+    public function scopeVigentesDePlanActivo(Builder $query): Builder
+    {
+        return $query->activos()->whereHas('planEstudio', fn (Builder $plan) => $plan->activos()
+            ->whereHas('carrera', fn (Builder $carrera) => $carrera->gestionablesEnPlan()));
+    }
+
+    /** P1 Gestión de Plan de Estudio: "Buscar por materia o código". */
+    public function scopeBuscar(Builder $query, ?string $texto): Builder
+    {
+        return $query->buscarPalabras($texto, ['codigo_det_plan_estudio'], ['materia' => ['nombre_materia']]);
     }
 
     public function planEstudio(): BelongsTo

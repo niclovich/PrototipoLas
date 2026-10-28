@@ -30,4 +30,9 @@ class DetallePlanEstudioFactory extends Factory
             'estado_det_plan_estudio' => EstadoGeneral::Activo,
         ];
     }
+
+    public function inactivo(): static
+    {
+        return $this->state(fn () => ['estado_det_plan_estudio' => EstadoGeneral::Inactivo]);
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace Tests\Feature\Auth;
 
+use App\Enums\EstadoCuenta;
 use App\Enums\RolSistema;
 use App\Notifications\VerificarCorreo;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -33,6 +34,21 @@ class EmailVerificationTest extends TestCase
             return $notificacion instanceof ShouldQueue
                 && str_starts_with($notificacion->toMail($usuario)->subject, 'Verificar correo electrónico');
         });
+    }
+
+    public function test_cuenta_inactiva_con_sesion_no_usa_las_rutas_de_fortify(): void
+    {
+        Notification::fake();
+        $usuario = $this->crearUsuario(RolSistema::Preceptor, ['email_verified_at' => null]);
+        $this->actingAs($usuario)->get(route('verification.notice'))->assertOk();
+
+        $usuario->forceFill(['estado_cuenta' => EstadoCuenta::Inactivo])->save();
+
+        $this->post(route('verification.send'))->assertRedirect(route('login'));
+        Notification::assertNothingSent();
+        $this->assertGuest();
+
+        $this->actingAs($usuario->fresh())->get(route('password.confirm'))->assertRedirect(route('login'));
     }
 
     public function test_el_link_firmado_verifica_el_correo(): void

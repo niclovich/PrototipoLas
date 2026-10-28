@@ -20,4 +20,9 @@ class MateriaFactory extends Factory
             'estado_materia' => EstadoGeneral::Activo,
         ];
     }
+
+    public function inactiva(): static
+    {
+        return $this->state(fn () => ['estado_materia' => EstadoGeneral::Inactivo]);
+    }
 }

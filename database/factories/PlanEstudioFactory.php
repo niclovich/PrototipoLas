@@ -22,4 +22,14 @@ class PlanEstudioFactory extends Factory
             'estado_plan_estudio' => EstadoGeneral::Activo,
         ];
     }
+
+    public function activo(): static
+    {
+        return $this->state(fn () => ['estado_plan_estudio' => EstadoGeneral::Activo]);
+    }
+
+    public function inactivo(): static
+    {
+        return $this->state(fn () => ['estado_plan_estudio' => EstadoGeneral::Inactivo]);
+    }
 }

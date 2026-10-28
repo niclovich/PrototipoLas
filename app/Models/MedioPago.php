@@ -12,6 +12,9 @@ class MedioPago extends Model
 {
     use EsCatalogo, HasFactory;
 
+    /** Al Monto Esperado del Efectivo se le suma el Monto Inicial (CU 36, aclaración p. 162). */
+    public const EFECTIVO = 'Efectivo';
+
     protected $table = 'medios_pago';
 
     protected $primaryKey = 'id';

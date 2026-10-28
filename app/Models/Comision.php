@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Enums\EstadoGeneral;
 use App\Models\Concerns\AuditaCambios;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -47,6 +48,37 @@ class Comision extends Model
     public function detalles(): HasMany
     {
         return $this->hasMany(DetComision::class);
+    }
+
+    public function scopeActivas(Builder $query): Builder
+    {
+        return $query->where('estado_comision', EstadoGeneral::Activo->value);
+    }
+
+    /** "1er Anio", "2do Anio", … (texto de los wireframes de CU3 y CU4). */
+    public function anioCursoTexto(): string
+    {
+        $sufijo = match ($this->anio_curso) {
+            1, 3 => 'er',
+            2 => 'do',
+            7, 10 => 'mo',
+            8 => 'vo',
+            9 => 'no',
+            default => 'to',
+        };
+
+        return "{$this->anio_curso}{$sufijo} Anio";
+    }
+
+    /** "COM-2026-1A · 1er Anio · Turno Manana" (combos de CU3) y, con modalidad, "… · Presencial" (Comision Actual del cambio). */
+    public function etiqueta(bool $conModalidad = false): string
+    {
+        $partes = [$this->codigo_comision, $this->anioCursoTexto(), $this->horario_comision];
+        if ($conModalidad) {
+            $partes[] = $this->modalidad?->modalidad;
+        }
+
+        return implode(' · ', array_filter($partes));
     }
 
     /** Alumnos que "cursan actualmente en" esta comisión (0..1 desde Alumno). */

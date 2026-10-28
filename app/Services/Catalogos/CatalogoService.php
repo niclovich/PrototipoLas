@@ -4,6 +4,7 @@ namespace App\Services\Catalogos;
 
 use App\Support\DefinicionCatalogo;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Validation\ValidationException;
 
 /**
  * ABM genérico de catálogos (SUPERADMIN). La baja es lógica (SoftDeletes): los registros
@@ -25,8 +26,14 @@ class CatalogoService
         return $registro;
     }
 
-    public function darDeBaja(Model $registro): void
+    public function darDeBaja(DefinicionCatalogo $catalogo, Model $registro): void
     {
+        foreach ($catalogo->bloqueanBaja as $relacion => $mensaje) {
+            if ($registro->{$relacion}()->exists()) {
+                throw ValidationException::withMessages(['accion' => $mensaje]);
+            }
+        }
+
         $registro->delete();
     }
 

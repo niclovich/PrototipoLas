@@ -3,7 +3,7 @@
 @section('title', 'Nuevo registro - '.$catalogo->titulo)
 
 @section('encabezado')
-    <x-header-with-title :titulo="'Nuevo/a '.mb_strtolower($catalogo->singular)" :subtitulo="$catalogo->titulo" />
+    <x-header-with-title :titulo="$catalogo->textoNuevo()" :subtitulo="$catalogo->titulo" />
 @endsection
 
 @section('contenido')

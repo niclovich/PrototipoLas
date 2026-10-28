@@ -18,9 +18,25 @@
 /public/build
 /public/hot
 /public/storage
+/.tmp-chrome-confirmacion/
 /storage/*.key
 /storage/pail
 /vendor
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+
+# Herramientas y configuraciones de agentes IA
+.claude/
+.cursor/
+.codex/
+
+# Archivos temporales de revisión
+.tmp-*.mjs
+
+# Documentación interna de desarrollo
+/docs/planes/
+/docs/BITACORA.md
+/docs/ESTADO.md
+/docs/tesis/Tesis_LAS_texto.txt

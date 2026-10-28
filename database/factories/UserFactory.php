@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use App\Enums\EstadoCuenta;
+use App\Enums\RolSistema;
+use App\Models\Localidad;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
@@ -45,5 +47,21 @@ class UserFactory extends Factory
     public function sinContrasenia(): static
     {
         return $this->state(fn () => ['password' => null, 'email_verified_at' => null]);
+    }
+
+    /** Usuario del Personal (CU 25) con el rol indicado. */
+    public function personal(RolSistema $rol = RolSistema::Docente): static
+    {
+        return $this->afterCreating(fn (User $usuario) => $usuario->syncRoles([$rol->value]));
+    }
+
+    /** Teléfono, dirección y Localidad (datos obligatorios de P2 Personal). */
+    public function conDomicilio(): static
+    {
+        return $this->state(fn () => [
+            'telefono_usuario' => fake()->numerify('38########'),
+            'direccion_usuario' => fake()->streetAddress(),
+            'localidad_id' => Localidad::factory(),
+        ]);
     }
 }

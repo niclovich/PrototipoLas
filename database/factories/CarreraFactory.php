@@ -25,4 +25,15 @@ class CarreraFactory extends Factory
             'duracion_id' => Duracion::factory(),
         ];
     }
+
+    /** Estado inicial de CU 3. */
+    public function pendiente(): static
+    {
+        return $this->state(fn () => ['estado_carrera' => EstadoCarrera::Pendiente]);
+    }
+
+    public function inactiva(): static
+    {
+        return $this->state(fn () => ['estado_carrera' => EstadoCarrera::Inactivo]);
+    }
 }

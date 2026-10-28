@@ -18,6 +18,14 @@ class TipoActa extends Model
 
     protected $fillable = ['descripcion'];
 
+    /** Valor del catálogo que exime de condiciones académicas en CU5 (aclaración p. 72). */
+    public const LIBRE = 'Libre';
+
+    public function esLibre(): bool
+    {
+        return $this->descripcion === self::LIBRE;
+    }
+
     public function actas(): HasMany
     {
         return $this->hasMany(ActaExamen::class);

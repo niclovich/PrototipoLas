@@ -40,6 +40,18 @@ enum RolSistema: string
         return $this === self::SuperAdmin ? 'danger' : 'info';
     }
 
+    /** Actores del personal (CU 25: Director General, Coordinador, Preceptor, Auxiliar Administrativo, Docente, Cajero). */
+    public static function delPersonal(): array
+    {
+        return [self::DirectorGeneral, self::Coordinador, self::Preceptor, self::AuxiliarAdministrativo, self::Docente, self::Cajero];
+    }
+
+    /** @return list<string> */
+    public static function valoresDelPersonal(): array
+    {
+        return array_map(fn (self $rol) => $rol->value, self::delPersonal());
+    }
+
     /** Roles que se pueden asignar desde el módulo Usuarios (el Alumno se crea en CU1/CU 9). */
     public static function asignablesDesdeUsuarios(): array
     {

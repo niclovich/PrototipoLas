@@ -12,6 +12,11 @@ class TipoDocumento extends Model
 {
     use EsCatalogo, HasFactory;
 
+    /** Documentos que pide CU1 (P4) y CU2. */
+    public const FOTOCOPIA_DNI = 'Fotocopia de DNI';
+
+    public const CERTIFICADO_TITULO = 'Certificado de Título';
+
     protected $table = 'tipos_documento';
 
     protected $primaryKey = 'id';

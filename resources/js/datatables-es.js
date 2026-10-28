@@ -26,13 +26,41 @@ function leerJson(elemento, atributo, porDefecto) {
     }
 }
 
+/** Valores de los filtros propios de la pantalla (data-filtros = lista de selectores). */
+function valoresFiltros(selectores) {
+    return selectores.reduce((valores, selector) => {
+        document.querySelectorAll(selector).forEach((campo) => {
+            if (campo.name) {
+                valores[campo.name] = campo.value;
+            }
+        });
+
+        return valores;
+    }, {});
+}
+
+/** Recarga la tabla al cambiar un filtro (texto con espera de 300 ms). */
+function escucharFiltros(api, selectores) {
+    let espera;
+    selectores.forEach((selector) => {
+        $(document).on('input change', selector, (evento) => {
+            clearTimeout(espera);
+            espera = setTimeout(() => api.ajax.reload(), evento.type === 'input' ? 300 : 0);
+        });
+    });
+}
+
 export function crearDataTable(tabla, opciones = {}) {
     const params = leerJson(tabla, 'data-params', {});
+    const filtros = leerJson(tabla, 'data-filtros', []);
+    const dom = tabla.dataset.dom ? { dom: tabla.dataset.dom } : {};
+    // Tablas con detalle propio por fila (P1 Gestión de Alumnos): Responsive solo oculta columnas.
+    const responsive = tabla.hasAttribute('data-detalle-expandible') ? { details: false } : true;
 
-    return $(tabla).DataTable({
+    const api = $(tabla).DataTable({
         processing: true,
         serverSide: true,
-        responsive: true,
+        responsive,
         autoWidth: false,
         pageLength: 10,
         lengthMenu: [10, 25, 50, 100],
@@ -42,10 +70,15 @@ export function crearDataTable(tabla, opciones = {}) {
         ajax: {
             url: tabla.dataset.url,
             type: 'POST',
-            data: (datos) => Object.assign(datos, params),
+            data: (datos) => Object.assign(datos, params, valoresFiltros(filtros)),
         },
+        ...dom,
         ...opciones,
     });
+
+    escucharFiltros(api, filtros);
+
+    return api;
 }
 
 export function iniciarDataTables() {

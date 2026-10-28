@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\Models\Concerns\AuditaCambios;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  */
 class Mes extends Model
 {
-    use AuditaCambios, HasFactory;
+    use AuditaCambios;
 
     public const INSCRIPCION = 'Inscripción';
 
@@ -37,6 +37,23 @@ class Mes extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = ['descripcion'];
+
+    /**
+     * Crea (o completa) los valores precargados respetando id = orden. Lo usan CatalogosSeeder y CuotaFactory
+     * (con o sin seeder previo); no hay MesFactory para no romper ese supuesto.
+     *
+     * @return Collection<int, self>
+     */
+    public static function precargados(): Collection
+    {
+        if (static::count() !== count(self::VALORES)) {
+            foreach (array_keys(self::VALORES) as $orden => $descripcion) {
+                static::updateOrCreate(['id' => $orden + 1], ['descripcion' => $descripcion]);
+            }
+        }
+
+        return static::orderBy('id')->get();
+    }
 
     public static function inscripcion(): self
     {

@@ -23,4 +23,10 @@ class NovedadFactory extends Factory
             'observacion_novedad' => fake()->sentence(),
         ];
     }
+
+    /** Baja de Personal (CU 27): Motivo con la acción "Baja de Personal". */
+    public function bajaDePersonal(): static
+    {
+        return $this->state(fn () => ['motivo_id' => Motivo::factory()->state(['accion' => Motivo::ACCION_BAJA_PERSONAL])]);
+    }
 }
